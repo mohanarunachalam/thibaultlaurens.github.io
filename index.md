@@ -19,9 +19,8 @@ tagline: some notes, reminders, findings and sharing
                     {{ post.date | date: "%B %e, %Y" }}
                 </strong>
                 | {{ post.category }}
-                | <a href="http://thibaultlaurens.github.com{{ post.url }}/#disqus_thread">comments</a>
+                | <a href="http://thibaultlaurens.github.com{{ post.url }}/#disqus_thread" data-disqus-identifier="{{ post.url }}">comments</a>
             </p>
-            
             {% if forloop.last %}
             {% else %}
                 <hr>
