@@ -1,46 +1,65 @@
 ---
 layout: page
-title: Hello World!
-tagline: Supporting tagline
+title: Yet another developer blog
+tagline: some notes, reminders, findings and sharing
 ---
 {% include JB/setup %}
 
-Read [Jekyll Quick Start](http://jekyllbootstrap.com/usage/jekyll-quick-start.html)
+<div class="row">
+  <div class="nine columns">
+    <div>
+        {% for post in site.posts %}	
+            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            <p>
+                {{ post.content | strip_html | truncatewords:75}}<br>
+            </p>
+            <p>
+                <a href="{{ post.url }}"><strong>Read more...</strong></a><br/>
+                <strong>
+                    {{ post.date | date: "%B %e, %Y" }}
+                </strong>
+                | {{ post.category }}
+                | <a href="http://thibaultlaurens.github.com{{ post.url }}/#disqus_thread">comments</a>
+            </p>
+            
+            {% if forloop.last %}
+            {% else %}
+                <hr>
+            {% endif %}
+            			
+        {% endfor %}
+    </div>
+  </div>
+  
+  <div class="two columns offset-by-one">
+              <a href="categories.html"><h4>Category</h4></a>
+              <strong><ul>
+                {% assign categories_list = site.categories %}
+                {% include JB/categories_list %}
+              </ul> </strong>
+  </div>
 
-Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllbootstrap.com)
+  <div class="two columns offset-by-one">
+              <h4>Blogroll</h4>
+              <ul>
+                  <strong><li><a target="_blank" title="Los Techies" href="http://lostechies.com/">Los Techies</a></li></strong>
+                  <strong><li><a target="_blank" title="Scott Hanselman" href="http://www.hanselman.com/blog/">Scott Hanselman</a></li></strong>
+                  <strong><li><a target="_blank" title="Haacked" href="http://haacked.com/">Phil Haack</a></li></strong>
+                  <strong><li><a target="_blank" title="Martin Fowler" href="martinfowler.com">Martin Fowler</a></li></strong>
+                  <strong><li><a target="_blank" title="Ian Robinson" href="iansrobinson.com">Ian Robinson</a></li></strong>
+                  <strong><li><a target="_blank" title="High Scalability" href="http://highscalability.com/">High Scalability</a></li></strong>
+                  <strong><li><a target="_blank" title="Coding Horror" href="http://www.codinghorror.com/blog/">Coding Horror</a></li></strong>
+                  <strong><li><a target="_blank" title="Dr Dobbs" href="http://www.drdobbs.com/">Dr Dobbs</a></li></strong>
+                  <strong><li><a target="_blank" title="Udi Dahan" href="http://www.udidahan.com/?blog=true">Udi Dahan</a></li></strong>
+                  <strong><li><a target="_blank" title="David Catuhe" href="http://blogs.msdn.com/b/eternalcoding/">David Catuhe</a></li></strong>
+                  <strong><li><a target="_blank" title="Julien Dollon" href="http://julien.dollon.net/">Julien Dollon</a></li></strong>
+                  <strong><li><a target="_blank" title="Geek Monkey" href="http://geekmonkey.org/">Geek Monkey</a></li></strong>
+                  <strong><li><a target="_blank" title="How To Node" href="http://howtonode.org/">How To Node</a></li></strong>
+                  <!--<strong><li><a target="_blank" title="" href=""></a></li></strong>-->
+              </ul>
+  </div>
 
-## Update Author Attributes
+  
 
-In `_config.yml` remember to specify your own data:
-    
-    title : My Blog =)
-    
-    author :
-      name : Name Lastname
-      email : blah@email.test
-      github : username
-      twitter : username
-
-The theme should reference these variables whenever needed.
-    
-## Sample Posts
-
-This blog contains sample posts which help stage pages and blog data.
-When you don't need the samples anymore just delete the `_posts/core-samples` folder.
-
-    $ rm -rf _posts/core-samples
-
-Here's a sample "posts list".
-
-<ul class="posts">
-  {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
-</ul>
-
-## To-Do
-
-This theme is still unfinished. If you'd like to be added as a contributor, [please fork](http://github.com/plusjade/jekyll-bootstrap)!
-We need to clean up the themes, make theme usage guides with theme-specific markup examples.
-
+</div>
 

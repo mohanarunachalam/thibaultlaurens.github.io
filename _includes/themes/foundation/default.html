@@ -14,7 +14,7 @@
     <!-- Le styles -->
     <link href="{{ ASSET_PATH }}/stylesheets/foundation.min.css" rel="stylesheet">
     <link href="{{ ASSET_PATH }}/stylesheets/app.css" rel="stylesheet" type="text/css" media="all">
-
+    <link rel="stylesheet" href="{{ ASSET_PATH }}/stylesheets/social_foundicons.css">
     <!-- Le fav and touch icons -->
   <!-- Update these with your own images
     <link rel="shortcut icon" href="images/favicon.ico">
@@ -22,28 +22,49 @@
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
   -->
+
   </head>
 
   <body>
   <div class="row contain-to-grid">
       <nav class="top-bar">
           <ul class="left">
-              <li><a href="#">{{ site.title }}</a></li>
+              <li><a title="Home" href="http://localhost:4000">{{ site.title }}</a></li>
+              <li class="divider"></li>
+              <li><a title="Archive" href="{{ BASE_PATH }}/archive.html">Archive</a></li>
+              <li class="divider"></li>
+              <li><a title="Category" href="{{ BASE_PATH }}/categories.html">Category</a></li>
+          </ul>
 
-              <!-- more links can be added here<li class="has-dropdown">
+          <ul class="right">
+
+              <li class="has-dropdown">
+                          <a href="#">Social</a>
+                          <ul class="dropdown"><li class="title back js-generated"><h5><a href="#">Social</a></h5></li>
+                            <li><a target="_blank" title="Go to github.com/ThibaultLaurens"  href="https://github.com/ThibaultLaurens">Github</a></li>
+                            <li><a target="_blank" title="Go to twitter.com/ThibaultLaurens" href="https://twitter.com/ThibaultLaurens">Twitter</a></li>
+                            <li><a target="_blank" title="Go to linkedin.com/thibault-laurens" href="http://www.linkedin.com/pub/thibault-laurens/13/b58/40b">LinkedIn</a></li>
+                          </ul>
+                        </li>
+              <li class="divider"></li>
+              <li><a title="Go to github.com/thibaultlaurens" href="https://github.com/ThibaultLaurens" target="_blank">Projects</a></li>
+              <li class="divider"></li>
+              <li><a title="Go to flickr.com/photos/thibaultlaurens" href="http://www.flickr.com/photos/thibaultlaurens/" target="_blank">Photo</a></li>
+              <li class="divider"></li>
+              <li><a title="More info about me" href="{{ BASE_PATH }}/about.html">About</a></li>
+ <!--
+              <li class="has-dropdown">
                   <a href="#">Link</a>
 
                   <ul class="dropdown">
                       <li><a href="#">Dropdown Link</a></li>
                   </ul>
 
-              </li>-->
-          </ul>
-
-          <ul class="right">
+              </li>
               {% assign pages_list = site.pages %}
               {% assign group = 'navigation' %}
               {% include JB/pages_list %}
+-->
           </ul>
       </nav>
   </div>
@@ -53,11 +74,22 @@
       </section>
 
       <footer class="row">
-        <div class="twelve columns">
-            <p>&copy; {{ site.author.name }} 2012
-              with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
-              and <a href="http://foundation.zurb.com" target="_blank" title="The most advanced responsive front-end framework in the world.">Zurb's Foundation 3</a>
+          <hr>
+        <div class="eight columns">
+            <p style="padding-top: 0px">
+                <a title="Go to facebook.com/thibault.laurens" target="_blank" href="https://www.facebook.com/thibault.laurens"><i class="social foundicon-facebook"></i></a>
+                <a title="Go to github.com/ThibaultLaurens" target="_blank" href="https://github.com/ThibaultLaurens"><i class="foundicon-github"></i></a>
+                <a title="Go to linkedin.com/thibault-laurens" target="_blank" href="http://www.linkedin.com/pub/thibault-laurens/13/b58/40b"><i class="social foundicon-linkedin"></i></a>
+                <a title="Go to twitter.com/ThibaultLaurens" target="_blank" href="https://twitter.com/ThibaultLaurens"><i class="social foundicon-twitter"></i></a>
+                <a title="Go to flickr.com/photos/thibaultlaurens" target="_blank" href="http://www.flickr.com/photos/thibaultlaurens/"><i class="social foundicon-flickr"></i></a>
             </p>
+                <p >
+                    &copy; {{ site.author.name }} 2013 with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+                  and <a href="http://foundation.zurb.com" target="_blank" title="The most advanced responsive front-end framework in the world.">Zurb's Foundation 3</a>
+                </p>
+        </div>
+        <div class="four columns right">
+        <img alt="technut" src="{{ ASSET_PATH }}/images/technut.png"/>
         </div>
       </footer>
 
