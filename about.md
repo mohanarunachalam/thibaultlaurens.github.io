@@ -28,7 +28,7 @@ I currently study a master's degree in Computer Science at
 <a href="http://www.brookes.ac.uk/" title="brookes.ac.uk" target="_blank"><strong>Oxford Brookes University</strong></a> 
 and I really enjoy it!
 
-I am also a budding photographer (just here
+I am also a budding photographer (just
 <a href="http://www.flickr.com/photos/thibaultlaurens/" title="flickr.com/photos/thibaultlaurens" target="_blank">here</a>
 !) who loves to travel, meet new people and explore the world.
 
