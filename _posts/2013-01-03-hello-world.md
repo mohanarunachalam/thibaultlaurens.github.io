@@ -12,7 +12,7 @@ As mentioned in the Github repository, "Jekyll is a blog aware, static site gene
 
 This blog is based on it and is hosted right on 
 <a href="https://github.com" title="github.com" target="_blank">Github</a>.
-Yes, because Jekyll is actually the engine used by Github Pages it is very simple to host a Jekyll blog on a repository named *"USERNAME.github.com"*.
+Yes, because Jekyll is actually the engine used by Github Pages, it is very simple to host a Jekyll blog on a repository named *"USERNAME.github.com"*.
 
 Dealing with Jekyll means all of these things that are easily integrated and ready to use like for instance
 <a href="http://disqus.com/" title="disqus.com" target="_blank">Disqus</a> for comments or even
@@ -24,7 +24,7 @@ I feel a little tired of twitter bootstrap everywhere so I choose to change and 
 
 I think Jekyll is the best way to blog for developers because it allows to work with a blog as we work with any project: use of a git repository, work and test in local, update from the command line..
 In addition, what makes Jekyll really interesting for a blog is that it runs text-to-html converters like *Markdown*, *Textile* or *Liquid* and allows the web-writer to add inline html. In other word, you
-can write a post in a simple text editor, add some html tag inside, push it to your Github repository and that's it!
+can write a post in a simple text editor, add some html tags inside, push it to your Github repository and that's it!
 
 The full stack of the blog is simply Github, Jekyll and Zurb's Foundation, you can watch/fork it 
 <a href="https://github.com/ThibaultLaurens/thibaultlaurens.github.com" title="github.com/ThibaultLaurens/thibaultlaurens.github.com" target="_blank"><strong>here</strong></a>.

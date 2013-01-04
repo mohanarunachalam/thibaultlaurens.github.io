@@ -11,10 +11,10 @@ tagline: some notes, reminders, findings and sharing
         {% for post in site.posts %}	
             <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
             <p>
-                {{ post.content | strip_html | truncatewords:75}}<br>
+                {{ post.content | strip_html | truncatewords:75}}
+                <a href="{{ post.url }}"><strong>Read more.</strong></a><br/>
             </p>
             <p>
-                <a href="{{ post.url }}"><strong>Read more...</strong></a><br/>
                 <strong>
                     {{ post.date | date: "%B %e, %Y" }}
                 </strong>
