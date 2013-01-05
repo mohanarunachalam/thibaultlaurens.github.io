@@ -44,8 +44,8 @@ tagline: some notes, reminders, findings and sharing
                   <strong><li><a target="_blank" title="Los Techies" href="http://lostechies.com/">Los Techies</a></li></strong>
                   <strong><li><a target="_blank" title="Scott Hanselman" href="http://www.hanselman.com/blog/">Scott Hanselman</a></li></strong>
                   <strong><li><a target="_blank" title="Haacked" href="http://haacked.com/">Phil Haack</a></li></strong>
-                  <strong><li><a target="_blank" title="Martin Fowler" href="martinfowler.com">Martin Fowler</a></li></strong>
-                  <strong><li><a target="_blank" title="Ian Robinson" href="iansrobinson.com">Ian Robinson</a></li></strong>
+                  <strong><li><a target="_blank" title="Martin Fowler" href="http://martinfowler.com">Martin Fowler</a></li></strong>
+                  <strong><li><a target="_blank" title="Ian Robinson" href="http://iansrobinson.com">Ian Robinson</a></li></strong>
                   <strong><li><a target="_blank" title="High Scalability" href="http://highscalability.com/">High Scalability</a></li></strong>
                   <strong><li><a target="_blank" title="Coding Horror" href="http://www.codinghorror.com/blog/">Coding Horror</a></li></strong>
                   <strong><li><a target="_blank" title="Dr Dobbs" href="http://www.drdobbs.com/">Dr Dobbs</a></li></strong>
