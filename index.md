@@ -53,6 +53,7 @@ tagline: some notes, reminders, findings and sharing
                   <strong><li><a target="_blank" title="David Catuhe" href="http://blogs.msdn.com/b/eternalcoding/">David Catuhe</a></li></strong>
                   <strong><li><a target="_blank" title="Julien Dollon" href="http://julien.dollon.net/">Julien Dollon</a></li></strong>
                   <strong><li><a target="_blank" title="Geek Monkey" href="http://geekmonkey.org/">Geek Monkey</a></li></strong>
+                  <strong><li><a target="_blank" title="Alex Maccaw" href="http://blog.alexmaccaw.com/">Alex Maccaw</a></li></strong>
                   <strong><li><a target="_blank" title="How To Node" href="http://howtonode.org/">How To Node</a></li></strong>
                   <!--<strong><li><a target="_blank" title="" href=""></a></li></strong>-->
               </ul>

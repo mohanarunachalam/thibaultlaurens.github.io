@@ -29,7 +29,7 @@ I currently study a master's degree in Computer Science at
 and I really enjoy it!
 
 I am also a budding photographer (just
-<a href="http://www.flickr.com/photos/thibaultlaurens/" title="flickr.com/photos/thibaultlaurens" target="_blank">here</a>
-!) who loves to travel, meet new people and explore the world.
+<a href="http://www.flickr.com/photos/thibaultlaurens/" title="flickr.com/photos/thibaultlaurens" target="_blank">here</a>)
+ who loves to travel, meet new people and explore the world.
 
 Feel free to contact me!
