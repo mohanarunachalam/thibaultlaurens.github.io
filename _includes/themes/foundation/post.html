@@ -16,7 +16,6 @@
     {{ content }}
     <hr>
     <div class="row pagination">
-      <ul>
         <div class="four columns">
                   {% if page.previous %}
                     <div class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a></div>
@@ -34,7 +33,6 @@
                     <div class="next disabled"><a>Next &rarr;</a></div>
                   {% endif %}
         </div>
-      </ul>
     </div>
     <hr>
     {% include JB/comments %}

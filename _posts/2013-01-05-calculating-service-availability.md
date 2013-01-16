@@ -7,7 +7,7 @@ tags: []
 ---
 {% include JB/setup %}
 
-**MTBF**, **MTTD**, **MTTR** and **MTTF** are the four parameters required to calculate the availabilty of a service or an individual component in a specific architecture.
+**MTBF**, **MTTD**, **MTTR** and **MTTF** are the four parameters required to calculate the availability of a service or an individual component in a specific architecture.
 
 * MTBF is the **Mean Time Between Faults**
 * MTTD is the **Mean Time To Detection**

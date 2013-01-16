@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Yet another developer blog
+description: some notes, reminders, findings and sharin
 tagline: some notes, reminders, findings and sharing
 ---
 {% include JB/setup %}
@@ -35,26 +36,26 @@ tagline: some notes, reminders, findings and sharing
               <strong><ul>
                 {% assign categories_list = site.categories %}
                 {% include JB/categories_list %}
-              </ul> </strong>
+              </ul></strong>
   </div>
 
   <div class="two columns offset-by-one">
               <h4>Blogroll</h4>
               <ul>
-                  <strong><li><a target="_blank" title="Los Techies" href="http://lostechies.com/">Los Techies</a></li></strong>
-                  <strong><li><a target="_blank" title="Scott Hanselman" href="http://www.hanselman.com/blog/">Scott Hanselman</a></li></strong>
-                  <strong><li><a target="_blank" title="Haacked" href="http://haacked.com/">Phil Haack</a></li></strong>
-                  <strong><li><a target="_blank" title="Martin Fowler" href="http://martinfowler.com">Martin Fowler</a></li></strong>
-                  <strong><li><a target="_blank" title="Ian Robinson" href="http://iansrobinson.com">Ian Robinson</a></li></strong>
-                  <strong><li><a target="_blank" title="High Scalability" href="http://highscalability.com/">High Scalability</a></li></strong>
-                  <strong><li><a target="_blank" title="Coding Horror" href="http://www.codinghorror.com/blog/">Coding Horror</a></li></strong>
-                  <strong><li><a target="_blank" title="Dr Dobbs" href="http://www.drdobbs.com/">Dr Dobbs</a></li></strong>
-                  <strong><li><a target="_blank" title="Udi Dahan" href="http://www.udidahan.com/?blog=true">Udi Dahan</a></li></strong>
-                  <strong><li><a target="_blank" title="Geek Monkey" href="http://geekmonkey.org/">Geek Monkey</a></li></strong>
-                  <strong><li><a target="_blank" title="Alex Maccaw" href="http://blog.alexmaccaw.com/">Alex Maccaw</a></li></strong>
-                  <strong><li><a target="_blank" title="How To Node" href="http://howtonode.org/">How To Node</a></li></strong>
-                  <strong><li><a target="_blank" title="David Catuhe" href="http://blogs.msdn.com/b/eternalcoding/">David Catuhe</a></li></strong>
-                  <strong><li><a target="_blank" title="Julien Dollon" href="http://julien.dollon.net/">Julien Dollon</a></li></strong>
+                  <li><a target="_blank" title="Los Techies" href="http://lostechies.com/"><strong>Los Techies</strong></a></li>
+                  <li><a target="_blank" title="Scott Hanselman" href="http://www.hanselman.com/blog/"><strong>Scott Hanselman</strong></a></li>
+                  <li><a target="_blank" title="Haacked" href="http://haacked.com/"><strong>Phil Haack</strong></a></li>
+                  <li><a target="_blank" title="Martin Fowler" href="http://martinfowler.com"><strong>Martin Fowler</strong></a></li>
+                  <li><a target="_blank" title="Ian Robinson" href="http://iansrobinson.com"><strong>Ian Robinson</strong></a></li>
+                  <li><a target="_blank" title="High Scalability" href="http://highscalability.com/"><strong>High Scalability</strong></a></li>
+                  <li><a target="_blank" title="Coding Horror" href="http://www.codinghorror.com/blog/"><strong>Coding Horror</strong></a></li>
+                  <li><a target="_blank" title="Dr Dobbs" href="http://www.drdobbs.com/"><strong>Dr Dobbs</strong></a></li>
+                  <li><a target="_blank" title="Udi Dahan" href="http://www.udidahan.com/?blog=true"><strong>Udi Dahan</strong></a></li>
+                  <li><a target="_blank" title="Geek Monkey" href="http://geekmonkey.org/"><strong>Geek Monkey</strong></a></li>
+                  <li><a target="_blank" title="Alex Maccaw" href="http://blog.alexmaccaw.com/"><strong>Alex Maccaw</strong></a></li>
+                  <li><a target="_blank" title="How To Node" href="http://howtonode.org/"><strong>How To Node</strong></a></li>
+                  <li><a target="_blank" title="David Catuhe" href="http://blogs.msdn.com/b/eternalcoding/"><strong>David Catuhe</strong></a></li>
+                  <li><a target="_blank" title="Julien Dollon" href="http://julien.dollon.net/"><strong>Julien Dollon</strong></a></li>
                   <!--<strong><li><a target="_blank" title="" href=""></a></li></strong>-->
               </ul>
   </div>
