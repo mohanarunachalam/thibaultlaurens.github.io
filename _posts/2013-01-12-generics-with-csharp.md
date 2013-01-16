@@ -2,7 +2,7 @@
 layout: post
 title: "Generics with C#"
 description: "Presentation and how it works under the hood"
-category: dotnet
+category: Dotnet
 tags: []
 ---
 {% include JB/setup %}
