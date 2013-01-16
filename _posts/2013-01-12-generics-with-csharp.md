@@ -1,34 +1,34 @@
 ---
 layout: post
 title: "Generics with C#"
-description: "Prensentation and how it works under the hood"
+description: "Presentation and how it works under the hood"
 category: .NET
 tags: []
 ---
 {% include JB/setup %}
 
-The most important new features of C# 2.0 (which was released in 2005) is **generics**. Understanding how they are implemented is essential to understand advances and key features they will bring later to
+The most important new feature of C# 2.0 (which was released in 2005) is **generics**. Understanding how they are implemented is essential to understand advances and key features they will bring later to
 C# and the .NET framework (like **LINQ** for example).
 
 * * *
 
 *What are generics?*  
     Also called parametric polymorphism, generics consists in declaring a type with a type parameter that will be instantiated when it will be needed. It adds a great flexibility to the language.  
-    In C#, you can declare generics with the help of **< T >** where T is the parameterized type. You can define classes, interfaces, methods, properties and delegates. The exemple below declares a generic simplified version of the List< T > class (available in the .NET framework)
+    In C#, you can declare generics with the help of **< T >** where T is the parameterized type. Classes, interfaces, methods, properties and delegates can be defined. The exemple below declares a generic simplified version of the List< T > class (available in the .NET framework)
     
 <script src="https://gist.github.com/4461585.js?file=list.cs"> </script>
 
-Then we can use this List< T > by adding objects to the list and using methods of the list.
+Then, this List< T > can be used by adding objects to the list and using methods of the list.
 
 <script src="https://gist.github.com/4461585.js?file=program.cs"> </script>
 
-An important thing to keep in mind is that parameterized objects has to have **the same type**. If we create another class, we cannot add an object of this second class to the *CarList*.  
-You can also declare a generic with multiple parameterized types, in this example we could declare a **List< T, U >**.
+An important thing to keep in mind is that parameterized objects has to have **the same type**. If another class is created, an object of this second class cannot be added to the *CarList*.  
+Generic with multiple parameterized types can also be declared, in this example a **List< T, U >** could be declared.
 
 * * *
 
 **Constraints** can be added to generics through the **“where”** keyword. It consists in declaring restriction about the parameterized type.
-For instance, the parameterized type has to be a reference type or it has to derive from a specific class. These constraints avoid compile-time error. For more information on constraints on type parameters
+For instance, the parameterized type has to be a reference type or it has to derive from a specific class. These constraints avoid compile-time errors. For more information on constraints on type parameters
 check the C# programming guide on the 
 <a href="http://msdn.microsoft.com/en-us/library/d5x73970.aspx" title="msdn.microsoft.com/en-us/library/d5x73970.aspx" target="_blank">msdn website</a>.
 
@@ -98,7 +98,7 @@ The example below shows a generic list of string and how its type information is
 <script src="https://gist.github.com/4461585.js?file=generic.il"> </script>
 
 * It can be noticed here the genericity of the IL code. The “ldarg” instruction for instance (line 5, IL_0000) which takes a method argument and put it on the stack, has no specific type to work with.  
-* The line 4 shows us the list of string but with a number *List\`1< string >*, this number is the **arity** and correponds to the number of parameterized type used (List< T, U > has an arity of 2).  
+* The line 4 shows the list of string but with a number *List\`1< string >*, this number is the **arity** and correponds to the number of parameterized type used (List< T, U > has an arity of 2).  
 * When the parameterized type is used, the IL code add a **!** as it can be seen line 11 (IL_0012)   
 
 
