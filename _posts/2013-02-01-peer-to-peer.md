@@ -100,7 +100,7 @@ tags: []
 
 * * *
 
-#### DHT threat in security
+#### DHT (Distributed Hash Table) threat in security
 
 * Incorrect lookup routing.
 * Incorrect routing update.
