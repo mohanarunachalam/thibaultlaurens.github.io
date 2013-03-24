@@ -2,7 +2,7 @@
 layout: post
 title: "Peer to Peer"
 description: "Middleware course review - part 2"
-category: Middleware
+category: middleware
 tags: []
 ---
 {% include JB/setup %}

@@ -2,7 +2,7 @@
 layout: post
 title: "Web services"
 description: "Middleware course review - part 4"
-category: Middleware
+category: middleware
 tags: []
 ---
 {% include JB/setup %}

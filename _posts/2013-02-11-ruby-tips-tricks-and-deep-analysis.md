@@ -2,7 +2,7 @@
 layout: post
 title: "Ruby: tips, tricks and bytecode analysis"
 description: "What is Ruby, syntactic details and how it works under the hood"
-category: Ruby
+category: ruby
 tags: []
 ---
 {% include JB/setup %}

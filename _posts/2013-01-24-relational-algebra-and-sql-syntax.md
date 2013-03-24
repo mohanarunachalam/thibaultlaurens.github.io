@@ -2,7 +2,7 @@
 layout: post
 title: "Relational algebra and SQL syntax"
 description: "Structured data course review"
-category: Database
+category: database
 tags: []
 ---
 {% include JB/setup %}

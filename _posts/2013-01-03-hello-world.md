@@ -2,7 +2,7 @@
 layout: post
 title: "Hello Blog!"
 description: "Why building a blog using Jekyll"
-category: Miscellaneous
+category: miscellaneous
 tags: []
 ---
 {% include JB/setup %}

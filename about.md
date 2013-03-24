@@ -9,16 +9,17 @@ description: "More information about me"
     <img alt="Thibault" src="{{ ASSET_PATH }}foundation/images/thibault.jpg"/>
 </div>
 
-Hello, my name is **Thibault Laurens**,I am a 22 years old french student living in Oxford, United Kingdom!
+Hi, my name is **Thibault Laurens**,I am a 23 years old french student living in Oxford, United Kingdom!
 
-Like the logo in the footer, yes I am **nuts about tech**! I discovered programing almost 4 years ago and since this day I just can't stop.
-I started with C# and the .NET framework (with which I worked and still today work a lot) and then I discovered many other interesting languages and frameworks like Ruby, C++, Python and even JavaScript! ( thanks to Node.js :) )
-I like to learn new things every day (which includes playing around with some cool tools!), to use the right technology for the right job and to find simple solutions to real life problems.  
-<br/>
+Like the logo in the footer, yes I am **nuts about tech**! 
 
-* * *
+Software programming is my daily passion. I like to learn new things every day, to use the right technology for the right job and to find simple solutions to real life problems. 
 
-What am I doing in the **UK**?
+C# and the Microsoft technology stack are my favorite playground but I also like to work with other interesting languages and open source frameworks. 
+
+I am currently working on my master's dissertation: **“A web architecture for highly scalable application in JavaScript”**, a very interesting topic!
+
+What am I doing here in the **UK**?
 
 I landed here in October 2011 in order to continue my studies for
 <a href="http://www.supinfo.com/en/Default.aspx" title="supinfo.com" target="_blank"><strong>SUPINFO International University</strong></a> 
@@ -32,4 +33,4 @@ I am also a budding photographer (just
 <a href="http://www.flickr.com/photos/thibaultlaurens/" title="flickr.com/photos/thibaultlaurens" target="_blank">here</a>)
  who loves to travel, meet new people and explore the world.
 
-Feel free to contact me!
+Feel free to contact me, I am looking for a new challenge and exciting opportunities to bring me up to the next level!

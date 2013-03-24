@@ -2,7 +2,7 @@
 layout: post
 title: "The component paradigm"
 description: "Middleware course review - part 3"
-category: Middleware
+category: middleware
 tags: []
 ---
 {% include JB/setup %}

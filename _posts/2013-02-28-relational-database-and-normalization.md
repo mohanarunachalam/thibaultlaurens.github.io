@@ -2,7 +2,7 @@
 layout: post
 title: "Relational database and Normalization"
 description: "A simple reminder of the normal forms"
-category: Database 
+category: database 
 tags: []
 ---
 {% include JB/setup %}
