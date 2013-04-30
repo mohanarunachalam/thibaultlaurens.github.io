@@ -32,8 +32,8 @@ tags: []
 * **Gantt chart** or Schedule: Stage plan, task VS time. Shows scheduling of work products as a function of time. Useful for planning, scheduling and monitoring a project (derived from the WBS, sync task dependencies with the PERT chart). It can also show resource availability, staff assignment and staff loading.
 
 * Estimating task duration:  
-	- **Qualitative**: break project into task, assign task to individuals, they estimate time for their own task, apply **fudge factor** (*2)
-	- **Quantitative**: Time = (Optimistic time + 4*Most likely time + Pessimistic time) / 6
+	- **Qualitative**: break project into task, assign task to individuals, they estimate time for their own task, apply **fudge factor** (x2)
+	- **Quantitative**: Time = (Optimistic time + 4 x Most likely time + Pessimistic time) / 6
 
 </br>
 
