@@ -3,7 +3,8 @@ layout: post
 title: "Relational database and Normalization"
 description: "A simple reminder of the normal forms"
 category: database 
-tags: []
+tags: 
+- blog-post
 ---
 {% include JB/setup %}
 In relational database design, the normalization objective is to check whether or not a relationship fill the prerequisites for a given normal form. This will automatically minimize redundancy and anomalies in insertion, deletion and update.

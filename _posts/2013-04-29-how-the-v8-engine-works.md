@@ -3,7 +3,8 @@ layout: post
 title: "How the V8 engine works?"
 description: "How it works and how to write performant JavaScript code for the engine"
 category: javascript
-tags: []
+tags: 
+- blog-post
 ---
 {% include JB/setup %}
 

@@ -3,7 +3,8 @@ layout: post
 title: "Generics with C#"
 description: "Presentation and how it works under the hood"
 category: microsoft
-tags: []
+tags: 
+- blog-post
 ---
 {% include JB/setup %}
 

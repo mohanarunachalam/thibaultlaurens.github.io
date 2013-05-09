@@ -3,7 +3,8 @@ layout: post
 title: "Mobile platforms in pervasive computing"
 description: "Pervasive Applications course review - part 2"
 category: ubiquitous
-tags: []
+tags: 
+- course-review
 ---
 {% include JB/setup %}
 

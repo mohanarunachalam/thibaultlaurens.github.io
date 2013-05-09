@@ -3,7 +3,8 @@ layout: post
 title: "Introduction and Project planning"
 description: "Software Project Management course review - part 1"
 category: management
-tags: []
+tags: 
+- course-review
 ---
 {% include JB/setup %}
 

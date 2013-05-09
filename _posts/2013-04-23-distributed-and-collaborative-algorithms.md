@@ -3,7 +3,8 @@ layout: post
 title: "Distributed and collaborative algorithms"
 description: "Pervasive Applications course review - part 3"
 category: ubiquitous
-tags: []
+tags: 
+- course-review
 ---
 {% include JB/setup %}
 

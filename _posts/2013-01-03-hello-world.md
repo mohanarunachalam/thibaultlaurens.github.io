@@ -3,7 +3,8 @@ layout: post
 title: "Hello Blog!"
 description: "Why building a blog using Jekyll"
 category: miscellaneous
-tags: []
+tags: 
+- blog-post
 ---
 {% include JB/setup %}
 For a first post, I would like to briefly explain how I built this blog. If you are tired of Wordpress or others complicated blog engines and are looking for a very simple and effective way to blog, then 

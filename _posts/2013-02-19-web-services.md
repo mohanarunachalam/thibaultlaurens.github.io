@@ -3,7 +3,8 @@ layout: post
 title: "Web services"
 description: "Middleware course review - part 4"
 category: middleware
-tags: []
+tags: 
+- course-review
 ---
 {% include JB/setup %}
 

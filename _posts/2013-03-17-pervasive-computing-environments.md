@@ -3,7 +3,8 @@ layout: post
 title: "Pervasive Computing Environments"
 description: "Pervasive Applications course review - part 1"
 category: ubiquitous
-tags: []
+tags: 
+- course-review
 ---
 {% include JB/setup %}
 

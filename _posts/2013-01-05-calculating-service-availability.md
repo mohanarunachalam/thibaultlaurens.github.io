@@ -3,7 +3,8 @@ layout: post
 title: "Calculating service availability"
 description: "with MTBF, MTTD, MTTR and MTTF"
 category: system
-tags: []
+tags: 
+- blog-post
 ---
 {% include JB/setup %}
 

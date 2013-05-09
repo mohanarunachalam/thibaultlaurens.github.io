@@ -3,7 +3,8 @@ layout: post
 title: "Software Quality Assurance"
 description: "Software Project Management course review - part 3"
 category: management
-tags: []
+tags: 
+- course-review
 ---
 {% include JB/setup %}
 

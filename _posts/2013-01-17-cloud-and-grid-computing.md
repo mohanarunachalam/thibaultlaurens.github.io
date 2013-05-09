@@ -3,7 +3,8 @@ layout: post
 title: "Cloud and Grid computing"
 description: "Middleware course review - part 1"
 category: middleware
-tags: []
+tags: 
+- course-review
 ---
 {% include JB/setup %}
 

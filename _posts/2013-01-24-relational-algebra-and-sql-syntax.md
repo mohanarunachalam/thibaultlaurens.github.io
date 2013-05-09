@@ -3,7 +3,8 @@ layout: post
 title: "Relational algebra and SQL syntax"
 description: "Structured data course review"
 category: database
-tags: []
+tags: 
+- course-review
 ---
 {% include JB/setup %}
 

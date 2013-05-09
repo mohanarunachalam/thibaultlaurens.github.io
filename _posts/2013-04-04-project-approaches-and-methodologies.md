@@ -3,7 +3,8 @@ layout: post
 title: "Project Approaches and methodologies"
 description: "Software Project Management course review - part 2"
 category: management
-tags: []
+tags: 
+- course-review
 ---
 {% include JB/setup %}
 
