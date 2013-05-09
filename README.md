@@ -1,4 +1,4 @@
-## thibaultlaurens.Github.com
+## thibaultlaurens.Github.io
  
 This is my blog made with Github pages, Jekyll and Zurb's Foundation.
 
