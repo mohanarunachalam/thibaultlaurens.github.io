@@ -7,7 +7,7 @@ tags: []
 ---
 {% include JB/setup %}
 
-#####	Distributed algorithms
+####	Distributed algorithms
 * Problems solved: resource allocation, distributed search, cooperative scheduling, spanning tree generation
 * Are typically executed **concurrently** with separate parts of the algo being run **simultaneously** on **independent** processors.
 * Challenge: **coordinating** the behavior of the independent parts of the algo in the face of processor **failures** and unreliable communication links
@@ -20,7 +20,9 @@ tags: []
 
 **CF fundamental assumption**: if users X and Y rate n items similarly, or have similar behaviors, and hence will rate or act on other items similarly.
 
-##### CF Challenges
+<br/>
+
+#### CF Challenges
 * Provide fast and **accurate** recommendations to attract the interest of customers
 * **Data Sparsity**: when very large product set, performance challenge
 * **Cold start** problem: new user or item just entered the system, not enough info
@@ -35,12 +37,16 @@ tags: []
 
 **The Netfix Prize Challenge**: open competition for the best CF algo. Team “BellKor’s Pragmatic Chaos” 10.07% improvement of RMSE in 2009
 
-##### CF Techniques
+<br/>
+
+#### CF Techniques
 * Memory-Based
 * Model-Based
 * Hybrid 
 
-##### Memory-Based CF algos:
+<br/>
+
+#### Memory-Based CF algos:
 * Generate prediction with entire or sample of the user-item database. Every user is part of a group of people with similar interests. Prediction produced with the neighbors of a new user. 
 * **Neighborhood-based CF algo** is a prevalent memory based CF algo. It calculates the similarity or weight between two users or two items, produce prediction and generate Top-N recommendation.
 * **Similarity computation** is a critical step, determines the similarity between two co-rated items or two users.
@@ -59,11 +65,16 @@ tags: []
 	- **User-based** Top-N recommendation algo
 	- **Item-based** Top-N recommendation algo
 
-##### Model-Based CF Algos: 
+<br/>
+
+#### Model-Based CF Algos: 
 * Model such as machine learning or data mining algo allow the system to learn to recognize complex patterns based on the training data and then make intelligent prediction for the collaborative filtering tasks. 
 * Bayesian models, clustering models and dependency networks have been investigated to **solve the shortcoming of memory-based algo**.
 * The goal is more to uncover latent factors rather than explain ratings. Most of the model are based on creating a classification or clustering technique (the number of paramaters can be reduced)
 * **Advantages**: handle sparsity better than memory-based, helps with scalability for large data sets, improve the prediction performance, intuitive rationale for the recommendation.
 * **Disadvantages**: expensive model building, tradeoff between prediction performance and scalability
 
-**Hybrid CF Algo** to combine the memory-based and the model-based algos, overcome the limitation of native CF approaches, improves the prediction performance, overcomes the CF problems such as sparsity and loss information. Disadvantage: increased complexity and expensive to implement.
+<br/>
+
+#### Hybrid CF Algo 
+To combine the memory-based and the model-based algos, overcome the limitation of native CF approaches, improves the prediction performance, overcomes the CF problems such as sparsity and loss information. Disadvantage: increased complexity and expensive to implement.

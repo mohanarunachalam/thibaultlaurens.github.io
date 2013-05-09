@@ -61,7 +61,7 @@ V8 creates hidden class when we call a function, if we call it again with differ
 
 ##### Tagged values
 
-To have an efficient representation of numbers and of JavaScript objects, V8 represents both of us with a **32 bits** value. It uses a bit to know if it is an object (flag = 1) or an integer (flag = 0) called here SMall Integer or **SMI** because of its 31 bits. Then, if a numeric value is bigger than 31 bits, V8 will box the number, turning it to a double and creating a new object to put the number inside.
+To have an efficient representation of numbers and JavaScript objects, V8 represents both of us with a **32 bits** value. It uses a bit to know if it is an object (flag = 1) or an integer (flag = 0) called here SMall Integer or **SMI** because of its 31 bits. Then, if a numeric value is bigger than 31 bits, V8 will box the number, turning it to a double and creating a new object to put the number inside.
 
 **Code optimization**: Try to use 31 bit signed numbers whenever possible to avoid the expensive boxing operation into JavaScript object.
 
