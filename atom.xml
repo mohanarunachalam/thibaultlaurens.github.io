@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
  
  <title>Thibault Laurens</title>
  <link href="http://thibaultlaurens.github.com/atom.xml" rel="self"/>
  <link href="http://thibaultlaurens.github.com"/>
- <updated>2013-05-10T12:27:34+01:00</updated>
+ <updated>2013-05-10T12:41:05+01:00</updated>
  <id>http://thibaultlaurens.github.com</id>
  <author>
    <name>Thibault Laurens</name>
@@ -1661,33 +1660,5 @@
 &lt;p&gt;If you want to get started blogging with Jekyll, the best way is probably to check &lt;a href='http://jekyllbootstrap.com/' target='_blank' title='jekyllbootstrap.com'&gt;Jekyll-Bootstrap&lt;/a&gt;, a little framework which makes the process even easier.&lt;/p&gt;</content>
  </entry>
  
-=======
----
-layout: nil
-title : Atom Feed
----
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
- 
- <title>{{ site.title }}</title>
- <link href="{{ site.production_url }}/atom.xml" rel="self"/>
- <link href="{{ site.production_url }}"/>
- <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>{{ site.production_url }}</id>
- <author>
-   <name>{{ site.author.name }}</name>
-   <email>{{ site.author.email }}</email>
- </author>
-
- {% for post in site.posts %}
- <entry>
-   <title>{{ post.title }}</title>
-   <link href="{{ site.production_url }}{{ post.url }}"/>
-   <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>{{ site.production_url }}{{ post.id }}</id>
-   <content type="html">{{ post.content | xml_escape }}</content>
- </entry>
- {% endfor %}
->>>>>>> 992cd0ea5e9fe0061c4081ce6c02816dcdb3a84a
  
 </feed>
