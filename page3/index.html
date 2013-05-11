@@ -1,0 +1,540 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Yet another developer blog</title>
+    <meta name="description" content="Yet another developer blog - some notes, reminders, findings and sharin">
+    <meta name="author" content="Thibault Laurens">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/foundation/stylesheets/foundation.min.css" rel="stylesheet">
+    <link href="/assets/themes/foundation/stylesheets/app.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="/assets/themes/foundation/stylesheets/social_foundicons.css">
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+
+  </head>
+
+  <body>
+  <div class="row contain-to-grid">
+      <nav class="top-bar">
+          <ul class="left">
+              <li><a title="Home" href="http://thibaultlaurens.github.com">Thibault Laurens</a></li>
+              <li class="divider"></li>
+              <li><a title="Archive" href="/archive.html">Archive</a></li>
+              <li class="divider"></li>
+              <li><a title="Category" href="/categories.html">Category</a></li>
+              <li class="divider"></li>
+              <li><a title="Tag" href="/tags.html">Tag</a></li>
+          </ul>
+
+          <ul class="right">
+
+              <li class="has-dropdown">
+                          <a href="#">Social</a>
+                          <ul class="dropdown"><li class="title back js-generated"><h5><a href="#">Social</a></h5></li>
+                            <li><a target="_blank" title="Go to github.com/ThibaultLaurens"  href="https://github.com/ThibaultLaurens">Github</a></li>
+                            <li><a target="_blank" title="Go to twitter.com/ThibaultLaurens" href="https://twitter.com/ThibaultLaurens">Twitter</a></li>
+                            <li><a target="_blank" title="Go to linkedin.com/thibault-laurens" href="http://www.linkedin.com/pub/thibault-laurens/13/b58/40b">LinkedIn</a></li>
+                          </ul>
+                        </li>
+              <li class="divider"></li>
+              <li><a title="Go to github.com/thibaultlaurens" href="https://github.com/ThibaultLaurens?tab=repositories" target="_blank">Projects</a></li>
+              <li class="divider"></li>
+              <li><a title="Go to flickr.com/photos/thibaultlaurens" href="http://www.flickr.com/photos/thibaultlaurens/" target="_blank">Photo</a></li>
+              <li class="divider"></li>
+              <li><a title="Go to soundcloud.com/thibault-laurens" href="https://soundcloud.com/thibault-laurens" target="_blank">Sound</a></li>
+              <li class="divider"></li>
+              <li><a title="More info about me" href="/about.html">About</a></li>
+ <!--
+              <li class="has-dropdown">
+                  <a href="#">Link</a>
+
+                  <ul class="dropdown">
+                      <li><a href="#">Dropdown Link</a></li>
+                  </ul>
+
+              </li>
+              
+              
+              
+
+
+  
+    
+      
+      	
+      	<li><a href="/404.html">404 - NOT FOUND</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Categories</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+
+
+
+-->
+          </ul>
+      </nav>
+  </div>
+
+      <section>
+        
+<header>
+	<div class="row">
+     <div class="eight columns">
+        <h1>Yet another developer blog </h1>
+         
+            <h4 class="subheader">some notes, reminders, findings and sharing</h4>
+        
+    </div>
+	</div>
+</header>
+
+<div class="row">
+  <div class="twelve columns">
+    
+
+<div class="row">
+  <div class="nine columns">
+    <div class="row">
+      
+    </div>
+
+    <br/>
+
+    <div>
+      	
+      <h3><a href="/microsoft/2013/01/12/generics-with-csharp">Generics with C#</a></h3>
+      <p>
+        The most important new feature of C# 2.0 (which was released in 2005) is generics. Understanding how they are implemented is essential to understand advances and key features they will bring later to C# and the .NET framework (like LINQ for example). What are generics? Also called parametric polymorphism, generics consists in declaring a type with a type parameter that will be instantiated when it will be needed. It adds a great flexibility to the...
+        <a href="/microsoft/2013/01/12/generics-with-csharp"><strong>Read more.</strong></a><br/>
+      </p>
+      <p>
+        <strong>
+          January 12, 2013
+        </strong>
+        |  
+	Category:
+		
+			
+				<a href="/category/microsoft">microsoft</a>
+			
+		
+	|
+	Tag:
+		
+			
+				<a href="/tag/blog-post">blog-post</a>
+			
+		
+        <!-- | <a href="http://thibaultlaurens.github.com/microsoft/2013/01/12/generics-with-csharp/#disqus_thread" data-disqus-identifier="/microsoft/2013/01/12/generics-with-csharp">comments</a> -->
+      </p>
+      
+      <hr>
+      
+
+      	
+      <h3><a href="/system/2013/01/05/calculating-service-availability">Calculating service availability</a></h3>
+      <p>
+        MTBF, MTTD, MTTR and MTTF are the four parameters required to calculate the availability of a service or an individual component in a specific architecture. MTBF is the Mean Time Between Faults MTTD is the Mean Time To Detection MTTR is the Mean Time To Repair MTTF is the Mean Time To Failure Well, once we got this, there are just a few little formula to know : MTBF = MTTD + MTTR + MTTFAvailabiliy...
+        <a href="/system/2013/01/05/calculating-service-availability"><strong>Read more.</strong></a><br/>
+      </p>
+      <p>
+        <strong>
+          January  5, 2013
+        </strong>
+        |  
+	Category:
+		
+			
+				<a href="/category/system">system</a>
+			
+		
+	|
+	Tag:
+		
+			
+				<a href="/tag/blog-post">blog-post</a>
+			
+		
+        <!-- | <a href="http://thibaultlaurens.github.com/system/2013/01/05/calculating-service-availability/#disqus_thread" data-disqus-identifier="/system/2013/01/05/calculating-service-availability">comments</a> -->
+      </p>
+      
+      <hr>
+      
+
+      	
+      <h3><a href="/miscellaneous/2013/01/03/hello-world">Hello Blog!</a></h3>
+      <p>
+        For a first post, I would like to briefly explain how I built this blog. If you are tired of Wordpress or others complicated blog engines and are looking for a very simple and effective way to blog, then Jekyll is what you are looking for! As mentioned in the Github repository, &#8220;Jekyll is a blog aware, static site generator in Ruby&#8221; and is the simpler way to blog I have seen so far. This...
+        <a href="/miscellaneous/2013/01/03/hello-world"><strong>Read more.</strong></a><br/>
+      </p>
+      <p>
+        <strong>
+          January  3, 2013
+        </strong>
+        |  
+	Category:
+		
+			
+				<a href="/category/miscellaneous">miscellaneous</a>
+			
+		
+	|
+	Tag:
+		
+			
+				<a href="/tag/blog-post">blog-post</a>
+			
+		
+        <!-- | <a href="http://thibaultlaurens.github.com/miscellaneous/2013/01/03/hello-world/#disqus_thread" data-disqus-identifier="/miscellaneous/2013/01/03/hello-world">comments</a> -->
+      </p>
+      
+      
+
+      
+    </div>
+
+    
+    
+    
+
+    <!-- Pagination links -->
+    <div id="post-pagination" class="pagination">
+     <hr>
+     <br/>
+     
+     <div class="four columns">
+      
+      <a href="/page2">&larr; Previous</a>
+      
+    </div>
+    
+
+    <div class="four columns">
+      <span class="page_number ">Page: 3 of 3</span>
+    </div>
+
+    
+    <div class="four columns next disabled">
+      <span>Next &rarr;</span>
+    </div>
+    
+    <br/> <br/>
+  </div>
+
+</div>
+
+<div class="two columns offset-by-one"> 
+
+  <div style="margin-bottom: 50px;">
+    <a href="/categories.html"><h4>Category</h4></a>
+    <strong><ul>
+      
+      
+
+
+  
+     
+    	<li><a href="/category/miscellaneous/">
+    		miscellaneous <span>(1)</span>
+    	</a></li>
+     
+    	<li><a href="/category/system/">
+    		system <span>(1)</span>
+    	</a></li>
+     
+    	<li><a href="/category/microsoft/">
+    		microsoft <span>(1)</span>
+    	</a></li>
+     
+    	<li><a href="/category/middleware/">
+    		middleware <span>(4)</span>
+    	</a></li>
+     
+    	<li><a href="/category/database/">
+    		database <span>(2)</span>
+    	</a></li>
+     
+    	<li><a href="/category/ruby/">
+    		ruby <span>(1)</span>
+    	</a></li>
+     
+    	<li><a href="/category/management/">
+    		management <span>(4)</span>
+    	</a></li>
+     
+    	<li><a href="/category/ubiquitous/">
+    		ubiquitous <span>(4)</span>
+    	</a></li>
+     
+    	<li><a href="/category/javascript/">
+    		javascript <span>(1)</span>
+    	</a></li>
+    
+  
+
+
+    </ul></strong>
+  </div>
+
+  <div style="margin-bottom: 50px;">
+    <a href="/tags.html"><h4>Tags</h4></a>
+    <strong><ul>
+      
+      
+
+
+
+  
+     
+    	<li><a href="/tag/blog-post/">blog-post <span>(6)</span></a></li>
+     
+    	<li><a href="/tag/course-review/">course-review <span>(13)</span></a></li>
+    
+  
+
+
+
+    </ul></strong>
+  </div>
+
+  <div style="margin-bottom: 50px;">
+    <h4>Blogroll</h4>
+    <ul>
+      <li><a target="_blank" title="Los Techies" href="http://lostechies.com/"><strong>Los Techies</strong></a></li>
+      <li><a target="_blank" title="Scott Hanselman" href="http://www.hanselman.com/blog/"><strong>Scott Hanselman</strong></a></li>
+      <li><a target="_blank" title="Haacked" href="http://haacked.com/"><strong>Phil Haack</strong></a></li>
+      <li><a target="_blank" title="Martin Fowler" href="http://martinfowler.com"><strong>Martin Fowler</strong></a></li>
+      <li><a target="_blank" title="Ian Robinson" href="http://iansrobinson.com"><strong>Ian Robinson</strong></a></li>
+      <li><a target="_blank" title="High Scalability" href="http://highscalability.com/"><strong>High Scalability</strong></a></li>
+      <li><a target="_blank" title="Coding Horror" href="http://www.codinghorror.com/blog/"><strong>Coding Horror</strong></a></li>
+      <li><a target="_blank" title="Dr Dobbs" href="http://www.drdobbs.com/"><strong>Dr Dobbs</strong></a></li>
+      <li><a target="_blank" title="Udi Dahan" href="http://www.udidahan.com/?blog=true"><strong>Udi Dahan</strong></a></li>
+      <li><a target="_blank" title="Geek Monkey" href="http://geekmonkey.org/"><strong>Geek Monkey</strong></a></li>
+      <li><a target="_blank" title="Alex Maccaw" href="http://blog.alexmaccaw.com/"><strong>Alex Maccaw</strong></a></li>
+      <li><a target="_blank" title="Pat Shaughnessy" href="http://patshaughnessy.net/"><strong>Pat Shaughnessy</strong></a></li>
+      <li><a target="_blank" title="How To Node" href="http://howtonode.org/"><strong>How To Node</strong></a></li>
+      <li><a target="_blank" title="Troy Hunt" href="http://www.troyhunt.com/"><strong>Troy Hunt</strong></a></li>
+      <!--<strong><li><a target="_blank" title="" href=""></a></li></strong>-->
+    </ul>
+  </div>
+
+  <div style="margin-bottom: 50px;">
+    <h4>France</h4>
+    <ul>
+      <li><a target="_blank" title="Breakinsecurity" href="http://blog.breakinsecurity.com/"><strong>Breakinsecurity</strong></a></li>
+      <li><a target="_blank" title="Jeyg" href="http://jeyg.info/"><strong>Jeyg</strong></a></li>
+      <li><a target="_blank" title="David Catuhe" href="http://blogs.msdn.com/b/eternalcoding/"><strong>David Catuhe</strong></a></li>
+      <li><a target="_blank" title="Julien Dollon" href="http://julien.dollon.net/"><strong>Julien Dollon</strong></a></li>
+      <!--<strong><li><a target="_blank" title="" href=""></a></li></strong>-->
+    </ul>
+  </div>
+  
+
+</div>
+
+
+  </div>
+</div>
+
+
+      </section>
+
+      <footer class="row">
+          <hr>
+        <div class="eight columns">
+            <p style="padding-top: 0px">
+                <a title="Go to facebook.com/thibault.laurens" target="_blank" href="https://www.facebook.com/thibault.laurens"><i class="social foundicon-facebook"></i></a>
+                <a title="Go to github.com/ThibaultLaurens" target="_blank" href="https://github.com/ThibaultLaurens"><i class="foundicon-github"></i></a>
+                <a title="Go to linkedin.com/thibault-laurens" target="_blank" href="http://www.linkedin.com/pub/thibault-laurens/13/b58/40b"><i class="social foundicon-linkedin"></i></a>
+                <a title="Go to twitter.com/ThibaultLaurens" target="_blank" href="https://twitter.com/ThibaultLaurens"><i class="social foundicon-twitter"></i></a>
+                <a title="Go to flickr.com/photos/thibaultlaurens" target="_blank" href="http://www.flickr.com/photos/thibaultlaurens/"><i class="social foundicon-flickr"></i></a>
+            </p>
+                <p>
+                    &copy; Thibault Laurens 2013 with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+                  and <a href="http://foundation.zurb.com" target="_blank" title="The most advanced responsive front-end framework in the world.">Zurb's Foundation 3</a>
+                </p>
+        </div>
+        <div class="four columns right">
+        <img alt="technut" src="/assets/themes/foundation/images/technut.png"/>
+        </div>
+      </footer>
+
+ <!-- /container -->
+
+    
+
+      <script type="text/javascript">
+		var disqus_shortname = 'thibaultlaurens';
+		var disqus_identifier = '/page3/index.html';
+		var disqus_url = 'http://thibaultlaurens.github.com/page3/index.html';
+ 
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function () {
+			var s = document.createElement('script'); s.async = true;
+			s.type = 'text/javascript';
+			s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+			(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+		}());
+	</script>
+
+  </body>
+
+</html>
+
