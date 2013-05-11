@@ -1,0 +1,570 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Yet another developer blog</title>
+    <meta name="description" content="Yet another developer blog - some notes, reminders, findings and sharin">
+    <meta name="author" content="Thibault Laurens">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/foundation/stylesheets/foundation.min.css" rel="stylesheet">
+    <link href="/assets/themes/foundation/stylesheets/app.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="/assets/themes/foundation/stylesheets/social_foundicons.css">
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+
+  </head>
+
+  <body>
+  <div class="row contain-to-grid">
+      <nav class="top-bar">
+          <ul class="left">
+              <li><a title="Home" href="http://thibaultlaurens.github.com">Thibault Laurens</a></li>
+              <li class="divider"></li>
+              <li><a title="Archive" href="/archive.html">Archive</a></li>
+              <li class="divider"></li>
+              <li><a title="Category" href="/categories.html">Category</a></li>
+              <li class="divider"></li>
+              <li><a title="Tag" href="/tags.html">Tag</a></li>
+          </ul>
+
+          <ul class="right">
+
+              <li class="has-dropdown">
+                          <a href="#">Social</a>
+                          <ul class="dropdown"><li class="title back js-generated"><h5><a href="#">Social</a></h5></li>
+                            <li><a target="_blank" title="Go to github.com/ThibaultLaurens"  href="https://github.com/ThibaultLaurens">Github</a></li>
+                            <li><a target="_blank" title="Go to twitter.com/ThibaultLaurens" href="https://twitter.com/ThibaultLaurens">Twitter</a></li>
+                            <li><a target="_blank" title="Go to linkedin.com/thibault-laurens" href="http://www.linkedin.com/pub/thibault-laurens/13/b58/40b">LinkedIn</a></li>
+                          </ul>
+                        </li>
+              <li class="divider"></li>
+              <li><a title="Go to github.com/thibaultlaurens" href="https://github.com/ThibaultLaurens?tab=repositories" target="_blank">Projects</a></li>
+              <li class="divider"></li>
+              <li><a title="Go to flickr.com/photos/thibaultlaurens" href="http://www.flickr.com/photos/thibaultlaurens/" target="_blank">Photo</a></li>
+              <li class="divider"></li>
+              <li><a title="Go to soundcloud.com/thibault-laurens" href="https://soundcloud.com/thibault-laurens" target="_blank">Sound</a></li>
+              <li class="divider"></li>
+              <li><a title="More info about me" href="/about.html">About</a></li>
+ <!--
+              <li class="has-dropdown">
+                  <a href="#">Link</a>
+
+                  <ul class="dropdown">
+                      <li><a href="#">Dropdown Link</a></li>
+                  </ul>
+
+              </li>
+              
+              
+              
+
+
+  
+    
+      
+      	
+      	<li><a href="/404.html">404 - NOT FOUND</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Categories</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+
+
+
+-->
+          </ul>
+      </nav>
+  </div>
+
+      <section>
+        
+<header>
+	<div class="row">
+     <div class="eight columns">
+        <h1>Yet another developer blog </h1>
+         
+            <h4 class="subheader">some notes, reminders, findings and sharing</h4>
+        
+    </div>
+	</div>
+</header>
+
+<div class="row">
+  <div class="twelve columns">
+    
+
+<div class="row">
+  <div class="nine columns">
+    <div class="row">
+      
+      <h2>Category: 'ubiquitous'</h2>
+      
+    </div>
+
+    <br/>
+
+    <div>
+      	
+      <h3><a href="/ubiquitous/2013/05/11/pervasive-data-access">Pervasive Data Access</a></h3>
+      <p>
+        Data dissemination in Pervasive environment Transfer data from producers to interested consumer, two categories: pull and push Characteristics &amp; Challenges: Limited client capability: battery life, screen size, CPU, memory… Limited bandwidth &amp; Weak connectivity: clients don’t stay connected continuously, frequent disconnections impact how transaction management is implemented and how data consistency is guaranteed. Asymmetry in the communication: downstream much greater than upstream. User Mobility: different cells and servers at different times. Pervasive data broadcast Performance...
+        <a href="/ubiquitous/2013/05/11/pervasive-data-access"><strong>Read more.</strong></a><br/>
+      </p>
+      <p>
+        <strong>
+          May 11, 2013
+        </strong>
+        |  
+	Category:
+		
+			
+				<a href="/category/ubiquitous">ubiquitous</a>
+			
+		
+	|
+	Tag:
+		
+			
+				<a href="/tag/course-review">course-review</a>
+			
+		
+        <!-- | <a href="http://thibaultlaurens.github.com/ubiquitous/2013/05/11/pervasive-data-access/#disqus_thread" data-disqus-identifier="/ubiquitous/2013/05/11/pervasive-data-access">comments</a> -->
+      </p>
+      
+      <hr>
+      
+
+      	
+      <h3><a href="/ubiquitous/2013/04/23/distributed-and-collaborative-algorithms">Distributed and collaborative algorithms</a></h3>
+      <p>
+        Distributed algorithms Problems solved: resource allocation, distributed search, cooperative scheduling, spanning tree generation Are typically executed concurrently with separate parts of the algo being run simultaneously on independent processors. Challenge: coordinating the behavior of the independent parts of the algo in the face of processor failures and unreliable communication links Collaboration Filtering (CF): Process of filtering for information or patterns using the know preferences of a group of users to make recommendations or predictions of...
+        <a href="/ubiquitous/2013/04/23/distributed-and-collaborative-algorithms"><strong>Read more.</strong></a><br/>
+      </p>
+      <p>
+        <strong>
+          April 23, 2013
+        </strong>
+        |  
+	Category:
+		
+			
+				<a href="/category/ubiquitous">ubiquitous</a>
+			
+		
+	|
+	Tag:
+		
+			
+				<a href="/tag/course-review">course-review</a>
+			
+		
+        <!-- | <a href="http://thibaultlaurens.github.com/ubiquitous/2013/04/23/distributed-and-collaborative-algorithms/#disqus_thread" data-disqus-identifier="/ubiquitous/2013/04/23/distributed-and-collaborative-algorithms">comments</a> -->
+      </p>
+      
+      <hr>
+      
+
+      	
+      <h3><a href="/ubiquitous/2013/04/10/mobile-platforms-in-pervasive-computing">Mobile platforms in pervasive computing</a></h3>
+      <p>
+        Types of mobile devices: Remote controls and smart remote Handheld gaming devices Palmtops / Tablets Smartphones Smartphones: Standard phone features+embedded programmable computer, dominate the market Advantages: wide range of functionality, powerful hardware Disadvantages: expensive, complex app deployment, phone network engagement Main smartphone OS: iOS: priority performance and user experience ( + LLVM) Android: priority flexibility and freedom for developers WP: priority compatibility with Microsoft technologies iOS: Development: C, C++ or Objective-C tools only for Mac,...
+        <a href="/ubiquitous/2013/04/10/mobile-platforms-in-pervasive-computing"><strong>Read more.</strong></a><br/>
+      </p>
+      <p>
+        <strong>
+          April 10, 2013
+        </strong>
+        |  
+	Category:
+		
+			
+				<a href="/category/ubiquitous">ubiquitous</a>
+			
+		
+	|
+	Tag:
+		
+			
+				<a href="/tag/course-review">course-review</a>
+			
+		
+        <!-- | <a href="http://thibaultlaurens.github.com/ubiquitous/2013/04/10/mobile-platforms-in-pervasive-computing/#disqus_thread" data-disqus-identifier="/ubiquitous/2013/04/10/mobile-platforms-in-pervasive-computing">comments</a> -->
+      </p>
+      
+      <hr>
+      
+
+      	
+      <h3><a href="/ubiquitous/2013/03/17/pervasive-computing-environments">Pervasive Computing Environments</a></h3>
+      <p>
+        Pervasice computing An environment in which people interact with embedded (and mostly invisible) computers and in which networked devices are aware of their surroundings and peers and are able to provide services from peers effectively. Multiple distributed computers with adequate processing, memory and communications capability. High availability, reliability, adapt to changes in environment. Reminders: HCI: Human-Computer Interaction Harvard Architecture: is a computer architecture with physically separate storage and signal pathways for instructions and data. Difference...
+        <a href="/ubiquitous/2013/03/17/pervasive-computing-environments"><strong>Read more.</strong></a><br/>
+      </p>
+      <p>
+        <strong>
+          March 17, 2013
+        </strong>
+        |  
+	Category:
+		
+			
+				<a href="/category/ubiquitous">ubiquitous</a>
+			
+		
+	|
+	Tag:
+		
+			
+				<a href="/tag/course-review">course-review</a>
+			
+		
+        <!-- | <a href="http://thibaultlaurens.github.com/ubiquitous/2013/03/17/pervasive-computing-environments/#disqus_thread" data-disqus-identifier="/ubiquitous/2013/03/17/pervasive-computing-environments">comments</a> -->
+      </p>
+      
+      
+
+      
+    </div>
+
+    
+    
+    
+
+    <!-- Pagination links -->
+    <div id="post-pagination" class="pagination">
+     <hr>
+     <br/>
+     
+    <div class="four columns previous disabled">
+      <span>&larr; Previous</span>
+    </div>
+    
+
+    <div class="four columns">
+      <span class="page_number ">Page: 1 of 1</span>
+    </div>
+
+    
+    <div class="four columns next disabled">
+      <span>Next &rarr;</span>
+    </div>
+    
+    <br/> <br/>
+  </div>
+
+</div>
+
+<div class="two columns offset-by-one"> 
+
+  <div style="margin-bottom: 50px;">
+    <a href="/categories.html"><h4>Category</h4></a>
+    <strong><ul>
+      
+      
+
+
+  
+     
+    	<li><a href="/category/miscellaneous/">
+    		miscellaneous <span>(1)</span>
+    	</a></li>
+     
+    	<li><a href="/category/system/">
+    		system <span>(1)</span>
+    	</a></li>
+     
+    	<li><a href="/category/microsoft/">
+    		microsoft <span>(1)</span>
+    	</a></li>
+     
+    	<li><a href="/category/middleware/">
+    		middleware <span>(4)</span>
+    	</a></li>
+     
+    	<li><a href="/category/database/">
+    		database <span>(2)</span>
+    	</a></li>
+     
+    	<li><a href="/category/ruby/">
+    		ruby <span>(1)</span>
+    	</a></li>
+     
+    	<li><a href="/category/management/">
+    		management <span>(4)</span>
+    	</a></li>
+     
+    	<li><a href="/category/ubiquitous/">
+    		ubiquitous <span>(4)</span>
+    	</a></li>
+     
+    	<li><a href="/category/javascript/">
+    		javascript <span>(1)</span>
+    	</a></li>
+    
+  
+
+
+    </ul></strong>
+  </div>
+
+  <div style="margin-bottom: 50px;">
+    <a href="/tags.html"><h4>Tags</h4></a>
+    <strong><ul>
+      
+      
+
+
+
+  
+     
+    	<li><a href="/tag/blog-post/">blog-post <span>(6)</span></a></li>
+     
+    	<li><a href="/tag/course-review/">course-review <span>(13)</span></a></li>
+    
+  
+
+
+
+    </ul></strong>
+  </div>
+
+  <div style="margin-bottom: 50px;">
+    <h4>Blogroll</h4>
+    <ul>
+      <li><a target="_blank" title="Los Techies" href="http://lostechies.com/"><strong>Los Techies</strong></a></li>
+      <li><a target="_blank" title="Scott Hanselman" href="http://www.hanselman.com/blog/"><strong>Scott Hanselman</strong></a></li>
+      <li><a target="_blank" title="Haacked" href="http://haacked.com/"><strong>Phil Haack</strong></a></li>
+      <li><a target="_blank" title="Martin Fowler" href="http://martinfowler.com"><strong>Martin Fowler</strong></a></li>
+      <li><a target="_blank" title="Ian Robinson" href="http://iansrobinson.com"><strong>Ian Robinson</strong></a></li>
+      <li><a target="_blank" title="High Scalability" href="http://highscalability.com/"><strong>High Scalability</strong></a></li>
+      <li><a target="_blank" title="Coding Horror" href="http://www.codinghorror.com/blog/"><strong>Coding Horror</strong></a></li>
+      <li><a target="_blank" title="Dr Dobbs" href="http://www.drdobbs.com/"><strong>Dr Dobbs</strong></a></li>
+      <li><a target="_blank" title="Udi Dahan" href="http://www.udidahan.com/?blog=true"><strong>Udi Dahan</strong></a></li>
+      <li><a target="_blank" title="Geek Monkey" href="http://geekmonkey.org/"><strong>Geek Monkey</strong></a></li>
+      <li><a target="_blank" title="Alex Maccaw" href="http://blog.alexmaccaw.com/"><strong>Alex Maccaw</strong></a></li>
+      <li><a target="_blank" title="Pat Shaughnessy" href="http://patshaughnessy.net/"><strong>Pat Shaughnessy</strong></a></li>
+      <li><a target="_blank" title="How To Node" href="http://howtonode.org/"><strong>How To Node</strong></a></li>
+      <li><a target="_blank" title="Troy Hunt" href="http://www.troyhunt.com/"><strong>Troy Hunt</strong></a></li>
+      <!--<strong><li><a target="_blank" title="" href=""></a></li></strong>-->
+    </ul>
+  </div>
+
+  <div style="margin-bottom: 50px;">
+    <h4>France</h4>
+    <ul>
+      <li><a target="_blank" title="Breakinsecurity" href="http://blog.breakinsecurity.com/"><strong>Breakinsecurity</strong></a></li>
+      <li><a target="_blank" title="Jeyg" href="http://jeyg.info/"><strong>Jeyg</strong></a></li>
+      <li><a target="_blank" title="David Catuhe" href="http://blogs.msdn.com/b/eternalcoding/"><strong>David Catuhe</strong></a></li>
+      <li><a target="_blank" title="Julien Dollon" href="http://julien.dollon.net/"><strong>Julien Dollon</strong></a></li>
+      <!--<strong><li><a target="_blank" title="" href=""></a></li></strong>-->
+    </ul>
+  </div>
+  
+
+</div>
+
+
+  </div>
+</div>
+
+
+      </section>
+
+      <footer class="row">
+          <hr>
+        <div class="eight columns">
+            <p style="padding-top: 0px">
+                <a title="Go to facebook.com/thibault.laurens" target="_blank" href="https://www.facebook.com/thibault.laurens"><i class="social foundicon-facebook"></i></a>
+                <a title="Go to github.com/ThibaultLaurens" target="_blank" href="https://github.com/ThibaultLaurens"><i class="foundicon-github"></i></a>
+                <a title="Go to linkedin.com/thibault-laurens" target="_blank" href="http://www.linkedin.com/pub/thibault-laurens/13/b58/40b"><i class="social foundicon-linkedin"></i></a>
+                <a title="Go to twitter.com/ThibaultLaurens" target="_blank" href="https://twitter.com/ThibaultLaurens"><i class="social foundicon-twitter"></i></a>
+                <a title="Go to flickr.com/photos/thibaultlaurens" target="_blank" href="http://www.flickr.com/photos/thibaultlaurens/"><i class="social foundicon-flickr"></i></a>
+            </p>
+                <p>
+                    &copy; Thibault Laurens 2013 with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+                  and <a href="http://foundation.zurb.com" target="_blank" title="The most advanced responsive front-end framework in the world.">Zurb's Foundation 3</a>
+                </p>
+        </div>
+        <div class="four columns right">
+        <img alt="technut" src="/assets/themes/foundation/images/technut.png"/>
+        </div>
+      </footer>
+
+ <!-- /container -->
+
+    
+
+      <script type="text/javascript">
+		var disqus_shortname = 'thibaultlaurens';
+		var disqus_identifier = '/category/ubiquitous/index.html';
+		var disqus_url = 'http://thibaultlaurens.github.com/category/ubiquitous/index.html';
+ 
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function () {
+			var s = document.createElement('script'); s.async = true;
+			s.type = 'text/javascript';
+			s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+			(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+		}());
+	</script>
+
+  </body>
+
+</html>
+
