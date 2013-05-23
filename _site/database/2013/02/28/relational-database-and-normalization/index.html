@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Relational database and Normalization</title>
+    <meta name="description" content="Relational database and Normalization - A simple reminder of the normal forms">
+    <meta name="author" content="Thibault Laurens">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/foundation/stylesheets/foundation.min.css" rel="stylesheet">
+    <link href="/assets/themes/foundation/stylesheets/app.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="/assets/themes/foundation/stylesheets/social_foundicons.css">
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+
+  </head>
+
+  <body>
+  <div class="row contain-to-grid">
+      <nav class="top-bar">
+          <ul class="left">
+              <li><a title="Home" href="http://thibaultlaurens.github.com">Thibault Laurens</a></li>
+              <li class="divider"></li>
+              <li><a title="Archive" href="/archive.html">Archive</a></li>
+              <li class="divider"></li>
+              <li><a title="Category" href="/categories.html">Category</a></li>
+              <li class="divider"></li>
+              <li><a title="Tag" href="/tags.html">Tag</a></li>
+          </ul>
+
+          <ul class="right">
+
+              <li class="has-dropdown">
+                          <a href="#">Social</a>
+                          <ul class="dropdown"><li class="title back js-generated"><h5><a href="#">Social</a></h5></li>
+                            <li><a target="_blank" title="Go to github.com/ThibaultLaurens"  href="https://github.com/ThibaultLaurens">Github</a></li>
+                            <li><a target="_blank" title="Go to twitter.com/ThibaultLaurens" href="https://twitter.com/ThibaultLaurens">Twitter</a></li>
+                            <li><a target="_blank" title="Go to linkedin.com/thibault-laurens" href="http://www.linkedin.com/pub/thibault-laurens/13/b58/40b">LinkedIn</a></li>
+                          </ul>
+                        </li>
+              <li class="divider"></li>
+              <li><a title="Go to github.com/thibaultlaurens" href="https://github.com/ThibaultLaurens?tab=repositories" target="_blank">Projects</a></li>
+              <li class="divider"></li>
+              <li><a title="Go to flickr.com/photos/thibaultlaurens" href="http://www.flickr.com/photos/thibaultlaurens/" target="_blank">Photo</a></li>
+              <li class="divider"></li>
+              <li><a title="Go to soundcloud.com/thibault-laurens" href="https://soundcloud.com/thibault-laurens" target="_blank">Sound</a></li>
+              <li class="divider"></li>
+              <li><a title="More info about me" href="/about.html">About</a></li>
+ <!--
+              <li class="has-dropdown">
+                  <a href="#">Link</a>
+
+                  <ul class="dropdown">
+                      <li><a href="#">Dropdown Link</a></li>
+                  </ul>
+
+              </li>
+              
+              
+              
+
+
+  
+    
+      
+      	
+      	<li><a href="/404.html">404 - NOT FOUND</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Categories</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+
+
+
+-->
+          </ul>
+      </nav>
+  </div>
+
+      <section>
+        
+<header>
+    <div class="row">
+    <div class="twelve columns">
+        <h1>Relational database and Normalization </h1>
+        
+            <h4 class="subheader">A simple reminder of the normal forms</h4>
+        
+    </div>
+    </div>
+</header>
+
+<div class="row">
+  <div class="nine columns">
+    <p>In relational database design, the normalization objective is to check whether or not a relationship fill the prerequisites for a given normal form. This will automatically minimize redundancy and anomalies in insertion, deletion and update.</p>
+
+<p>There is 4 basics and commonly used normal forms : <strong>first (1NF), second (2NF), third (3NF) and Boyce-Codd (BCNF)</strong> normal forms.</p>
+<hr />
+<h4 id='first_normal_form'>First Normal Form</h4>
+
+<p><strong>1NF</strong> makes reference to the concept of <strong>atomicity</strong> : Table represents a relation in which intersection of each row and column contains one and only one value.</p>
+<br />
+<h4 id='second_normal_form'>Second Normal Form</h4>
+
+<p>A <strong>2NF</strong> is a 1NF with every non primary key attribute is fully <strong>functionally dependent</strong> on the primary key. This involves identifying partial dependencies on the primary key and removing them by creating a new relation.</p>
+<br />
+<h4 id='third_normal_form'>Third Normal Form</h4>
+
+<p>A <strong>3NF</strong> is a 2NF based on the concept of <strong>transitive dependency</strong> (attributes A-&gt;B and B-&gt;C therefore A-&gt;C). Like in 2NF, this involves identifying transitive dependencies on the primary key and removing them by creating a new relation.</p>
+<br />
+<h4 id='boycecodd_normal_form'>Boyce-Codd Normal Form</h4>
+
+<p><strong>BCNF</strong> makes reference to the concept of <strong>functional dependency</strong> and <strong>candidate key</strong> (the minimal superkey for the relation). In BCNF, every determinant has to be a candidate key. If the relation has functional dependencies where determinants are not candidate keys we have to remove them and create a new relation with a copy of their determinant. A 3NF relation with only one candidate key is automatically in BCNF.</p>
+<hr />
+<p>A good relational model should be at least in 2NF, higher normal forms has their pros and cons. After 3NF, access time could be longer (we can fix this problem with Index on primary key) and the database structure could be difficult to maintain. But, you ensure non redondant and inconsistent data. The best things to do is to choose the level of normalization over the type of access : if data are more often edited than readed you should normalize as much as possible. Otherwise, if data are more often readed, then you should probably denormalize a little bit to improve data access, but keep in mind that redundancy can increase the amount of data and, in the end push down performances.</p>
+
+<p>Note: 1NF, 2NF, 3NF and BCNF focus on eliminating data redundancies based on undesirable functional dependencies. The are other normal forms after BCNF : <strong>Fourth (4NF), Fifth (5NF), Domain/Key (DKNF) and Sixth (6NF)</strong> normal forms wich are focus on other things like multivalued dependency (4NF) or joind dependency implied by candidate keys (5NF).</p>
+    <hr>
+    <div class="row pagination">
+        <div class="four columns">
+                  
+                    <div class="prev"><a href="/middleware/2013/02/19/web-services" title="Web services">&larr; Previous</a></div>
+                  
+        </div>
+        <div class="four columns">
+            <div><a href="/archive.html">Archive</a></div>
+        </div>
+        <div class="four columns">
+                  
+                    <div class="next"><a href="/management/2013/03/13/introduction-and-project-planning" title="Introduction and Project planning">Next &rarr;</a></div>
+                  
+        </div>
+    </div>
+    <hr>
+    
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'thibaultlaurens'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+  </div>
+  <div class="two columns offset-by-one">
+
+    <div style="margin-bottom: 50px;">
+      <h4>Published</h4>
+      <div class="date"><span>28 February 2013</span></div> 
+    </div>
+
+      <div style="margin-bottom: 50px;">
+        <h4>Category</h4>
+        database
+      </div>
+
+      <div style="margin-bottom: 50px;">
+        <h4>Tag</h4>
+        blog-post
+      </div>
+        
+        <div style="margin-bottom: 50px;">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-via="thibaultlaurens">Tweet</a>
+      </div>
+  </div>
+</div>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+      </section>
+
+      <footer class="row">
+          <hr>
+        <div class="eight columns">
+            <p style="padding-top: 0px">
+                <a title="Go to facebook.com/thibault.laurens" target="_blank" href="https://www.facebook.com/thibault.laurens"><i class="social foundicon-facebook"></i></a>
+                <a title="Go to github.com/ThibaultLaurens" target="_blank" href="https://github.com/ThibaultLaurens"><i class="foundicon-github"></i></a>
+                <a title="Go to linkedin.com/thibault-laurens" target="_blank" href="http://www.linkedin.com/pub/thibault-laurens/13/b58/40b"><i class="social foundicon-linkedin"></i></a>
+                <a title="Go to twitter.com/ThibaultLaurens" target="_blank" href="https://twitter.com/ThibaultLaurens"><i class="social foundicon-twitter"></i></a>
+                <a title="Go to flickr.com/photos/thibaultlaurens" target="_blank" href="http://www.flickr.com/photos/thibaultlaurens/"><i class="social foundicon-flickr"></i></a>
+            </p>
+                <p>
+                    &copy; Thibault Laurens 2013 with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+                  and <a href="http://foundation.zurb.com" target="_blank" title="The most advanced responsive front-end framework in the world.">Zurb's Foundation 3</a>
+                </p>
+        </div>
+        <div class="four columns right">
+        <img alt="technut" src="/assets/themes/foundation/images/technut.png"/>
+        </div>
+      </footer>
+
+ <!-- /container -->
+
+    
+
+      <script type="text/javascript">
+		var disqus_shortname = 'thibaultlaurens';
+		var disqus_identifier = '/database/2013/02/28/relational-database-and-normalization';
+		var disqus_url = 'http://thibaultlaurens.github.com/database/2013/02/28/relational-database-and-normalization';
+ 
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function () {
+			var s = document.createElement('script'); s.async = true;
+			s.type = 'text/javascript';
+			s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+			(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+		}());
+	</script>
+
+  </body>
+
+</html>
+
