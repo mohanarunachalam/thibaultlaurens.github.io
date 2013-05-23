@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
  
  <title>Thibault Laurens</title>
- <link href="http://thibaultlaurens.github.com/atom.xml" rel="self"/>
- <link href="http://thibaultlaurens.github.com"/>
- <updated>2013-05-11T19:55:13+01:00</updated>
- <id>http://thibaultlaurens.github.com</id>
+ <link href="http://thibaultlaurens.github.io/atom.xml" rel="self"/>
+ <link href="http://thibaultlaurens.github.io"/>
+ <updated>2013-05-23T16:18:33+01:00</updated>
+ <id>http://thibaultlaurens.github.io</id>
  <author>
    <name>Thibault Laurens</name>
    <email>laurens.thibault@gmail.com</email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Pervasive Data Access</title>
-   <link href="http://thibaultlaurens.github.com/ubiquitous/2013/05/11/pervasive-data-access"/>
+   <link href="http://thibaultlaurens.github.io/ubiquitous/2013/05/11/pervasive-data-access"/>
    <updated>2013-05-11T00:00:00+01:00</updated>
-   <id>http://thibaultlaurens.github.com/ubiquitous/2013/05/11/pervasive-data-access</id>
+   <id>http://thibaultlaurens.github.io/ubiquitous/2013/05/11/pervasive-data-access</id>
    <content type="html">&lt;h4 id='data_dissemination_in_pervasive_environment'&gt;Data dissemination in Pervasive environment&lt;/h4&gt;
 
 &lt;ul&gt;
@@ -176,9 +176,9 @@
  
  <entry>
    <title>Software Configuration Management</title>
-   <link href="http://thibaultlaurens.github.com/management/2013/05/10/software-configuration-management"/>
+   <link href="http://thibaultlaurens.github.io/management/2013/05/10/software-configuration-management"/>
    <updated>2013-05-10T00:00:00+01:00</updated>
-   <id>http://thibaultlaurens.github.com/management/2013/05/10/software-configuration-management</id>
+   <id>http://thibaultlaurens.github.io/management/2013/05/10/software-configuration-management</id>
    <content type="html">&lt;h4 id='introduction'&gt;Introduction&lt;/h4&gt;
 
 &lt;ul&gt;
@@ -344,9 +344,9 @@
  
  <entry>
    <title>How the V8 engine works?</title>
-   <link href="http://thibaultlaurens.github.com/javascript/2013/04/29/how-the-v8-engine-works"/>
+   <link href="http://thibaultlaurens.github.io/javascript/2013/04/29/how-the-v8-engine-works"/>
    <updated>2013-04-29T00:00:00+01:00</updated>
-   <id>http://thibaultlaurens.github.com/javascript/2013/04/29/how-the-v8-engine-works</id>
+   <id>http://thibaultlaurens.github.io/javascript/2013/04/29/how-the-v8-engine-works</id>
    <content type="html">&lt;h4 id='what_is_v8'&gt;What is V8?&lt;/h4&gt;
 
 &lt;p&gt;V8 is a &lt;strong&gt;JavaScript engine&lt;/strong&gt; build in the google development center in Germany. It is &lt;a href='https://code.google.com/p/v8/wiki/Source' target='_blank' title='code.google.com/p/v8/wiki/Source'&gt;&lt;strong&gt;open source&lt;/strong&gt;&lt;/a&gt; and written in &lt;strong&gt;C++&lt;/strong&gt;. It is used for both client side (Googgle Chrome) and server side (node.js) JavaScript applications.&lt;/p&gt;
@@ -430,9 +430,9 @@
  
  <entry>
    <title>Distributed and collaborative algorithms</title>
-   <link href="http://thibaultlaurens.github.com/ubiquitous/2013/04/23/distributed-and-collaborative-algorithms"/>
+   <link href="http://thibaultlaurens.github.io/ubiquitous/2013/04/23/distributed-and-collaborative-algorithms"/>
    <updated>2013-04-23T00:00:00+01:00</updated>
-   <id>http://thibaultlaurens.github.com/ubiquitous/2013/04/23/distributed-and-collaborative-algorithms</id>
+   <id>http://thibaultlaurens.github.io/ubiquitous/2013/04/23/distributed-and-collaborative-algorithms</id>
    <content type="html">&lt;h4 id='distributed_algorithms'&gt;Distributed algorithms&lt;/h4&gt;
 
 &lt;ul&gt;
@@ -556,9 +556,9 @@
  
  <entry>
    <title>Software Quality Assurance</title>
-   <link href="http://thibaultlaurens.github.com/management/2013/04/19/software-quality-assurance"/>
+   <link href="http://thibaultlaurens.github.io/management/2013/04/19/software-quality-assurance"/>
    <updated>2013-04-19T00:00:00+01:00</updated>
-   <id>http://thibaultlaurens.github.com/management/2013/04/19/software-quality-assurance</id>
+   <id>http://thibaultlaurens.github.io/management/2013/04/19/software-quality-assurance</id>
    <content type="html">&lt;h4 id='history'&gt;History&lt;/h4&gt;
 
 &lt;ul&gt;
@@ -770,9 +770,9 @@
  
  <entry>
    <title>Mobile platforms in pervasive computing</title>
-   <link href="http://thibaultlaurens.github.com/ubiquitous/2013/04/10/mobile-platforms-in-pervasive-computing"/>
+   <link href="http://thibaultlaurens.github.io/ubiquitous/2013/04/10/mobile-platforms-in-pervasive-computing"/>
    <updated>2013-04-10T00:00:00+01:00</updated>
-   <id>http://thibaultlaurens.github.com/ubiquitous/2013/04/10/mobile-platforms-in-pervasive-computing</id>
+   <id>http://thibaultlaurens.github.io/ubiquitous/2013/04/10/mobile-platforms-in-pervasive-computing</id>
    <content type="html">&lt;h4 id='types_of_mobile_devices'&gt;Types of mobile devices:&lt;/h4&gt;
 
 &lt;ul&gt;
@@ -906,9 +906,9 @@
  
  <entry>
    <title>Project Approaches and methodologies</title>
-   <link href="http://thibaultlaurens.github.com/management/2013/04/04/project-approaches-and-methodologies"/>
+   <link href="http://thibaultlaurens.github.io/management/2013/04/04/project-approaches-and-methodologies"/>
    <updated>2013-04-04T00:00:00+01:00</updated>
-   <id>http://thibaultlaurens.github.com/management/2013/04/04/project-approaches-and-methodologies</id>
+   <id>http://thibaultlaurens.github.io/management/2013/04/04/project-approaches-and-methodologies</id>
    <content type="html">&lt;h3 id='software_development'&gt;Software development&lt;/h3&gt;
 &lt;br /&gt;
 &lt;h4 id='why_to_develop_software_systems'&gt;Why to develop software systems?&lt;/h4&gt;
@@ -1084,9 +1084,9 @@
  
  <entry>
    <title>Pervasive Computing Environments</title>
-   <link href="http://thibaultlaurens.github.com/ubiquitous/2013/03/17/pervasive-computing-environments"/>
+   <link href="http://thibaultlaurens.github.io/ubiquitous/2013/03/17/pervasive-computing-environments"/>
    <updated>2013-03-17T00:00:00+00:00</updated>
-   <id>http://thibaultlaurens.github.com/ubiquitous/2013/03/17/pervasive-computing-environments</id>
+   <id>http://thibaultlaurens.github.io/ubiquitous/2013/03/17/pervasive-computing-environments</id>
    <content type="html">&lt;h4 id='pervasice_computing'&gt;Pervasice computing&lt;/h4&gt;
 
 &lt;p&gt;An environment in which people interact with embedded (and mostly invisible) computers and in which networked devices are aware of their surroundings and peers and are able to provide services from peers effectively. Multiple distributed computers with adequate processing, memory and communications capability. High availability, reliability, adapt to changes in environment.&lt;/p&gt;
@@ -1198,9 +1198,9 @@
  
  <entry>
    <title>Introduction and Project planning</title>
-   <link href="http://thibaultlaurens.github.com/management/2013/03/13/introduction-and-project-planning"/>
+   <link href="http://thibaultlaurens.github.io/management/2013/03/13/introduction-and-project-planning"/>
    <updated>2013-03-13T00:00:00+00:00</updated>
-   <id>http://thibaultlaurens.github.com/management/2013/03/13/introduction-and-project-planning</id>
+   <id>http://thibaultlaurens.github.io/management/2013/03/13/introduction-and-project-planning</id>
    <content type="html">&lt;h4 id='project_management'&gt;Project Management&lt;/h4&gt;
 &lt;br /&gt;
 &lt;ul&gt;
@@ -1262,9 +1262,9 @@
  
  <entry>
    <title>Relational database and Normalization</title>
-   <link href="http://thibaultlaurens.github.com/database/2013/02/28/relational-database-and-normalization"/>
+   <link href="http://thibaultlaurens.github.io/database/2013/02/28/relational-database-and-normalization"/>
    <updated>2013-02-28T00:00:00+00:00</updated>
-   <id>http://thibaultlaurens.github.com/database/2013/02/28/relational-database-and-normalization</id>
+   <id>http://thibaultlaurens.github.io/database/2013/02/28/relational-database-and-normalization</id>
    <content type="html">&lt;p&gt;In relational database design, the normalization objective is to check whether or not a relationship fill the prerequisites for a given normal form. This will automatically minimize redundancy and anomalies in insertion, deletion and update.&lt;/p&gt;
 
 &lt;p&gt;There is 4 basics and commonly used normal forms : &lt;strong&gt;first (1NF), second (2NF), third (3NF) and Boyce-Codd (BCNF)&lt;/strong&gt; normal forms.&lt;/p&gt;
@@ -1292,9 +1292,9 @@
  
  <entry>
    <title>Web services</title>
-   <link href="http://thibaultlaurens.github.com/middleware/2013/02/19/web-services"/>
+   <link href="http://thibaultlaurens.github.io/middleware/2013/02/19/web-services"/>
    <updated>2013-02-19T00:00:00+00:00</updated>
-   <id>http://thibaultlaurens.github.com/middleware/2013/02/19/web-services</id>
+   <id>http://thibaultlaurens.github.io/middleware/2013/02/19/web-services</id>
    <content type="html">&lt;h4 id='definition'&gt;Definition&lt;/h4&gt;
 
 &lt;p&gt;A platform and implementation dependant software component that can be:&lt;/p&gt;
@@ -1354,9 +1354,9 @@
  
  <entry>
    <title>Ruby: tips, tricks and bytecode analysis</title>
-   <link href="http://thibaultlaurens.github.com/ruby/2013/02/11/ruby-tips-tricks-and-deep-analysis"/>
+   <link href="http://thibaultlaurens.github.io/ruby/2013/02/11/ruby-tips-tricks-and-deep-analysis"/>
    <updated>2013-02-11T00:00:00+00:00</updated>
-   <id>http://thibaultlaurens.github.com/ruby/2013/02/11/ruby-tips-tricks-and-deep-analysis</id>
+   <id>http://thibaultlaurens.github.io/ruby/2013/02/11/ruby-tips-tricks-and-deep-analysis</id>
    <content type="html">&lt;h4 id='my_personal_experience_with_ruby'&gt;My personal experience with Ruby&lt;/h4&gt;
 
 &lt;p&gt;Basically I am not a Ruby developer: it means I never pushed to production any code written in Ruby but it doesn’t mean I don’t like to play with it. For now I wrote two programs in Ruby, two web applications (with the help of the excellent MVC framework Ruby on Rails) for university projects.&lt;/p&gt;
@@ -1420,9 +1420,9 @@
  
  <entry>
    <title>The component paradigm</title>
-   <link href="http://thibaultlaurens.github.com/middleware/2013/02/06/the-component-paradigm"/>
+   <link href="http://thibaultlaurens.github.io/middleware/2013/02/06/the-component-paradigm"/>
    <updated>2013-02-06T00:00:00+00:00</updated>
-   <id>http://thibaultlaurens.github.com/middleware/2013/02/06/the-component-paradigm</id>
+   <id>http://thibaultlaurens.github.io/middleware/2013/02/06/the-component-paradigm</id>
    <content type="html">&lt;h4 id='componentbased_middleware'&gt;Component-based middleware&lt;/h4&gt;
 
 &lt;ul&gt;
@@ -1468,9 +1468,9 @@
  
  <entry>
    <title>Peer to Peer</title>
-   <link href="http://thibaultlaurens.github.com/middleware/2013/02/01/peer-to-peer"/>
+   <link href="http://thibaultlaurens.github.io/middleware/2013/02/01/peer-to-peer"/>
    <updated>2013-02-01T00:00:00+00:00</updated>
-   <id>http://thibaultlaurens.github.com/middleware/2013/02/01/peer-to-peer</id>
+   <id>http://thibaultlaurens.github.io/middleware/2013/02/01/peer-to-peer</id>
    <content type="html">&lt;h4 id='definition'&gt;Definition&lt;/h4&gt;
 
 &lt;ul&gt;
@@ -1604,9 +1604,9 @@
  
  <entry>
    <title>Relational algebra and SQL syntax</title>
-   <link href="http://thibaultlaurens.github.com/database/2013/01/24/relational-algebra-and-sql-syntax"/>
+   <link href="http://thibaultlaurens.github.io/database/2013/01/24/relational-algebra-and-sql-syntax"/>
    <updated>2013-01-24T00:00:00+00:00</updated>
-   <id>http://thibaultlaurens.github.com/database/2013/01/24/relational-algebra-and-sql-syntax</id>
+   <id>http://thibaultlaurens.github.io/database/2013/01/24/relational-algebra-and-sql-syntax</id>
    <content type="html">&lt;h4 id='relational_algebra_operators'&gt;Relational algebra operators&lt;/h4&gt;
 
 &lt;ul&gt;
@@ -1653,9 +1653,9 @@
  
  <entry>
    <title>Cloud and Grid computing</title>
-   <link href="http://thibaultlaurens.github.com/middleware/2013/01/17/cloud-and-grid-computing"/>
+   <link href="http://thibaultlaurens.github.io/middleware/2013/01/17/cloud-and-grid-computing"/>
    <updated>2013-01-17T00:00:00+00:00</updated>
-   <id>http://thibaultlaurens.github.com/middleware/2013/01/17/cloud-and-grid-computing</id>
+   <id>http://thibaultlaurens.github.io/middleware/2013/01/17/cloud-and-grid-computing</id>
    <content type="html">&lt;h4 id='cloud_grid_and_cluster'&gt;Cloud, Grid and Cluster&lt;/h4&gt;
 
 &lt;ul&gt;
@@ -1833,9 +1833,9 @@
  
  <entry>
    <title>Generics with C#</title>
-   <link href="http://thibaultlaurens.github.com/microsoft/2013/01/12/generics-with-csharp"/>
+   <link href="http://thibaultlaurens.github.io/microsoft/2013/01/12/generics-with-csharp"/>
    <updated>2013-01-12T00:00:00+00:00</updated>
-   <id>http://thibaultlaurens.github.com/microsoft/2013/01/12/generics-with-csharp</id>
+   <id>http://thibaultlaurens.github.io/microsoft/2013/01/12/generics-with-csharp</id>
    <content type="html">&lt;p&gt;The most important new feature of C# 2.0 (which was released in 2005) is &lt;strong&gt;generics&lt;/strong&gt;. Understanding how they are implemented is essential to understand advances and key features they will bring later to C# and the .NET framework (like &lt;strong&gt;LINQ&lt;/strong&gt; for example).&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;&lt;em&gt;What are generics?&lt;/em&gt;&lt;br /&gt; Also called parametric polymorphism, generics consists in declaring a type with a type parameter that will be instantiated when it will be needed. It adds a great flexibility to the language.&lt;br /&gt; In C#, you can declare generics with the help of &lt;strong&gt;&amp;lt; T &amp;gt;&lt;/strong&gt; where T is the parameterized type. Classes, interfaces, methods, properties and delegates can be defined. The exemple below declares a generic simplified version of the List&amp;lt; T &amp;gt; class (available in the .NET framework)&lt;/p&gt;
@@ -1920,9 +1920,9 @@
  
  <entry>
    <title>Calculating service availability</title>
-   <link href="http://thibaultlaurens.github.com/system/2013/01/05/calculating-service-availability"/>
+   <link href="http://thibaultlaurens.github.io/system/2013/01/05/calculating-service-availability"/>
    <updated>2013-01-05T00:00:00+00:00</updated>
-   <id>http://thibaultlaurens.github.com/system/2013/01/05/calculating-service-availability</id>
+   <id>http://thibaultlaurens.github.io/system/2013/01/05/calculating-service-availability</id>
    <content type="html">&lt;p&gt;&lt;strong&gt;MTBF&lt;/strong&gt;, &lt;strong&gt;MTTD&lt;/strong&gt;, &lt;strong&gt;MTTR&lt;/strong&gt; and &lt;strong&gt;MTTF&lt;/strong&gt; are the four parameters required to calculate the availability of a service or an individual component in a specific architecture.&lt;/p&gt;
 
 &lt;ul&gt;
@@ -1962,9 +1962,9 @@
  
  <entry>
    <title>Hello Blog!</title>
-   <link href="http://thibaultlaurens.github.com/miscellaneous/2013/01/03/hello-world"/>
+   <link href="http://thibaultlaurens.github.io/miscellaneous/2013/01/03/hello-world"/>
    <updated>2013-01-03T00:00:00+00:00</updated>
-   <id>http://thibaultlaurens.github.com/miscellaneous/2013/01/03/hello-world</id>
+   <id>http://thibaultlaurens.github.io/miscellaneous/2013/01/03/hello-world</id>
    <content type="html">&lt;p&gt;For a first post, I would like to briefly explain how I built this blog. If you are tired of Wordpress or others complicated blog engines and are looking for a very simple and effective way to blog, then &lt;a href='https://github.com/mojombo/jekyll/wiki' target='_blank' title='github.com/mojombo/jekyll'&gt;&lt;strong&gt;Jekyll&lt;/strong&gt;&lt;/a&gt; is what you are looking for! As mentioned in the Github repository, &amp;#8220;Jekyll is a blog aware, static site generator in Ruby&amp;#8221; and is the simpler way to blog I have seen so far.&lt;/p&gt;
 
 &lt;p&gt;This blog is based on it and is hosted right on &lt;a href='https://github.com' target='_blank' title='github.com'&gt;Github&lt;/a&gt;. Yes, because Jekyll is actually the engine used by Github Pages, it is very simple to host a Jekyll blog on a repository named &lt;em&gt;&amp;#8220;USERNAME.github.com&amp;#8221;&lt;/em&gt;.&lt;/p&gt;
