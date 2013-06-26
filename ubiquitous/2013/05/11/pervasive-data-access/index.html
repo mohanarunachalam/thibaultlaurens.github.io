@@ -1,0 +1,509 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Pervasive Data Access</title>
+    <meta name="description" content="Pervasive Data Access - Pervasive Applications course review - part 4">
+    <meta name="author" content="Thibault Laurens">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/foundation/stylesheets/foundation.min.css" rel="stylesheet">
+    <link href="/assets/themes/foundation/stylesheets/app.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="/assets/themes/foundation/stylesheets/social_foundicons.css">
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+
+  </head>
+
+  <body>
+  <div class="row contain-to-grid">
+      <nav class="top-bar">
+          <ul class="left">
+              <li><a title="Home" href="http://thibaultlaurens.github.com">Thibault Laurens</a></li>
+              <li class="divider"></li>
+              <li><a title="Archive" href="/archive.html">Archive</a></li>
+              <li class="divider"></li>
+              <li><a title="Category" href="/categories.html">Category</a></li>
+              <li class="divider"></li>
+              <li><a title="Tag" href="/tags.html">Tag</a></li>
+          </ul>
+
+          <ul class="right">
+
+              <li class="has-dropdown">
+                          <a href="#">Social</a>
+                          <ul class="dropdown"><li class="title back js-generated"><h5><a href="#">Social</a></h5></li>
+                            <li><a target="_blank" title="Go to github.com/ThibaultLaurens"  href="https://github.com/ThibaultLaurens">Github</a></li>
+                            <li><a target="_blank" title="Go to twitter.com/ThibaultLaurens" href="https://twitter.com/ThibaultLaurens">Twitter</a></li>
+                            <li><a target="_blank" title="Go to linkedin.com/thibault-laurens" href="http://www.linkedin.com/pub/thibault-laurens/13/b58/40b">LinkedIn</a></li>
+                          </ul>
+                        </li>
+              <li class="divider"></li>
+              <li><a title="Go to github.com/thibaultlaurens" href="https://github.com/ThibaultLaurens?tab=repositories" target="_blank">Projects</a></li>
+              <li class="divider"></li>
+              <li><a title="Go to flickr.com/photos/thibaultlaurens" href="http://www.flickr.com/photos/thibaultlaurens/" target="_blank">Photo</a></li>
+              <li class="divider"></li>
+              <li><a title="Go to soundcloud.com/thibault-laurens" href="https://soundcloud.com/thibault-laurens" target="_blank">Sound</a></li>
+              <li class="divider"></li>
+              <li><a title="More info about me" href="/about.html">About</a></li>
+ <!--
+              <li class="has-dropdown">
+                  <a href="#">Link</a>
+
+                  <ul class="dropdown">
+                      <li><a href="#">Dropdown Link</a></li>
+                  </ul>
+
+              </li>
+              
+              
+              
+
+
+  
+    
+      
+      	
+      	<li><a href="/404.html">404 - NOT FOUND</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Categories</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+
+
+
+-->
+          </ul>
+      </nav>
+  </div>
+
+      <section>
+        
+<header>
+    <div class="row">
+    <div class="twelve columns">
+        <h1>Pervasive Data Access </h1>
+        
+            <h4 class="subheader">Pervasive Applications course review - part 4</h4>
+        
+    </div>
+    </div>
+</header>
+
+<div class="row">
+  <div class="nine columns">
+    <h4 id='data_dissemination_in_pervasive_environment'>Data dissemination in Pervasive environment</h4>
+
+<ul>
+<li>
+<p>Transfer data from producers to interested consumer, two categories: <strong>pull</strong> and <strong>push</strong></p>
+</li>
+
+<li>
+<p>Characteristics &amp; Challenges:</p>
+
+<ul>
+<li><strong>Limited client capability</strong>: battery life, screen size, CPU, memory…</li>
+
+<li><strong>Limited bandwidth &amp; Weak connectivity</strong>: clients don’t stay connected continuously, frequent disconnections impact how transaction management is implemented and how data consistency is guaranteed.</li>
+
+<li><strong>Asymmetry in the communication</strong>: downstream much greater than upstream.</li>
+
+<li><strong>User Mobility</strong>: different cells and servers at different times.</li>
+</ul>
+</li>
+</ul>
+<br />
+<h4 id='pervasive_data_broadcast'>Pervasive data broadcast</h4>
+
+<ul>
+<li>
+<p>Performance criteria</p>
+
+<ul>
+<li><strong>Access efficiency</strong>: how fast a client request is answered</li>
+
+<li><strong>Energy conservation</strong>: how much battery power a mobile client consumes</li>
+</ul>
+</li>
+
+<li>
+<p><strong>Broadcast scheduling</strong>: arranges the order of data items and the frequency of these data items in a broadcast channel, to improve the client access efficiency. Broadcast schedules:</p>
+
+<ul>
+<li>Push-based broadcast</li>
+
+<li>Pull-based (on-demand) broadcast</li>
+
+<li>Hybrid broadcast</li>
+</ul>
+</li>
+
+<li>
+<p><strong>Push based broadcast</strong></p>
+
+<ul>
+<li><strong>Flat broadcast</strong>: All data broadcasted in one cycle, same access time. Inefficient.</li>
+
+<li><strong>Probabilistic-Based Broadcast</strong>: Long access time for a data item may be resulted + inferior performance to other broadcast algorithms.</li>
+
+<li><strong>Broadcast Disk</strong>: Data items of same range of access probability are grouped into <strong>logical disks</strong>. Each disk is assigned a broadband frequency. A broadcast is decomposed into several minor cycles. One minor cycle = one data item from each disk.</li>
+
+<li><strong>Optimal Push Scheduling</strong> (complicated)</li>
+</ul>
+</li>
+
+<li>
+<p>Disadvantages of push based scheduling: not tailored to individual client need + tend to limit the broadcast data items to a pool and react slowly to changing client access patterns.</p>
+</li>
+
+<li>
+<p><strong>On-demand based (pull-based)</strong>: client sends requests to the server through an uplink channel, requests are queued at the server, the server choose requested items, delivers them over the broadcast channel and clear the request in the queue. Clients manage the broadcast channel.</p>
+</li>
+
+<li>
+<p><strong>Fixed-Size Item</strong> On-demand broadcast: Average access time performance used as the main optimization objective</p>
+
+<ul>
+<li>FCFS: <strong>First-Come-First-Serve</strong> (simple but poor access performance)</li>
+
+<li>MRF: <strong>Most Requests First</strong></li>
+
+<li>MRFL: <strong>MRF Low</strong> by breaking the pie in favor of the item with low requested probability</li>
+
+<li>LWF: <strong>Longest Wait First</strong>: sum of the waiting time of all outstanding requests for the item</li>
+</ul>
+</li>
+
+<li>
+<p><strong>Variable-Size Item</strong> On-Demand broadcast</p>
+
+<ul>
+<li>A new performance metric called <strong>stretch</strong> is used (ratio access time/service time). Reasonable metric for variable-size item: takes the size into consideration (service time)</li>
+
+<li>PLWF: <strong>Pre-Emptive Longest Wait First</strong></li>
+
+<li>SRTF: <strong>Shortest Remaining Time First</strong></li>
+
+<li>LTSF: <strong>Long Total Stretch First</strong> (current stretch of a request: ratio = time the request has been queued in the system thus far / service time)</li>
+
+<li><strong>MAX algorithm</strong>: assigns a deadline to each request when it arrives at the server. deadline = arrivaltime + servicetime * SMAX (SMAX = max stretch value of the request)</li>
+</ul>
+</li>
+
+<li>
+<p><strong>Energy-Efficient</strong> On-Demand broadcast takes energy saving into consideration. Broadcast data items in batches using an indexing technique (index items in the current broadcast cycle). Client tunes into a small portion of the broadcast channel instead of monitoring the broadcast channel (energy saving). Data scheduling based on a priority formula.</p>
+</li>
+
+<li>
+<p><strong>Hybrid broadcast</strong>: requires 2 queues (request queue + broadcast cycle), a timer and algorithm</p>
+</li>
+
+<li>
+<p><strong>Aix indexing</strong> for energy conservation, indicates the arrival time of data items (instead of scanning a broadcast channel for requested data items)</p>
+</li>
+
+<li>
+<p>Aix indexing steps:</p>
+
+<ul>
+<li><strong>Initial probe</strong>: tuning the broadcast channel to determine when an index is broadcast.</li>
+
+<li><strong>Index lookup</strong>: accessing the index to determine the time when a required data item is on air.</li>
+
+<li><strong>Download</strong>: retrieving required data item at its indicated broadcast time.</li>
+</ul>
+</li>
+
+<li>
+<p>Indexing techniques</p>
+
+<ul>
+<li><strong>Hashing &amp; flexible indexing</strong>: data items inside frames, hash function hashes a key attribute (ex: delivery time) of the frame holding the desired data, shift function guide a search to the frame containing the desired data.</li>
+
+<li><strong>Index tree</strong>: stores the key attribute values and the arrival time of the data frames in each node, very efficient for clustered broadcast cycle.</li>
+
+<li><strong>Signatures</strong> (for non-cluster based) widely used for information retrieval, signature and query signature generated</li>
+</ul>
+</li>
+</ul>
+<br />
+<h4 id='mobile_data_caching'>Mobile Data Caching</h4>
+
+<ul>
+<li>Caching frequently used data items in the mobile client’s local storage improve access latency and data availability</li>
+
+<li>Cache management technique include <strong>cache replacement</strong> (what data items to keep to maximize the space efficiency), <strong>cache coherence</strong> (between source values and cached values) and <strong>cache prefetching</strong> (loads data in advance on the server, if the request is predictable).</li>
+</ul>
+<br />
+<h4 id='data_access_based_on_user_requirements'>Data Access based on user requirements</h4>
+
+<ul>
+<li><strong>Time-critical</strong> applications demand data to be made available by a specified “deadline”.</li>
+
+<li><strong>Location-based</strong> applications request data based on the current location of the users.</li>
+
+<li><strong>Semantic-based</strong> data access: to understand the data access requirement in a semantic way (make required data earlier and more efficient).</li>
+
+<li><strong>Reliable</strong> data access: introduce controlled redundancy in the broadcast schedule to deal with unreliable wireless communication (data corrupted or lost because of signal interference for ex)</li>
+</ul>
+    <hr>
+    <div class="row pagination">
+        <div class="four columns">
+                  
+                    <div class="prev"><a href="/management/2013/05/10/software-configuration-management" title="Software Configuration Management">&larr; Previous</a></div>
+                  
+        </div>
+        <div class="four columns">
+            <div><a href="/archive.html">Archive</a></div>
+        </div>
+        <div class="four columns">
+                  
+                    <div class="next"><a href="/management/2013/06/24/risk-management" title="Risk Management">Next &rarr;</a></div>
+                  
+        </div>
+    </div>
+    <hr>
+    
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'thibaultlaurens'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+  </div>
+  <div class="two columns offset-by-one">
+
+    <div style="margin-bottom: 50px;">
+      <h4>Published</h4>
+      <div class="date"><span>11 May 2013</span></div> 
+    </div>
+
+      <div style="margin-bottom: 50px;">
+        <h4>Category</h4>
+        ubiquitous
+      </div>
+
+      <div style="margin-bottom: 50px;">
+        <h4>Tag</h4>
+        course-review
+      </div>
+        
+        <div style="margin-bottom: 50px;">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-via="thibaultlaurens">Tweet</a>
+      </div>
+  </div>
+</div>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+      </section>
+
+      <footer class="row">
+          <hr>
+        <div class="eight columns">
+            <p style="padding-top: 0px">
+                <a title="Go to facebook.com/thibault.laurens" target="_blank" href="https://www.facebook.com/thibault.laurens"><i class="social foundicon-facebook"></i></a>
+                <a title="Go to github.com/ThibaultLaurens" target="_blank" href="https://github.com/ThibaultLaurens"><i class="foundicon-github"></i></a>
+                <a title="Go to linkedin.com/thibault-laurens" target="_blank" href="http://www.linkedin.com/pub/thibault-laurens/13/b58/40b"><i class="social foundicon-linkedin"></i></a>
+                <a title="Go to twitter.com/ThibaultLaurens" target="_blank" href="https://twitter.com/ThibaultLaurens"><i class="social foundicon-twitter"></i></a>
+                <a title="Go to flickr.com/photos/thibaultlaurens" target="_blank" href="http://www.flickr.com/photos/thibaultlaurens/"><i class="social foundicon-flickr"></i></a>
+            </p>
+                <p>
+                    &copy; Thibault Laurens 2013 with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+                  and <a href="http://foundation.zurb.com" target="_blank" title="The most advanced responsive front-end framework in the world.">Zurb's Foundation 3</a>
+                </p>
+        </div>
+        <div class="four columns right">
+        <img alt="technut" src="/assets/themes/foundation/images/technut.png"/>
+        </div>
+      </footer>
+
+ <!-- /container -->
+
+    
+
+      <script type="text/javascript">
+		var disqus_shortname = 'thibaultlaurens';
+		var disqus_identifier = '/ubiquitous/2013/05/11/pervasive-data-access';
+		var disqus_url = 'http://thibaultlaurens.github.com/ubiquitous/2013/05/11/pervasive-data-access';
+ 
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function () {
+			var s = document.createElement('script'); s.async = true;
+			s.type = 'text/javascript';
+			s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+			(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+		}());
+	</script>
+
+  </body>
+
+</html>
+
