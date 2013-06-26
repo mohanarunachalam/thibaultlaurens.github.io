@@ -4,7 +4,11 @@
  <title>Thibault Laurens</title>
  <link href="http://thibaultlaurens.github.io/atom.xml" rel="self"/>
  <link href="http://thibaultlaurens.github.io"/>
+<<<<<<< HEAD
  <updated>2013-06-26T18:05:43+01:00</updated>
+=======
+ <updated>2013-05-23T16:18:33+01:00</updated>
+>>>>>>> 76433a42576a0929114044ee135c9b6cd1bc16e9
  <id>http://thibaultlaurens.github.io</id>
  <author>
    <name>Thibault Laurens</name>
@@ -13,6 +17,7 @@
 
  
  <entry>
+<<<<<<< HEAD
    <title>Context Awareness</title>
    <link href="http://thibaultlaurens.github.io/ubiquitous/2013/06/25/context-awareness"/>
    <updated>2013-06-25T00:00:00+01:00</updated>
@@ -327,6 +332,8 @@
  </entry>
  
  <entry>
+=======
+>>>>>>> 76433a42576a0929114044ee135c9b6cd1bc16e9
    <title>Pervasive Data Access</title>
    <link href="http://thibaultlaurens.github.io/ubiquitous/2013/05/11/pervasive-data-access"/>
    <updated>2013-05-11T00:00:00+01:00</updated>
