@@ -1,0 +1,18 @@
+
+	Category:
+		{% if item.categories %}
+			{% for cat in item.categories %}
+				<a href="/category/{{cat}}">{{cat}}</a>
+			{% endfor %}
+		{% else %}
+			None
+		{% endif %}
+	|
+	Tag:
+		{% if item.tags %}
+			{% for tag in item.tags %}
+				<a href="/tag/{{tag}}">{{tag}}</a>
+			{% endfor %}
+		{% else %}
+			None
+		{% endif %}
