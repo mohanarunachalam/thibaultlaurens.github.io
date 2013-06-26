@@ -1,0 +1,483 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Peer to Peer</title>
+    <meta name="description" content="Peer to Peer - Middleware course review - part 2">
+    <meta name="author" content="Thibault Laurens">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/foundation/stylesheets/foundation.min.css" rel="stylesheet">
+    <link href="/assets/themes/foundation/stylesheets/app.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="/assets/themes/foundation/stylesheets/social_foundicons.css">
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+
+  </head>
+
+  <body>
+  <div class="row contain-to-grid">
+      <nav class="top-bar">
+          <ul class="left">
+              <li><a title="Home" href="http://thibaultlaurens.github.com">Thibault Laurens</a></li>
+              <li class="divider"></li>
+              <li><a title="Archive" href="/archive.html">Archive</a></li>
+              <li class="divider"></li>
+              <li><a title="Category" href="/categories.html">Category</a></li>
+              <li class="divider"></li>
+              <li><a title="Tag" href="/tags.html">Tag</a></li>
+          </ul>
+
+          <ul class="right">
+
+              <li class="has-dropdown">
+                          <a href="#">Social</a>
+                          <ul class="dropdown"><li class="title back js-generated"><h5><a href="#">Social</a></h5></li>
+                            <li><a target="_blank" title="Go to github.com/ThibaultLaurens"  href="https://github.com/ThibaultLaurens">Github</a></li>
+                            <li><a target="_blank" title="Go to twitter.com/ThibaultLaurens" href="https://twitter.com/ThibaultLaurens">Twitter</a></li>
+                            <li><a target="_blank" title="Go to linkedin.com/thibault-laurens" href="http://www.linkedin.com/pub/thibault-laurens/13/b58/40b">LinkedIn</a></li>
+                          </ul>
+                        </li>
+              <li class="divider"></li>
+              <li><a title="Go to github.com/thibaultlaurens" href="https://github.com/ThibaultLaurens?tab=repositories" target="_blank">Projects</a></li>
+              <li class="divider"></li>
+              <li><a title="Go to flickr.com/photos/thibaultlaurens" href="http://www.flickr.com/photos/thibaultlaurens/" target="_blank">Photo</a></li>
+              <li class="divider"></li>
+              <li><a title="Go to soundcloud.com/thibault-laurens" href="https://soundcloud.com/thibault-laurens" target="_blank">Sound</a></li>
+              <li class="divider"></li>
+              <li><a title="More info about me" href="/about.html">About</a></li>
+ <!--
+              <li class="has-dropdown">
+                  <a href="#">Link</a>
+
+                  <ul class="dropdown">
+                      <li><a href="#">Dropdown Link</a></li>
+                  </ul>
+
+              </li>
+              
+              
+              
+
+
+  
+    
+      
+      	
+      	<li><a href="/404.html">404 - NOT FOUND</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Categories</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+
+
+
+-->
+          </ul>
+      </nav>
+  </div>
+
+      <section>
+        
+<header>
+    <div class="row">
+    <div class="twelve columns">
+        <h1>Peer to Peer </h1>
+        
+            <h4 class="subheader">Middleware course review - part 2</h4>
+        
+    </div>
+    </div>
+</header>
+
+<div class="row">
+  <div class="nine columns">
+    <h4 id='definition'>Definition</h4>
+
+<ul>
+<li><strong>High degree of decentralization</strong>: Peers implement both client and server functionality, most of system state dynamically allocated among peers.</li>
+
+<li><strong>Self-organization</strong>: Once a node is distributed, a little or no manual configuration required.</li>
+
+<li><strong>Low barrier to deployment</strong>: Low upfront investment.</li>
+
+<li><strong>Organic growth</strong>: Resources contributed by participating nodes.</li>
+
+<li><strong>Resilience to faults and attacks</strong>: Few, if any, node&#8217;s critical to system operation.</li>
+
+<li><strong>Abundance and diversity of resources</strong>: Few organization can afford: divers hardware, software, network access, power supply ..</li>
+</ul>
+<br />
+<h4 id='application'>Application</h4>
+
+<ul>
+<li><strong>SETI@HOME</strong>: volounteer computing, users donate spare CPU cycles.</li>
+
+<li><strong>BBC</strong>: Iplayer, streaming media, exploit bandwith of clients to avoid bandwith cost of server based solutions.</li>
+
+<li><strong>BitTorrent</strong>: Sharing and distributing files.</li>
+</ul>
+<br />
+<h4 id='how_it_works'>How it works?</h4>
+
+<ul>
+<li><strong>Overlay network</strong>: Computer network built on top of another network. Nodes connected by virtual links, each is a path, possibly through many nodes in the underlying network.</li>
+
+<li><strong>Key challenge</strong>: To build an overlay network with routing capability that works well in presence of high membership turnover.</li>
+
+<li><strong>Characteristic</strong>: Degree of centralization, overlay maintenance, distributed state, distributed coordination.</li>
+</ul>
+<br />
+<h4 id='degree_of_centralization'>Degree of centralization</h4>
+
+<ul>
+<li>Presence or absence of centralized components in system design</li>
+
+<li>Partially centralized system have a dedicated node controller maintaining set of participating nodes</li>
+
+<li>Decentralized system has no dedicated nodes critical to operation of the system but some has supernodes (highly available) which store state, keep indices of available content, act like a rendez-vous point.</li>
+</ul>
+<hr />
+<h4 id='unstructured_overlays'>Unstructured overlays</h4>
+
+<ul>
+<li>No constraints on links between different nodes and hence no particular structure to the overlay.</li>
+
+<li>New node performs random walkthrough overlay to find place to join</li>
+
+<li>Minimum chosen to maintain connectivity in case of failure.</li>
+
+<li>Maximum set to bound overhead of maintaining links.</li>
+</ul>
+<br />
+<h4 id='structured_overlays'>Structured overlays</h4>
+
+<ul>
+<li>Each node has a unique ID chosen so they are uniformly distributed in that spaces. Overlay graph has a specific structure. The ID determines the position in the structure and contains its sets of links.</li>
+
+<li>Use of key to assign responsabilities: one key is mapped to one node. <strong>KBR</strong>, <em>key based routing</em>, with a starting node and a key. KBR gives the path to the node responsible for the key.</li>
+</ul>
+<br />
+<h4 id='content_in_unstructured_overlays'>Content in unstructured overlays</h4>
+
+<ul>
+<li>Object stored at node that inserted the object, as well as at node that subsequently download the object.</li>
+
+<li>Controller node maintains list of what is where.</li>
+
+<li>Queries are directed to controller which responds with lists of nodes where object may be found.</li>
+</ul>
+<br />
+<h4 id='content_in_structured_overlays'>Content in structured overlays</h4>
+
+<ul>
+<li>Object stored at node that inserted the object, as well as at node that subsequently download the object.</li>
+
+<li>Querying node floods request message through the overlay specifying object by key, keywords, metadata..</li>
+
+<li>Node that has matching object (or pointer) responds.</li>
+
+<li>Scope of floods often limited, to trade recall for overhead.</li>
+</ul>
+<hr />
+<h4 id='chord'>Chord</h4>
+
+<ul>
+<li>Efficient by locating a node that stores a particular object.</li>
+
+<li>Distributed lookup protocol with one operation: maps keys to node + a finger table</li>
+
+<li>With n nodes, each nodes maintains only informations about log(n) nodes and resolves lookup via log(n) messages to other nodes, join or leave requires log2(n) messages.</li>
+</ul>
+<br />
+<h4 id='pastry'>Pastry</h4>
+
+<ul>
+<li>Each node is assigned a node ID (128 bits) chosen randomly, assumed to be uniformly distributed.</li>
+
+<li>Identifies node&#8217;s position in a circular spaces 0 to 2^128 - 1</li>
+
+<li>Message and node ID share prefix (messages are routed to node ID closer message key).</li>
+
+<li>Each nodes maintain a routing table, neighbourhood set and leaf set.</li>
+</ul>
+<br />
+<h4 id='scribe'>Scribe</h4>
+
+<ul>
+<li>Based on Pastry, publish-subscribe.</li>
+
+<li>Subscribers register interest in a topic or pattern of events.</li>
+
+<li>Asynchronously receive events matching their interests.</li>
+</ul>
+<hr />
+<h4 id='dht_distributed_hash_table_threat_in_security'>DHT (Distributed Hash Table) threat in security</h4>
+
+<ul>
+<li>Incorrect lookup routing.</li>
+
+<li>Incorrect routing update.</li>
+
+<li>Partitionning</li>
+</ul>
+    <hr>
+    <div class="row pagination">
+        <div class="four columns">
+                  
+                    <div class="prev"><a href="/database/2013/01/24/relational-algebra-and-sql-syntax" title="Relational algebra and SQL syntax">&larr; Previous</a></div>
+                  
+        </div>
+        <div class="four columns">
+            <div><a href="/archive.html">Archive</a></div>
+        </div>
+        <div class="four columns">
+                  
+                    <div class="next"><a href="/middleware/2013/02/06/the-component-paradigm" title="The component paradigm">Next &rarr;</a></div>
+                  
+        </div>
+    </div>
+    <hr>
+    
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'thibaultlaurens'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+  </div>
+  <div class="two columns offset-by-one">
+
+    <div style="margin-bottom: 50px;">
+      <h4>Published</h4>
+      <div class="date"><span>01 February 2013</span></div> 
+    </div>
+
+      <div style="margin-bottom: 50px;">
+        <h4>Category</h4>
+        middleware
+      </div>
+
+      <div style="margin-bottom: 50px;">
+        <h4>Tag</h4>
+        course-review
+      </div>
+        
+        <div style="margin-bottom: 50px;">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-via="thibaultlaurens">Tweet</a>
+      </div>
+  </div>
+</div>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+      </section>
+
+      <footer class="row">
+          <hr>
+        <div class="eight columns">
+            <p style="padding-top: 0px">
+                <a title="Go to facebook.com/thibault.laurens" target="_blank" href="https://www.facebook.com/thibault.laurens"><i class="social foundicon-facebook"></i></a>
+                <a title="Go to github.com/ThibaultLaurens" target="_blank" href="https://github.com/ThibaultLaurens"><i class="foundicon-github"></i></a>
+                <a title="Go to linkedin.com/thibault-laurens" target="_blank" href="http://www.linkedin.com/pub/thibault-laurens/13/b58/40b"><i class="social foundicon-linkedin"></i></a>
+                <a title="Go to twitter.com/ThibaultLaurens" target="_blank" href="https://twitter.com/ThibaultLaurens"><i class="social foundicon-twitter"></i></a>
+                <a title="Go to flickr.com/photos/thibaultlaurens" target="_blank" href="http://www.flickr.com/photos/thibaultlaurens/"><i class="social foundicon-flickr"></i></a>
+            </p>
+                <p>
+                    &copy; Thibault Laurens 2013 with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+                  and <a href="http://foundation.zurb.com" target="_blank" title="The most advanced responsive front-end framework in the world.">Zurb's Foundation 3</a>
+                </p>
+        </div>
+        <div class="four columns right">
+        <img alt="technut" src="/assets/themes/foundation/images/technut.png"/>
+        </div>
+      </footer>
+
+ <!-- /container -->
+
+    
+
+      <script type="text/javascript">
+		var disqus_shortname = 'thibaultlaurens';
+		var disqus_identifier = '/middleware/2013/02/01/peer-to-peer';
+		var disqus_url = 'http://thibaultlaurens.github.com/middleware/2013/02/01/peer-to-peer';
+ 
+		/* * * DON'T EDIT BELOW THIS LINE * * */
+		(function () {
+			var s = document.createElement('script'); s.async = true;
+			s.type = 'text/javascript';
+			s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+			(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+		}());
+	</script>
+
+  </body>
+
+</html>
+
