@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>How the V8 engine works?</title>
+    <meta name="description" content="How it works and how to write performant JavaScript code for the engine">
+    <meta name="author" content="Thibault Laurens">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <link rel="shortcut icon" href="/assets/themes/twitter/img/favicon.ico">
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+
+    <!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-narrow">
+          <a class="brand" href="/">Thibault Laurens</a>
+                <ul class="nav">
+                    <li><a href="/pages/nav/archive.html">Archive</a></li>
+                    <li><a href="/pages/nav/categories.html">Categories</a></li>
+                    <li><a href="/pages/courses/index.html">Courses</a></li>
+                    <li><a href="/pages/books/index.html">Books</a></li>
+                    <li><a title="Go to github.com/thibaultlaurens" href="https://github.com/ThibaultLaurens" target="_blank">Projects</a></li>
+                    <li><a href="/pages/about.html">About</a></li>
+                </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-narrow">
+
+      <div class="content">
+          
+<div class="page-header">
+  <h1>How the V8 engine works?</h1>
+  
+   <h1><small>How it works and how to write performant JavaScript code for the engine</small></h1>
+</div>
+
+<div class="row-fluid post-full post">
+  <div class="span12">
+    <div class="date">
+      <span>29 April 2013</span>
+    </div>
+    <div class="content">
+      
+<h4 id="what_is_v8">What is V8?</h4>
+
+<p>V8 is a <strong>JavaScript engine</strong> build in the google development center in Germany. It is <a target='_blank' href='https://code.google.com/p/v8/wiki/Source' title='code.google.com/p/v8/wiki/Source'><strong>open source</strong></a> and written in <strong>C++</strong>. It is used for both client side (Googgle Chrome) and server side (node.js) JavaScript applications.</p>
+
+<p>V8 was first designed to increase the performance of the JavaScript execution inside web browsers. In order to obtain speed, V8 translates JavaScript code into more efficient machine code instead of using an interpreter. It compiles JavaScript code into machine code at execution by implementing a <strong>JIT (Just-In-Time) compiler</strong> like a lot of modern JavaScript engines such as SpiderMonkey or Rhino (Mozilla) are doing. The main difference with V8 is that it doesn’t produce bytecode or any intermediate code.</p>
+
+<p>The aim of this article is to show and to understand <strong>how V8 works, in order to produce optimized code</strong> for both client side or server side applications. If you are already asking yourself “Should I care about JavaScript performance?” then I will answer with a citation, from Daniel Clifford (tech lead and manager of the V8 team): “It’s not just about making your current application run faster, it’s about enabling things that you have never been able to do in the past”.</p>
+<div class='six centered columns'>
+    <img alt='V8!' src='/assets/themes/img/post/21-03-13-v8/v8.PNG' />
+</div>
+<h4 id="hidden_class">Hidden class</h4>
+
+<p>JavaScript is a protoptye-based language: there is <strong>no classes</strong> and objects are created by using a cloning process. Also, JavaScript is dynamically typed: types and type informations are not explicit and properties can be added and deleted to objects on the fly. Accessing types and properties effectively makes a first big challenge for V8. Instead of using a dictionnary-like data structure for storing object properties and doing a dynamic lookup to resolve the property location (like most JavaScript engine do), V8 creates <strong>hidden classes</strong>, at runtime, in order to have an internal representation of the type system and to improve the property access time.</p>
+
+<p>Let’s have for instance a “Point” function and the creation of two “Point” objects:</p>
+<div class='ten centered columns'>
+    <img alt='hidden class' src='/assets/themes/img/post/21-03-13-v8/hiddenclass.PNG' />
+</div>
+<p>If the layout are the same, which is the case here, p and q belong to the same hidden class created by V8. This highlight another advantage in using hidden classes: it allows V8 to group objects witch properties are the same. Here “p” and “q” use the same <strong>optimized code</strong>.</p>
+
+<p>Now let’s assume that we want to add a “z” property to our “q” object, right after its declaration (which is perfectly fine with a dynamically typed language).</p>
+
+<p>How V8 will deal with this scenario? In fact, V8 <strong>creates a new hidden class everytime the constructor function declares a property</strong> and keeps track of the changement in the hidden class. Why? Because if two objects are created (“p” and “q”) and if a member is added to the second object (“q”) after the creation, V8 needs to keep the last hidden class created (for the first object “p”) and to create a new one (for the second object “q”) with the new member.</p>
+<div class='ten centered columns'>
+    <img alt='transition information' src='/assets/themes/img/post/21-03-13-v8/transition.PNG' />
+</div>
+<p>Everytime a new hidden class is created, the previous one is updated with a class transition indicating what hidden class has to be used instead of it.</p>
+
+<h5 id="code_optimization">Code optimization</h5>
+
+<p>Because V8 creates a new hidden class for each property, hidden class creation should be kept to a minimum. To do this, try to avoid to add properties after the object creation and always initialize object members in the same order (to avoid the creation of different three of hidden classes).</p>
+
+<p>[Update] Another trick: Monomorphic operations are operations which only work on objects with the same hidden class. V8 creates hidden class when we call a function, if we call it again with different parameter types, V8 need to create another hidden class: <strong>Prefer monomorphic code to polymorphic code</strong></p>
+
+<p><br /></p>
+<hr />
+<p><br /></p>
+
+<h4 id="more_example_on_how_v8_optimized_javascript_code">More example on how V8 optimized JavaScript code</h4>
+
+<p><br /></p>
+
+<h5 id="tagged_values">Tagged values</h5>
+
+<p>To have an efficient representation of numbers and JavaScript objects, V8 represents both of us with a <strong>32 bits</strong> value. It uses a bit to know if it is an object (flag = 1) or an integer (flag = 0) called here SMall Integer or <strong>SMI</strong> because of its 31 bits. Then, if a numeric value is bigger than 31 bits, V8 will box the number, turning it to a double and creating a new object to put the number inside.</p>
+
+<p><strong>Code optimization</strong>: Try to use 31 bit signed numbers whenever possible to avoid the expensive boxing operation into JavaScript object.</p>
+
+<p><br /></p>
+
+<h5 id="arrays">Arrays</h5>
+
+<p>V8 uses to differents methods to handle arrays:</p>
+
+<ul>
+<li><strong>Fast elements</strong>: Designed for arrays where set of keys are very compact. They have a <strong>linear storage buffer</strong> that can be accessed very efficiently.</li>
+
+<li><strong>Dictionary elements</strong>: Designed for sparse arrays which don’t have every elements inside of them. It is actually a <strong>hash table</strong>, more expensive to access than “Fast Elements”</li>
+</ul>
+
+<p><strong>Code optimization</strong>: Be sure that V8 uses “Fast Elements” to handle arrays, in other words, avoid sparse arrays where keys are not next incremental numbers. Also, try to avoid to pre-allocate large arrays, better is to grow as you go. Finally, don’t delete elements in arrays: it makes the key set sparse.</p>
+
+<p><br /></p>
+<hr />
+<p><br /></p>
+
+<h4 id="how_v8_compiles_javascript_code">How V8 compiles JavaScript code?</h4>
+
+<p><br /></p>
+
+<p>V8 has two compilers!</p>
+
+<ul>
+<li>
+<p>A <strong>“Full” Compiler</strong> that can generate good code for any JavaScript: good but not great JIT code. The goal of this compiler is to generates code quickly. To achieve its goal, it doesn’t do any type analysis and doesn”t know anything about types. Instead, it uses an <strong>Inline Caches</strong> or “IC” strategy to refine knowledge about types while the program run. IC is very efficient and bring about 20 times speed improvment.</p>
+</li>
+
+<li>
+<p>An <strong>Optimizing Compiler</strong> that produces great code for most of the JavaScript language. It comes later and re-compiles hot functions. The optimizing compiler takes types from the Inline Cache and make decisions about how to optimize the code better. However, some language features are not supported yet like try/catch block for instance. (The workaround for try/catch blocks is to write the “non stable” code into a function and to call the function in the try block)</p>
+</li>
+</ul>
+
+<p><br /></p>
+
+<p><strong>Code optimization</strong>: V8 also supports <strong>de-optimization</strong>: the optimizing compiler makes optimistic assumptions from the Inline Cache about the different types, de-optimization comes if these assumptions are invalids. For example, if an hidden class generated was not the one expected, V8 throws away the optimized code and come back to the Full Compiler to get types again from the Inline Cache. This process is slow and should be avoided by trying to not change functions after they are optimized.</p>
+
+<p><br /></p>
+<hr />
+<p><br /></p>
+
+<h4 id="resources">Resources</h4>
+
+<ul>
+<li>Google I/O 2012 “Breaking the JavaScript Speed Limit with V8” with Daniel Clifford, tech lead and manager of the V8 team:</li>
+</ul>
+
+<p><a target='_blank' href='https://www.youtube.com/watch?v=UJPdhx5zTaw' title='video'>video</a> and</p>
+
+<p><a target='_blank' href='http://v8-io12.appspot.com' title='slides'>slides</a>.</p>
+
+<ul>
+<li>V8: an open source JavaScript engine:</li>
+</ul>
+
+<p><a target='_blank' href='http://www.youtube.com/watch?v=hWhMKalEicY' title='video'>video</a> of Lars Bak, V8 core engineer.</p>
+
+<ul>
+<li>Nikkei Electronics Asia blog post: <a target='_blank' href='http://techon.nikkeibp.co.jp/article/HONSHI/20090106/163615/' title='go to techon.nikkeibp.co.jp'>Why Is the New Google V8 Engine So Fast?</a></li>
+</ul>
+
+    </div>
+
+  
+    <ul class="tag_box inline">
+      <li><i class="icon-folder-open"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/pages/nav/categories.html#javascript-ref">
+    		javascript <span>1</span>
+    	</a></li>
+    
+  
+
+
+    </ul>
+    
+
+    
+
+    <hr>
+    <div class="pagination">
+      <ul>
+      
+        <li class="prev"><a href="/database/2013/02/28/relational-database-and-normalization" title="Relational database and Normalization">&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next disabled"><a>Next &rarr;</a>
+      
+      </ul>
+    </div>
+    <hr>
+    
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'thibaultlaurens'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+  </div>
+</div>
+
+
+      </div>
+      <footer class="row">
+            <hr>
+            <div class="span8">
+                <p>
+                    <a title="Go to facebook.com/thibault.laurens" target="_blank" href="https://www.facebook.com/thibault.laurens"><img src="/assets/themes/twitter/bootstrap/img/facebook.png"/></a>
+                    <a title="Go to github.com/ThibaultLaurens" target="_blank" href="https://github.com/ThibaultLaurens"><img src="/assets/themes/twitter/bootstrap/img/github.png"/></i></a>
+                    <a title="Go to linkedin.com/thibault-laurens" target="_blank" href="http://www.linkedin.com/pub/thibault-laurens/13/b58/40b"><img src="/assets/themes/twitter/bootstrap/img/linked_in.png"/></i></a>
+                    <a title="Go to twitter.com/ThibaultLaurens" target="_blank" href="https://twitter.com/ThibaultLaurens"><img src="/assets/themes/twitter/bootstrap/img/twitter.png"/></a>
+                    <a title="Go to flickr.com/photos/thibaultlaurens" target="_blank" href="http://www.flickr.com/photos/thibaultlaurens/"><img src="/assets/themes/twitter/bootstrap/img/flickr.png"/></i></a>
+                </p>
+                <p>&copy; 2013 Thibault Laurens
+                    with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+                    and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+                </p>
+            </div>
+            <div class="span3 pull-right">
+                <img alt="technut" src="/assets/themes/twitter/img/technut.png"/>
+            </div>
+        </footer>
+
+    </div>
+
+    
+  </body>
+</html>
+
