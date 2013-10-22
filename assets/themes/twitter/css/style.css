@@ -160,3 +160,7 @@ a > img {
     display: inline;
     margin-right: 30px;
 }
+
+.pagination {
+    text-align: center;
+}
