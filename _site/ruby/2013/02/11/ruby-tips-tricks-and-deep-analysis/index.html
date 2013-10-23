@@ -34,7 +34,8 @@
   </head>
 
   <body>
-    <div class="navbar">
+  <a href="https://github.com/ThibaultLaurens/thibaultlaurens.github.io"><img style="position: absolute; top: 0; right: 0; border: 0; width: 149px; height: 149px; margin-top: 61px;margin-right: 0" src="http://aral.github.com/fork-me-on-github-retina-ribbons/right-grey@2x.png" alt="Fork me on GitHub"></a>
+  <div class="navbar">
       <div class="navbar-inner">
         <div class="container-narrow">
           <a class="brand" href="/">Thibault Laurens</a>
@@ -51,7 +52,6 @@
     </div>
 
     <div class="container-narrow">
-
       <div class="content">
           
 <div class="page-header">
@@ -74,9 +74,9 @@
 <p>The source code of these two projects can be found on Github:</p>
 
 <ul>
-<li><strong>LaFourchette2012</strong> (<a title='github.com/ThibaultLaurens/La_Fourchette_2012' target='_blank' href='https://github.com/ThibaultLaurens/La_Fourchette_2012'>source code</a>) written with four friends, this web application could be used to manage a restaurant’s chain (restaurants, customers &amp; orders, waiters, cookers, payment, bill…). It has a nice “no-refresh” client interface written with <strong>BackboneJS</strong> and an admin panel.</li>
+<li><strong>LaFourchette2012</strong> (<a target='_blank' title='github.com/ThibaultLaurens/La_Fourchette_2012' href='https://github.com/ThibaultLaurens/La_Fourchette_2012'>source code</a>) written with four friends, this web application could be used to manage a restaurant’s chain (restaurants, customers &amp; orders, waiters, cookers, payment, bill…). It has a nice “no-refresh” client interface written with <strong>BackboneJS</strong> and an admin panel.</li>
 
-<li><strong>TraditOnRails</strong> (<a title='github.com/ThibaultLaurens/TraditOnRails' target='_blank' href='https://github.com/ThibaultLaurens/TraditOnRails'>source code</a>) a more recent project is a basic fictitious trading application with fictitious currencies stored in a <strong>MongoDB</strong> database. One characteristic of this project is that it uses a <strong>Node.JS</strong> server and shows real-time updates of currencies rate with the help of <strong>socket.io</strong> and a nice graph.</li>
+<li><strong>TraditOnRails</strong> (<a target='_blank' title='github.com/ThibaultLaurens/TraditOnRails' href='https://github.com/ThibaultLaurens/TraditOnRails'>source code</a>) a more recent project is a basic fictitious trading application with fictitious currencies stored in a <strong>MongoDB</strong> database. One characteristic of this project is that it uses a <strong>Node.JS</strong> server and shows real-time updates of currencies rate with the help of <strong>socket.io</strong> and a nice graph.</li>
 </ul>
 
 <p>Oh and by the way, I should mention that this blog is written with <strong>Jekyll</strong> so once again: RUBY please!</p>
@@ -98,7 +98,7 @@
 
 <li>It uses <strong>Bloks</strong> to iterate on array like for example array.all?{|n| n &gt; 4}, a.keep_if{|n| n&gt;1}</li>
 
-<li>It has multiple types for function such as Blocks and lambdas. Blocks is the most common way to use <a title='skorks.com/2010/05/closures-a-simple-explanation-using-ruby/' target='_blank' href='http://www.skorks.com/2010/05/closures-a-simple-explanation-using-ruby/'><strong>closure</strong></a> (concept from the Scheme language) in Ruby and is one of the most powerful feature of Ruby, it allows the developer to pass code to <strong>iterators</strong> such as each, detect or inject. (I should also say that Ruby extends the concept of block into a new one called <a title='ruby-doc.org/core-1.9.3/Proc.html' target='_blank' href='http://www.ruby-doc.org/core-1.9.3/Proc.html'>Proc</a> which is <strong>first class citizen</strong> and can be simply created by adding Proc.new in a block.)</li>
+<li>It has multiple types for function such as Blocks and lambdas. Blocks is the most common way to use <a target='_blank' title='skorks.com/2010/05/closures-a-simple-explanation-using-ruby/' href='http://www.skorks.com/2010/05/closures-a-simple-explanation-using-ruby/'><strong>closure</strong></a> (concept from the Scheme language) in Ruby and is one of the most powerful feature of Ruby, it allows the developer to pass code to <strong>iterators</strong> such as each, detect or inject. (I should also say that Ruby extends the concept of block into a new one called <a target='_blank' title='ruby-doc.org/core-1.9.3/Proc.html' href='http://www.ruby-doc.org/core-1.9.3/Proc.html'>Proc</a> which is <strong>first class citizen</strong> and can be simply created by adding Proc.new in a block.)</li>
 </ul>
 <script src='https://gist.github.com/ThibaultLaurens/4751477.js?file=block.rb'><![CDATA[ ]]></script>
 <p>Example of a Block in Rails: The code on the left side of the “do” will interact with the variable inside the two pipes on its right side.</p>
@@ -107,7 +107,7 @@
 
 <p>One thing the university teach me is that you can’t learn a new programming language if you don’t see how it works under the hood. So, let’s go a little deeper inside Ruby!</p>
 
-<p>The actual version of Ruby, Ruby 1.9, uses <strong>YARV</strong> (<a title='wikipedia.org/wiki/YARV' target='_blank' href='http://en.wikipedia.org/wiki/YARV'>Yet another Ruby VM</a>, also called <strong>KRI</strong>) which is a <strong>bytecode interpreter</strong>. YARV was designed to reduce the execution time of Ruby programs. When a ruby program is executed, the first step will be to generate YARV instructions. In order to achieve this step, the code is first <strong>tokenized</strong>, then tokens are grouped into Ruby statements: it’s the <strong>parsing</strong>. Finally these statements are compiled into low level <strong>YARV instructions</strong>. Ruby doesn’t use <strong>Yacc</strong> (<a title='wikipedia.org/wiki/Yacc' target='_blank' href='http://en.wikipedia.org/wiki/Yacc'>Yet Another Compiler Compiler</a>) as <strong>parser generator</strong> but <a title='wikipedia.org/wiki/GNU_bison' target='_blank' href='http://en.wikipedia.org/wiki/GNU_bison'>Bison</a>. The parser code is processed at the <strong>build time</strong> of Ruby and not at the run time of the program. The second step is to run YARV instructions. YARV possess low level structures. It has for instance two instructions called <strong>branchif</strong> and <strong>branchunless</strong> (which can be understand has low level if and unless Ruby statement) and a low level function called <strong>jump</strong> in order to change the program counter and move into the compiled program.</p>
+<p>The actual version of Ruby, Ruby 1.9, uses <strong>YARV</strong> (<a target='_blank' title='wikipedia.org/wiki/YARV' href='http://en.wikipedia.org/wiki/YARV'>Yet another Ruby VM</a>, also called <strong>KRI</strong>) which is a <strong>bytecode interpreter</strong>. YARV was designed to reduce the execution time of Ruby programs. When a ruby program is executed, the first step will be to generate YARV instructions. In order to achieve this step, the code is first <strong>tokenized</strong>, then tokens are grouped into Ruby statements: it’s the <strong>parsing</strong>. Finally these statements are compiled into low level <strong>YARV instructions</strong>. Ruby doesn’t use <strong>Yacc</strong> (<a target='_blank' title='wikipedia.org/wiki/Yacc' href='http://en.wikipedia.org/wiki/Yacc'>Yet Another Compiler Compiler</a>) as <strong>parser generator</strong> but <a target='_blank' title='wikipedia.org/wiki/GNU_bison' href='http://en.wikipedia.org/wiki/GNU_bison'>Bison</a>. The parser code is processed at the <strong>build time</strong> of Ruby and not at the run time of the program. The second step is to run YARV instructions. YARV possess low level structures. It has for instance two instructions called <strong>branchif</strong> and <strong>branchunless</strong> (which can be understand has low level if and unless Ruby statement) and a low level function called <strong>jump</strong> in order to change the program counter and move into the compiled program.</p>
 
 <p>For example, this if/else statement in Ruby…</p>
 <script src='https://gist.github.com/ThibaultLaurens/4751477.js?file=login.rb'><![CDATA[ ]]></script>
@@ -125,7 +125,7 @@
 <hr />
 <h4 id="the_best_is_to_see_under_a_microscope">The best is to see under a microscope</h4>
 
-<p>That’s all for now with Ruby but if you like this kind of things I may suggest you to read the <strong>excellent book</strong> of <strong>Pat Shaughnessy</strong> <a title='patshaughnessy.net/ruby-under-a-microscope' target='_blank' href='http://patshaughnessy.net/ruby-under-a-microscope'><strong>Ruby Under a Microscope</strong></a></p>
+<p>That’s all for now with Ruby but if you like this kind of things I may suggest you to read the <strong>excellent book</strong> of <strong>Pat Shaughnessy</strong> <a target='_blank' title='patshaughnessy.net/ruby-under-a-microscope' href='http://patshaughnessy.net/ruby-under-a-microscope'><strong>Ruby Under a Microscope</strong></a></p>
 <div><img src='/assets/themes//img/post/11-02-13-ruby/ruby.jpg' alt='Ruby!' /></div>
     </div>
 
