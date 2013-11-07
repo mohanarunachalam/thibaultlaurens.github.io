@@ -75,7 +75,7 @@
 <script src='https://gist.github.com/4461585.js?file=program.cs'><![CDATA[ ]]></script>
 <p>An important thing to keep in mind is that parameterized objects has to have <strong>the same type</strong>. If another class is created, an object of this second class cannot be added to the <em>CarList</em>.<br />Generic with multiple parameterized types can also be declared, in this example a <strong>List&lt; T, U &gt;</strong> could be declared.</p>
 <hr />
-<p><strong>Constraints</strong> can be added to generics through the <strong>“where”</strong> keyword. It consists in declaring restriction about the parameterized type. For instance, the parameterized type has to be a reference type or it has to derive from a specific class. These constraints avoid compile-time errors. For more information on constraints on type parameters check the C# programming guide on the <a target='_blank' title='msdn.microsoft.com/en-us/library/d5x73970.aspx' href='http://msdn.microsoft.com/en-us/library/d5x73970.aspx'>msdn website</a>.</p>
+<p><strong>Constraints</strong> can be added to generics through the <strong>“where”</strong> keyword. It consists in declaring restriction about the parameterized type. For instance, the parameterized type has to be a reference type or it has to derive from a specific class. These constraints avoid compile-time errors. For more information on constraints on type parameters check the C# programming guide on the <a title='msdn.microsoft.com/en-us/library/d5x73970.aspx' target='_blank' href='http://msdn.microsoft.com/en-us/library/d5x73970.aspx'>msdn website</a>.</p>
 
 <p>The website list 6 differents type of constraints:</p>
 <table class='responsive'>
@@ -126,7 +126,7 @@
 <script src='https://gist.github.com/4461585.js?file=generic.cs'><![CDATA[ ]]></script>
 <p>We obtained an error with types that don’t implement “ICustomInterface” like string.</p>
 <hr />
-<p>The C# design team made the choice to integrate generics directly <strong>into the CLR</strong> in order to avoid some problem seen in Java (Java doesn’t integrate generics in the JVM and uses type erasure) but also, to guarantee cross language compatibility through the .NET framework. C# use <strong>reification</strong> for generics and it results in a complete synchronisation between the compile time and the runtime. In other words, generics instantiation appends at runtime and this is only possible because the IL code produce by the CLR is totally type neutral. Have a look at this excellent <a target='_blank' title='broadcast.oreilly.com/2009/03/an-interview-with-anders-hejls' href='http://broadcast.oreilly.com/2009/03/an-interview-with-anders-hejls.html'>interview with Anders Hejlsberg</a> (lead architect of C#, but also author of Turbo Pascal and chief architect of Delphi).</p>
+<p>The C# design team made the choice to integrate generics directly <strong>into the CLR</strong> in order to avoid some problem seen in Java (Java doesn’t integrate generics in the JVM and uses type erasure) but also, to guarantee cross language compatibility through the .NET framework. C# use <strong>reification</strong> for generics and it results in a complete synchronisation between the compile time and the runtime. In other words, generics instantiation appends at runtime and this is only possible because the IL code produce by the CLR is totally type neutral. Have a look at this excellent <a title='broadcast.oreilly.com/2009/03/an-interview-with-anders-hejls' target='_blank' href='http://broadcast.oreilly.com/2009/03/an-interview-with-anders-hejls.html'>interview with Anders Hejlsberg</a> (lead architect of C#, but also author of Turbo Pascal and chief architect of Delphi).</p>
 
 <p>The example below shows a generic list of string and how its type information is preserved in the <strong>IL code</strong>:</p>
 <script src='https://gist.github.com/4461585.js?file=generic.il'><![CDATA[ ]]></script>
@@ -146,7 +146,7 @@
 <li>No runtime exeptions, with generics you have a compile-time type check.</li>
 </ul>
 
-<p>The complete technical guide of <strong>Generics</strong> is available online on the msdn website <a target='_blank' title='msdn.microsoft.com/en-us/library/512aeb7t.aspx' href='http://msdn.microsoft.com/en-us/library/512aeb7t.aspx'><strong>here</strong></a>.</p>
+<p>The complete technical guide of <strong>Generics</strong> is available online on the msdn website <a title='msdn.microsoft.com/en-us/library/512aeb7t.aspx' target='_blank' href='http://msdn.microsoft.com/en-us/library/512aeb7t.aspx'><strong>here</strong></a>.</p>
 
     </div>
 

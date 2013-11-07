@@ -3,8 +3,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Pages</title>
-    
+    <title>Professional Node.js</title>
+    <meta name="description" content="author: Pedro Teixeira">
     <meta name="author" content="Thibault Laurens">
 
     <!-- Enable responsive viewport -->
@@ -55,258 +55,41 @@
       <div class="content">
           
 <div class="page-header">
-  <h1>Pages</h1>
+  <h1>Professional Node.js</h1>
   
-  
+   <h1><small>author: Pedro Teixeira</small></h1>
 </div>
 
 <div class="row-fluid post">
   <div class="span12">
     
+<h4 id="introducing_node">Introducing Node</h4>
 
-<h2>All Pages</h2>
+<p>Event-driven programming: the flow is determined by the flow of event. Programmers register callbacks to be used as event handlers for events they are interested in, and the system invokes these handlers when those events occurs. Advantages: no need to use multiple processes or threads to scale. JS suits well: first class function and closures</p>
+<hr />
+<h3 id="node_core_api_basics">Node core API basics</h3>
+
+<h4 id="loading_modules">Loading modules</h4>
+
+<p>JS bad feature: the sharing of a global namespace among scripts -&gt; Node use the CommonJS modules standard: each module has it’s own context, separated from the other modules. To load a module: var module = require(‘my_module’); The require function return a JS object representing the API exposed by the module. That object can be any JS value (object, function, array..). ‘my_module’ can be:</p>
+
 <ul>
+<li>a module name, to load a nodejs core module
+<ul>
+<li>a module name, to load a module from the node_modules folder. (1: if nodejs fails to find the module in node_modules folder of the current directory, it will try the parent folder and keep descending until it reaches the root) (2: the node_modules folder os the default folder where npm installs modules)</li>
 
+<li>a module path, to load a custom module. The path can ba absolute or relative to the current file</li>
 
-
-
-  
-    
-      
-      	
-      	<li><a href="/404.html">404 - not found</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/atom.xml">Atom Feed</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/index.html">Yet another developer blog</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/pages/about.html">About</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/pages/books/index.html">Books</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/pages/books/nosql-distilled.html">NoSQL Distilled</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/pages/books/professional-node-js.html">Professional Node.js</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/pages/courses/datastructure/relational-algebra-and-sql-syntax.html">Relational algebra and SQL syntax</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/pages/courses/index.html">Courses</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/pages/courses/management/1-introduction-and-project-planning.html">Introduction and Project planning</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/pages/courses/management/2-project-approaches-and-methodologies.html">Project Approaches and methodologies</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/pages/courses/management/3-software-quality-assurance.html">Software Quality Assurance</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/pages/courses/management/4-software-configuration-management.html">Software Configuration Management</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/pages/courses/management/5-risk-management.html">Risk Management</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/pages/courses/middleware/1-cloud-and-grid-computing.html">Cloud and Grid computing</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/pages/courses/middleware/2-peer-to-peer.html">Peer to Peer</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/pages/courses/middleware/3-the-component-paradigm.html">The component paradigm</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/pages/courses/middleware/4-web-services.html">Web services</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/pages/courses/pervasivecomputing/1-pervasive-computing-environments.html">Pervasive Computing Environments</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/pages/courses/pervasivecomputing/2-mobile-platforms-in-pervasive-computing.html">Mobile platforms in pervasive computing</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/pages/courses/pervasivecomputing/3-distributed-and-collaborative-algorithms.html">Distributed and collaborative algorithms</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/pages/courses/pervasivecomputing/4-pervasive-data-access.html">Pervasive Data Access</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/pages/courses/pervasivecomputing/5-context-awareness.html">Context Awareness</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/pages/nav/archive.html">Archive</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/pages/nav/categories.html">Categories</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li class="active"><a href="/pages/nav/pages.html" class="active">Pages</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/pages/nav/tags.html">Tags</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/rss.xml">RSS Feed</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/sitemap.txt">Sitemap</a></li>
-      	
-      
-    
-  
-
-
-
+<li>a folder path. Node will presume the folder is a package and will try to find a package definition file (package.json, with the main entry point of the package defined in it). I there is no package.json file in the folder, nodejs will assume that the main entry point is a file named index.js and will look for it. The ‘.js’ extension can be omitted when loading a module: nodejs will automatically add the ‘.js’ extension when looking for the module Modules are cached the first time they are loaded, if a module is required two times, the module initialization runs only once.</li>
 </ul>
+</li>
+</ul>
+
+<h4 id="using_buffers_to_manipulate_encode_and_decode_binary_data">Using buffers to manipulate, encode and decode binary data</h4>
+
+<h4 id="using_the_event_emitter_pattern_to_simplify_event_binding">Using the event emitter pattern to simplify event binding</h4>
+
+<h4 id="scheduling_the_execution_of_function_using_timers">Scheduling the execution of function using timers</h4>
 
   </div>
 </div>
