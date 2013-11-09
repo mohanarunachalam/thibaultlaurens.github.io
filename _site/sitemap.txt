@@ -13,6 +13,7 @@ http://thibaultlaurens.github.io/pages/courses/management/2-project-approaches-a
 http://thibaultlaurens.github.io/pages/courses/management/3-software-quality-assurance.html
 http://thibaultlaurens.github.io/pages/courses/management/4-software-configuration-management.html
 http://thibaultlaurens.github.io/pages/courses/management/5-risk-management.html
+http://thibaultlaurens.github.io/pages/courses/management/6-project-estimation-1.html
 http://thibaultlaurens.github.io/pages/courses/middleware/1-cloud-and-grid-computing.html
 http://thibaultlaurens.github.io/pages/courses/middleware/2-peer-to-peer.html
 http://thibaultlaurens.github.io/pages/courses/middleware/3-the-component-paradigm.html

@@ -10,6 +10,8 @@ description: "Software Project Management course review - part 3"
 * 1980’s: customer satisfaction consideration -> shared responsibility
 * 1990’s: scope of quality expanded -> non-functional issues (safety, ethics…)
 
+<br/>
+
 #### What is quality?
 * **Relative**: it’s about a product being used in a particular context
 * **Multidimensional**: price, reliability, maintainability, ease of use …
@@ -18,6 +20,8 @@ description: "Software Project Management course review - part 3"
  **AQL**: Acceptable Quality Level
 
 **ISO/IEC 8402**: “The totality of features and characteristics of a product or service that bear upon its ability to satisfy specified or implied needs”
+
+<br/>
 
 #### **Levels** of quality:
 * **Absolute** (quantify)
@@ -31,24 +35,34 @@ Cost versus Quality optimisation: an **optimum** needs to be established
 
 Software **quality characteristics**: efficiency, cost, effectiveness, reliability, maintainability, safety, security, usability
 
+<br/>
+
 #### Quality as part of **software documentation**
 * **Functional specification**: what the system will do
 * **Quality plan**: quality attributes applicable, how it is assured
 * **Project management plan**: timing, dependencies and resource requirements
+
+<br/>
 
 #### **McCall’s Model**
 * **Product Operation**: the smooth running of existing software – Correctness, reliability, efficiency, integrity, usability
 * **Product Revision**: the ease of changing software and bug fixing – Maintainability, testability, flexibility
 * **Product Transition** - Portability, reusability, interoperability
 
+<br/>
+
 #### **Quality Factor** – Relationship (between pairs of quality factors):
 * **Indifferent**: zero correlation
 * **Complementary**: positive correlation
 * **Conflicting**: negative correlation
 
+<br/>
+
 #### **CMMI**: Capability Maturity Model Integration
 * Process improvement approach to software development
 * **Levels**: chaotic (initial), repeatable (managed), defined, quantitatively managed, optimised
+
+<br/>
 
 #### **Measures** for Software Quality:
 * The **test** measure a given quality factor
@@ -57,6 +71,8 @@ Software **quality characteristics**: efficiency, cost, effectiveness, reliabili
 * A measurement type may be **binary** or **relative**
 * A **range** which includes a worst, a best, a planned and a “now” value
 
+<br/>
+
 #### McCall: 
 * **quality factor value: Fq = c1m1 + c2m2 + … + cnmn**
 * Ci: criteria relevance or weighting (internal measure)
@@ -64,6 +80,8 @@ Software **quality characteristics**: efficiency, cost, effectiveness, reliabili
 * N: number of criteria
 
 Software metrics: count **Lines of code** (**LOC**) or KLOCs (30lines/day developer average)
+
+<br/>
 
 #### Code complexity metrics:
 
@@ -106,10 +124,14 @@ Hierrachy of standard makers: International (ISO, IEC), National (BSI, ANSI), Se
 
 **ISO 9000**: define what you do, document the system, demonstrate that you do what you say you do, demonstrate it to customers through registration (obtain certification)
 
+<br/>
+
 #### ISO 9001: 
 * Models for quality assurance in design, development, production, installation and servicing
 * **Certification**: recognise competence or conformance, provide evidence that an organisation is capable of producing quality products or services
 * **Accreditation**: ability to award certified, an accreditation body accredits a certification body after satisfying itself that it operates in accordance with appropriate criteria of competence
+
+<br/>
 
 #### Quality Management:
 * **Hierarchy**: Quality Management (quality plan), Quality Assurance (define procedures), Quality Control (check procedures)
@@ -117,6 +139,8 @@ Hierrachy of standard makers: International (ISO, IEC), National (BSI, ANSI), Se
 * **Quality Control**: operational techniques and activities used to fulfil requirements for quality
 * **Quality Assurance**: steps taken to make sure that a company’s product or service are sufficiently high quality, includes software engineering methods, review, testing, documentation, software dev standards & control, measurement, reporting.
 * **Total Quality Management**: is the management approach of an organization, centred on quality and based on the participation of all its members, and aiming at long-term success through customer satisfaction and benefits to all members of the organization and the society.
+
+<br/>
 
 **Quality and Safety critical systems**: result in loss or damage to people, assets or equipment. **Control system** & **Protection system**
 
