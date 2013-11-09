@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Project management"
+title: "Project estimation - part 1"
 description: "Software Project Management course review - part 6"
 ---
 {% include JB/setup %}
