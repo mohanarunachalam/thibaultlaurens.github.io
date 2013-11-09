@@ -6,6 +6,7 @@ http://thibaultlaurens.github.io/pages/about.html
 http://thibaultlaurens.github.io/pages/books/index.html
 http://thibaultlaurens.github.io/pages/books/nosql-distilled.html
 http://thibaultlaurens.github.io/pages/books/professional-node-js.html
+http://thibaultlaurens.github.io/pages/courses/compiler/1-overview.html
 http://thibaultlaurens.github.io/pages/courses/datastructure/relational-algebra-and-sql-syntax.html
 http://thibaultlaurens.github.io/pages/courses/index.html
 http://thibaultlaurens.github.io/pages/courses/management/1-introduction-and-project-planning.html

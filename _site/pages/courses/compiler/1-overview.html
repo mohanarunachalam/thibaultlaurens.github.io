@@ -3,8 +3,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Courses</title>
-    
+    <title>Overview</title>
+    <meta name="description" content="Language spec and compiler construction - part 1">
     <meta name="author" content="Thibault Laurens">
 
     <!-- Enable responsive viewport -->
@@ -55,62 +55,166 @@
       <div class="content">
           
 <div class="page-header">
-  <h1>Courses</h1>
-   <h1><small>Notes about my MSc in Oxford Brookes University</small></h1>
+  <h1>Overview</h1>
   
+   <h1><small>Language spec and compiler construction - part 1</small></h1>
 </div>
 
 <div class="row-fluid post">
   <div class="span12">
-     <div class="page">
-    <h3>Middleware</h3>
-    <ul>
-        <li><a href="/pages/courses/middleware/1-cloud-and-grid-computing.html">Cloud and Grid computing</a></li>
-        <li><a href="/pages/courses/middleware/2-peer-to-peer.html">Peer to Peer</a></li>
-        <li><a href="/pages/courses/middleware/3-the-component-paradigm.html">The component paradigm</a></li>
-        <li><a href="/pages/courses/middleware/4-web-services.html">Web services</a></li>
-        <li><a href="/pages/courses/middleware/5-message-passing-and-pvm.html">Message Passing and PVM</a> </li>
-    </ul>
-    </br>
-    <h3>Pervasive Computing</h3>
-    <ul>
-        <li><a href="/pages/courses/pervasivecomputing/1-pervasive-computing-environments.html">Pervasive Computing Environments</a></li>
-        <li><a href="/pages/courses/pervasivecomputing/2-mobile-platforms-in-pervasive-computing.html">Mobile platforms in pervasive computing</a></li>
-        <li><a href="/pages/courses/pervasivecomputing/3-distributed-and-collaborative-algorithms.html">Distributed and collaborative algorithms</a></li>
-        <li><a href="/pages/courses/pervasivecomputing/4-pervasive-data-access.html">Pervasive Data Access</a></li>
-        <li><a href="/pages/courses/pervasivecomputing/5-context-awareness.html">Context Awareness</a></li>
-        <li><a href="/pages/courses/pervasivecomputing/6-social-legal-ethical-issues.html" >Social, legal and ethical issues</a></li>
-    </ul>
-    </br>
-    <h3>Language spec and compiler construction</h3>
-    <ul>
-        <li><a href="/pages/courses/compiler/1-overview.html">Overview</a></li>
-        <li><a>Scanning (todo)</a></li>
-        <li><a>Parsing (todo)</a></li>
-        <li><a>Semantic processing (todo)</a></li>
-        <li><a>Symbol Table (todo)</a></li>
-        <li><a>Code Generation (todo)</a></li>
-        <li><a>Coco (todo)</a></li>
+    
+<h4 id="introduction">Introduction</h4>
 
-    </ul>
-    </br>
-    <h3>Management</h3>
-    <ul>
-        <li><a href="/pages/courses/management/1-introduction-and-project-planning.html">Introduction and Project planning</a></li>
-        <li><a href="/pages/courses/management/2-project-approaches-and-methodologies.html">Project Approaches and methodologies</a></li>
-        <li><a href="/pages/courses/management/3-software-quality-assurance.html">Software Quality Assurance</a></li>
-        <li><a href="/pages/courses/management/4-software-configuration-management.html">Software Configuration Management</a></li>
-        <li><a href="/pages/courses/management/5-risk-management.html">Risk Management</a></li>
-        <li><a href="/pages/courses/management/6-project-estimation-1.html">Project Estimation - part 1</a></li>
-        <li><a href="/pages/courses/management/7-project-estimation-2.html">Project Estimation - part 2</a></li>
-        <li><a href="/pages/courses/management/8-project-monitoring-and-control.html" >Project Monitoring and Control</a></li>
-    </ul>
-    </br>
-    <h3>Data Structure</h3>
-    <ul>
-        <li><a href="/pages/courses/datastructure/relational-algebra-and-sql-syntax.html">Relational algebra and SQL syntax</a></li>
-    </ul>
-</div>
+<ul>
+<li>Compiler translates source code to machine code</li>
+
+<li>Interpreter executes source code “directly” (ex: statements in a loop are scanned and parsed again and again).</li>
+
+<li>Variant: interpretation of intermediate code of a VM</li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="dynamic_structure_of_a_compiler_">Dynamic structure of a compiler :</h4>
+
+<ul>
+<li>1 Lexical analysis (scanning) -&gt; token stream, token has numbers + values (when needed)</li>
+
+<li>2 Parsing -&gt; syntax tree (structure of the program)</li>
+
+<li>3 Semantic analysis (type checking, symbol table…)</li>
+
+<li>4 Optimization</li>
+
+<li>5 Code generation (machine or bytecode)</li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="static_structure_of_a_compiler">Static structure of a compiler:</h4>
+
+<ul>
+<li>Scanner: provides tokens from the source code</li>
+
+<li>Parser and sem. Analysis: “main program” directs the whole compilation</li>
+
+<li>Symbol table: maintains info about declared names and types</li>
+
+<li>Code generation: generates machine code</li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="grammars_four_components">Grammars: four components</h4>
+
+<ul>
+<li>Terminal symbols: are atomic (“if”, ident, number…)</li>
+
+<li>Nonterminal symbols: are decomposed into smaller units (Statement, Condition, Type…)</li>
+
+<li>Productions: rules how to decompose nonterminals (Statement = Designator “=” Expr”;” … )</li>
+
+<li>Start symbol: topmost nonterminal</li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="ebnf_extended_backusnaur_form_for_writing_grammar">EBNF (Extended Backus-Naur form) for writing grammar</h4>
+
+<ul>
+<li>Productions
+<ul>
+<li>Statement = “write” ident “,” Expression “;”.</li>
+
+<li>Terminal symbols start with lower-case letters</li>
+
+<li>Nonterminal symbols start with upper-case letters</li>
+</ul>
+</li>
+
+<li>Metasymbols
+<ul>
+<li>| separates alternatives -&gt; a|b|c = a or b or c</li>
+
+<li>(…) groups alternatives -&gt; a(b|c) = ab | ac</li>
+
+<li>[…] optional part -&gt; [a]b = ab | b</li>
+
+<li>{…} iterative part -&gt; {a}b = b | ab | aab | aaab …</li>
+</ul>
+</li>
+
+<li>John Backus developed the first fortran compiler, Peter Naur edited the Algol60 report</li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="start_symbols">Start symbols:</h4>
+
+<ul>
+<li>terminal symbols with witch a nonterminal can start -&gt; First(Factor)=ident, number, “(”</li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="successors">Successors:</h4>
+
+<p>terminal symbols can follow a nonterminal in the grammar -&gt; Follow(Expr)=”)”, eof (eof: end of file)</p>
+
+<p><br /></p>
+
+<h4 id="strings">Strings</h4>
+
+<ul>
+<li>A finite sequence of symbols from an alphabet</li>
+
+<li>Alphabet: all terminal and nonterminal symbols of a grammar</li>
+
+<li>Strings denoted by greek letter α, β … , emty string ε</li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="derivation">Derivation</h4>
+
+<ul>
+<li>Direct: α =&gt; β -&gt; Term = Factor * Factor =&gt; Term = ident * Factor</li>
+
+<li>Indirect: α =&gt; y1 =&gt; y2 =&gt; … =&gt; yn =&gt;s β</li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="recursion_can_be_used_to_represent_repetitions_and_nested_structures">Recursion: can be used to represent repetitions and nested structures</h4>
+
+<ul>
+<li>Direct: X =&gt; ω1 X ω2
+<ul>
+<li>Left recursion X = b | Xa.</li>
+
+<li>Right recursion X = b | aX.</li>
+
+<li>Central recursion X = b| “(” X “)”.</li>
+</ul>
+</li>
+
+<li>Indirect: X =&gt; * ω1 X ω2</li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="chomskys_classification_of_grammar">Chomsky’s classification of grammar</h4>
+
+<ul>
+<li>Class 0: Unrestricted grammars recognized by Turing machines (α and β arbitrary)</li>
+
+<li>Class 1: Context-sensitive grammars recognized by linear bounded automata ( |α| ≤ |β|)</li>
+
+<li>Class 2: Context-free grammars recognized by push-down automata (α = NT, β ≠ ε)</li>
+
+<li>Class 3: Regular grammars recognized by finite automata (α = NT, β = T or T NT)</li>
+</ul>
+
   </div>
 </div>
 
