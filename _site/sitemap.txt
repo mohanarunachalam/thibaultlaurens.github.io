@@ -23,6 +23,7 @@ http://thibaultlaurens.github.io/pages/courses/pervasivecomputing/2-mobile-platf
 http://thibaultlaurens.github.io/pages/courses/pervasivecomputing/3-distributed-and-collaborative-algorithms.html
 http://thibaultlaurens.github.io/pages/courses/pervasivecomputing/4-pervasive-data-access.html
 http://thibaultlaurens.github.io/pages/courses/pervasivecomputing/5-context-awareness.html
+http://thibaultlaurens.github.io/pages/courses/pervasivecomputing/6-social-legal-ethical-issues.html
 http://thibaultlaurens.github.io/pages/nav/archive.html
 http://thibaultlaurens.github.io/pages/nav/categories.html
 http://thibaultlaurens.github.io/pages/nav/pages.html
