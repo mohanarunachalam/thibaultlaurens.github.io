@@ -17,6 +17,7 @@ http://thibaultlaurens.github.io/pages/courses/middleware/1-cloud-and-grid-compu
 http://thibaultlaurens.github.io/pages/courses/middleware/2-peer-to-peer.html
 http://thibaultlaurens.github.io/pages/courses/middleware/3-the-component-paradigm.html
 http://thibaultlaurens.github.io/pages/courses/middleware/4-web-services.html
+http://thibaultlaurens.github.io/pages/courses/middleware/5-message-passing-and-pvm.html
 http://thibaultlaurens.github.io/pages/courses/pervasivecomputing/1-pervasive-computing-environments.html
 http://thibaultlaurens.github.io/pages/courses/pervasivecomputing/2-mobile-platforms-in-pervasive-computing.html
 http://thibaultlaurens.github.io/pages/courses/pervasivecomputing/3-distributed-and-collaborative-algorithms.html
