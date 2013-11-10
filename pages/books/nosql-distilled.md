@@ -16,6 +16,7 @@ description: "author: Pramod J. Sadalage and Martin Fowler"
 ### Part 1: Understand
 
 #### 1: Why NoSQL?
+
 * **Impedance mismatch**: the difference between the relational model and the in-memory data structures
 * **Integration database**: multiple applications store their data in a common database / **Application database**: only directly accessed by a single application
 * If data and traffic increase, more computing resources are required: **scale up (a bigger server) or out (cluster of small machines)**
@@ -24,13 +25,17 @@ description: "author: Pramod J. Sadalage and Martin Fowler"
 * NoSQL is an accidental neologism. There is no prescriptive definition but common characteristics: **not using the relational model**, **running well on clusters**, **open-source**, **built for the 21st century web estates** and **schemaless**
 * The most important result of the rise of NoSQL is **Polyglot Persistence**
 
+<br />
 
 #### 2: Aggregate Data Models
+
 * **Aggregate**: a collection of related objects that we wish to treat as a unit (from Domain-Driven Design). Aggregates form the boundaries for *ACID* operations with the database.
 * **ACID**: Atomic, Consistent, Isolated and Durable (the real point is atomicity)
 * Key-value, document and column-family databases can all be seen as forms of **aggregate-oriented database**. Key-value data model treats the aggregate as an opaque whole (only key lookup for the whole aggregate), document model makes the aggregate transparent to the database allowing queries and partial retrievals, column family model treat aggregates as units of data within a single row.
 * Aggregates make it easier for the database to manage data storage over **clusters**
 * Further reading: <a href="http://domaindrivendesign.org">http://domaindrivendesign.org</a>
+
+<br />
 
 #### 3: More Details on Data Models
 
@@ -38,6 +43,8 @@ description: "author: Pramod J. Sadalage and Martin Fowler"
 * Graph database organize data into **node and edge graph**; they work best for data that has **complex relationship structures**.
 * Schemaless databases allow you to freely add fields to records (it's easy to deal with **nonuniform** data), but there is usually an **implicit schema** expected by users of the data.
 * Aggregate-oriented databases often compute (and cache on disk) **materialized views** to provide data organized differently from their primary aggregate. This is often done with **map-reduce computations**.
+
+<br />
 
 #### 4: Distribution Models
 
@@ -47,6 +54,8 @@ description: "author: Pramod J. Sadalage and Martin Fowler"
 * **Master-slave** replication makes one node the authoritative copy that **handles writes** while slaves synchronize with the master and may **handle reads**. This technique reduces the chances of update conflicts. To ensure **read resilience**, you need to ensure that read and write paths into your application are different (putting the reads and writes through separate database connections).
 * **Peer-to-peer** replication allows writes to any node; the nodes coordinate to synchronize their copies of the data and to avoid write-write conflict. This technique avoids loading all writes onto a single point of failure.
 
+<br />
+
 #### 5: Consistency
 
 * Write-write conflicts occur when two clients try to write the same data at the same time. Read-write conflicts occur when one client reads inconsistent data in the midle of another client's write.
@@ -55,6 +64,7 @@ description: "author: Pramod J. Sadalage and Martin Fowler"
 * Clients usually want read-your-writes consistency, which means a client can write and then immediately read the new value. This can be difficult if the read and the write happen on different node.
 * To get good consistency, you need to involve many nodes in data operations, but this increase latency. So you often have to trade off consistency versus latency.
 
+<br />
 
 #### 6: Version Stamps
 
@@ -62,6 +72,7 @@ description: "author: Pramod J. Sadalage and Martin Fowler"
 * Version stamps can be implemented using counters, GUIDs, content hashes, timestamps or a combination of these.
 * With distributed systems, a vector of version stamps allows you to detect when different nodes have conflicting updates.
 
+<br />
 
 #### 7: Map-Reduce
 

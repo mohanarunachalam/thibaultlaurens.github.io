@@ -93,6 +93,8 @@
 <li>The most important result of the rise of NoSQL is <strong>Polyglot Persistence</strong></li>
 </ul>
 
+<p><br /></p>
+
 <h4 id="2_aggregate_data_models">2: Aggregate Data Models</h4>
 
 <ul>
@@ -107,6 +109,8 @@
 <li>Further reading: <a href='http://domaindrivendesign.org'>http://domaindrivendesign.org</a></li>
 </ul>
 
+<p><br /></p>
+
 <h4 id="3_more_details_on_data_models">3: More Details on Data Models</h4>
 
 <ul>
@@ -118,6 +122,8 @@
 
 <li>Aggregate-oriented databases often compute (and cache on disk) <strong>materialized views</strong> to provide data organized differently from their primary aggregate. This is often done with <strong>map-reduce computations</strong>.</li>
 </ul>
+
+<p><br /></p>
 
 <h4 id="4_distribution_models">4: Distribution Models</h4>
 
@@ -133,6 +139,8 @@
 <li><strong>Peer-to-peer</strong> replication allows writes to any node; the nodes coordinate to synchronize their copies of the data and to avoid write-write conflict. This technique avoids loading all writes onto a single point of failure.</li>
 </ul>
 
+<p><br /></p>
+
 <h4 id="5_consistency">5: Consistency</h4>
 
 <ul>
@@ -147,6 +155,8 @@
 <li>To get good consistency, you need to involve many nodes in data operations, but this increase latency. So you often have to trade off consistency versus latency.</li>
 </ul>
 
+<p><br /></p>
+
 <h4 id="6_version_stamps">6: Version Stamps</h4>
 
 <ul>
@@ -156,6 +166,8 @@
 
 <li>With distributed systems, a vector of version stamps allows you to detect when different nodes have conflicting updates.</li>
 </ul>
+
+<p><br /></p>
 
 <h4 id="7_mapreduce">7: Map-Reduce</h4>
 
