@@ -5,8 +5,8 @@
         <description>Thibault Laurens - Thibault Laurens</description>
         <link>http://thibaultlaurens.github.io</link>
         <link>http://thibaultlaurens.github.io</link>
-        <lastBuildDate>2013-11-10T10:28:36+00:00</lastBuildDate>
-        <pubDate>2013-11-10T10:28:36+00:00</pubDate>
+        <lastBuildDate>2013-11-10T10:33:02+00:00</lastBuildDate>
+        <pubDate>2013-11-10T10:33:02+00:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -15,13 +15,13 @@
                 <description>
 &lt;h4 id=&quot;what_is_v8&quot;&gt;What is V8?&lt;/h4&gt;
 
-&lt;p&gt;V8 is a &lt;strong&gt;JavaScript engine&lt;/strong&gt; build in the google development center in Germany. It is &lt;a href='https://code.google.com/p/v8/wiki/Source' target='_blank' title='code.google.com/p/v8/wiki/Source'&gt;&lt;strong&gt;open source&lt;/strong&gt;&lt;/a&gt; and written in &lt;strong&gt;C++&lt;/strong&gt;. It is used for both client side (Googgle Chrome) and server side (node.js) JavaScript applications.&lt;/p&gt;
+&lt;p&gt;V8 is a &lt;strong&gt;JavaScript engine&lt;/strong&gt; build in the google development center in Germany. It is &lt;a href='https://code.google.com/p/v8/wiki/Source' title='code.google.com/p/v8/wiki/Source' target='_blank'&gt;&lt;strong&gt;open source&lt;/strong&gt;&lt;/a&gt; and written in &lt;strong&gt;C++&lt;/strong&gt;. It is used for both client side (Googgle Chrome) and server side (node.js) JavaScript applications.&lt;/p&gt;
 
 &lt;p&gt;V8 was first designed to increase the performance of the JavaScript execution inside web browsers. In order to obtain speed, V8 translates JavaScript code into more efficient machine code instead of using an interpreter. It compiles JavaScript code into machine code at execution by implementing a &lt;strong&gt;JIT (Just-In-Time) compiler&lt;/strong&gt; like a lot of modern JavaScript engines such as SpiderMonkey or Rhino (Mozilla) are doing. The main difference with V8 is that it doesn’t produce bytecode or any intermediate code.&lt;/p&gt;
 
 &lt;p&gt;The aim of this article is to show and to understand &lt;strong&gt;how V8 works, in order to produce optimized code&lt;/strong&gt; for both client side or server side applications. If you are already asking yourself “Should I care about JavaScript performance?” then I will answer with a citation, from Daniel Clifford (tech lead and manager of the V8 team): “It’s not just about making your current application run faster, it’s about enabling things that you have never been able to do in the past”.&lt;/p&gt;
 &lt;div class='six centered columns'&gt;
-    &lt;img alt='V8!' src='/assets/themes/img/post/21-03-13-v8/v8.PNG' /&gt;
+    &lt;img src='/assets/themes/img/post/21-03-13-v8/v8.PNG' alt='V8!' /&gt;
 &lt;/div&gt;
 &lt;h4 id=&quot;hidden_class&quot;&gt;Hidden class&lt;/h4&gt;
 
@@ -29,7 +29,7 @@
 
 &lt;p&gt;Let’s have for instance a “Point” function and the creation of two “Point” objects:&lt;/p&gt;
 &lt;div class='ten centered columns'&gt;
-    &lt;img alt='hidden class' src='/assets/themes/img/post/21-03-13-v8/hiddenclass.PNG' /&gt;
+    &lt;img src='/assets/themes/img/post/21-03-13-v8/hiddenclass.PNG' alt='hidden class' /&gt;
 &lt;/div&gt;
 &lt;p&gt;If the layout are the same, which is the case here, p and q belong to the same hidden class created by V8. This highlight another advantage in using hidden classes: it allows V8 to group objects witch properties are the same. Here “p” and “q” use the same &lt;strong&gt;optimized code&lt;/strong&gt;.&lt;/p&gt;
 
@@ -37,7 +37,7 @@
 
 &lt;p&gt;How V8 will deal with this scenario? In fact, V8 &lt;strong&gt;creates a new hidden class everytime the constructor function declares a property&lt;/strong&gt; and keeps track of the changement in the hidden class. Why? Because if two objects are created (“p” and “q”) and if a member is added to the second object (“q”) after the creation, V8 needs to keep the last hidden class created (for the first object “p”) and to create a new one (for the second object “q”) with the new member.&lt;/p&gt;
 &lt;div class='ten centered columns'&gt;
-    &lt;img alt='transition information' src='/assets/themes/img/post/21-03-13-v8/transition.PNG' /&gt;
+    &lt;img src='/assets/themes/img/post/21-03-13-v8/transition.PNG' alt='transition information' /&gt;
 &lt;/div&gt;
 &lt;p&gt;Everytime a new hidden class is created, the previous one is updated with a class transition indicating what hidden class has to be used instead of it.&lt;/p&gt;
 
@@ -109,18 +109,18 @@
 &lt;li&gt;Google I/O 2012 “Breaking the JavaScript Speed Limit with V8” with Daniel Clifford, tech lead and manager of the V8 team:&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;a href='https://www.youtube.com/watch?v=UJPdhx5zTaw' target='_blank' title='video'&gt;video&lt;/a&gt; and&lt;/p&gt;
+&lt;p&gt;&lt;a href='https://www.youtube.com/watch?v=UJPdhx5zTaw' title='video' target='_blank'&gt;video&lt;/a&gt; and&lt;/p&gt;
 
-&lt;p&gt;&lt;a href='http://v8-io12.appspot.com' target='_blank' title='slides'&gt;slides&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href='http://v8-io12.appspot.com' title='slides' target='_blank'&gt;slides&lt;/a&gt;.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;V8: an open source JavaScript engine:&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;a href='http://www.youtube.com/watch?v=hWhMKalEicY' target='_blank' title='video'&gt;video&lt;/a&gt; of Lars Bak, V8 core engineer.&lt;/p&gt;
+&lt;p&gt;&lt;a href='http://www.youtube.com/watch?v=hWhMKalEicY' title='video' target='_blank'&gt;video&lt;/a&gt; of Lars Bak, V8 core engineer.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Nikkei Electronics Asia blog post: &lt;a href='http://techon.nikkeibp.co.jp/article/HONSHI/20090106/163615/' target='_blank' title='go to techon.nikkeibp.co.jp'&gt;Why Is the New Google V8 Engine So Fast?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Nikkei Electronics Asia blog post: &lt;a href='http://techon.nikkeibp.co.jp/article/HONSHI/20090106/163615/' title='go to techon.nikkeibp.co.jp' target='_blank'&gt;Why Is the New Google V8 Engine So Fast?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
                 <link>http://thibaultlaurens.github.io/javascript/2013/04/29/how-the-v8-engine-works</link>
@@ -176,9 +176,9 @@
 &lt;p&gt;The source code of these two projects can be found on Github:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;LaFourchette2012&lt;/strong&gt; (&lt;a href='https://github.com/ThibaultLaurens/La_Fourchette_2012' target='_blank' title='github.com/ThibaultLaurens/La_Fourchette_2012'&gt;source code&lt;/a&gt;) written with four friends, this web application could be used to manage a restaurant’s chain (restaurants, customers &amp;amp; orders, waiters, cookers, payment, bill…). It has a nice “no-refresh” client interface written with &lt;strong&gt;BackboneJS&lt;/strong&gt; and an admin panel.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LaFourchette2012&lt;/strong&gt; (&lt;a href='https://github.com/ThibaultLaurens/La_Fourchette_2012' title='github.com/ThibaultLaurens/La_Fourchette_2012' target='_blank'&gt;source code&lt;/a&gt;) written with four friends, this web application could be used to manage a restaurant’s chain (restaurants, customers &amp;amp; orders, waiters, cookers, payment, bill…). It has a nice “no-refresh” client interface written with &lt;strong&gt;BackboneJS&lt;/strong&gt; and an admin panel.&lt;/li&gt;
 
-&lt;li&gt;&lt;strong&gt;TraditOnRails&lt;/strong&gt; (&lt;a href='https://github.com/ThibaultLaurens/TraditOnRails' target='_blank' title='github.com/ThibaultLaurens/TraditOnRails'&gt;source code&lt;/a&gt;) a more recent project is a basic fictitious trading application with fictitious currencies stored in a &lt;strong&gt;MongoDB&lt;/strong&gt; database. One characteristic of this project is that it uses a &lt;strong&gt;Node.JS&lt;/strong&gt; server and shows real-time updates of currencies rate with the help of &lt;strong&gt;socket.io&lt;/strong&gt; and a nice graph.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;TraditOnRails&lt;/strong&gt; (&lt;a href='https://github.com/ThibaultLaurens/TraditOnRails' title='github.com/ThibaultLaurens/TraditOnRails' target='_blank'&gt;source code&lt;/a&gt;) a more recent project is a basic fictitious trading application with fictitious currencies stored in a &lt;strong&gt;MongoDB&lt;/strong&gt; database. One characteristic of this project is that it uses a &lt;strong&gt;Node.JS&lt;/strong&gt; server and shows real-time updates of currencies rate with the help of &lt;strong&gt;socket.io&lt;/strong&gt; and a nice graph.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Oh and by the way, I should mention that this blog is written with &lt;strong&gt;Jekyll&lt;/strong&gt; so once again: RUBY please!&lt;/p&gt;
@@ -200,7 +200,7 @@
 
 &lt;li&gt;It uses &lt;strong&gt;Bloks&lt;/strong&gt; to iterate on array like for example array.all?{|n| n &amp;gt; 4}, a.keep_if{|n| n&amp;gt;1}&lt;/li&gt;
 
-&lt;li&gt;It has multiple types for function such as Blocks and lambdas. Blocks is the most common way to use &lt;a href='http://www.skorks.com/2010/05/closures-a-simple-explanation-using-ruby/' target='_blank' title='skorks.com/2010/05/closures-a-simple-explanation-using-ruby/'&gt;&lt;strong&gt;closure&lt;/strong&gt;&lt;/a&gt; (concept from the Scheme language) in Ruby and is one of the most powerful feature of Ruby, it allows the developer to pass code to &lt;strong&gt;iterators&lt;/strong&gt; such as each, detect or inject. (I should also say that Ruby extends the concept of block into a new one called &lt;a href='http://www.ruby-doc.org/core-1.9.3/Proc.html' target='_blank' title='ruby-doc.org/core-1.9.3/Proc.html'&gt;Proc&lt;/a&gt; which is &lt;strong&gt;first class citizen&lt;/strong&gt; and can be simply created by adding Proc.new in a block.)&lt;/li&gt;
+&lt;li&gt;It has multiple types for function such as Blocks and lambdas. Blocks is the most common way to use &lt;a href='http://www.skorks.com/2010/05/closures-a-simple-explanation-using-ruby/' title='skorks.com/2010/05/closures-a-simple-explanation-using-ruby/' target='_blank'&gt;&lt;strong&gt;closure&lt;/strong&gt;&lt;/a&gt; (concept from the Scheme language) in Ruby and is one of the most powerful feature of Ruby, it allows the developer to pass code to &lt;strong&gt;iterators&lt;/strong&gt; such as each, detect or inject. (I should also say that Ruby extends the concept of block into a new one called &lt;a href='http://www.ruby-doc.org/core-1.9.3/Proc.html' title='ruby-doc.org/core-1.9.3/Proc.html' target='_blank'&gt;Proc&lt;/a&gt; which is &lt;strong&gt;first class citizen&lt;/strong&gt; and can be simply created by adding Proc.new in a block.)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;script src='https://gist.github.com/ThibaultLaurens/4751477.js?file=block.rb'&gt;&lt;![CDATA[ ]]&gt;&lt;/script&gt;
 &lt;p&gt;Example of a Block in Rails: The code on the left side of the “do” will interact with the variable inside the two pipes on its right side.&lt;/p&gt;
@@ -209,7 +209,7 @@
 
 &lt;p&gt;One thing the university teach me is that you can’t learn a new programming language if you don’t see how it works under the hood. So, let’s go a little deeper inside Ruby!&lt;/p&gt;
 
-&lt;p&gt;The actual version of Ruby, Ruby 1.9, uses &lt;strong&gt;YARV&lt;/strong&gt; (&lt;a href='http://en.wikipedia.org/wiki/YARV' target='_blank' title='wikipedia.org/wiki/YARV'&gt;Yet another Ruby VM&lt;/a&gt;, also called &lt;strong&gt;KRI&lt;/strong&gt;) which is a &lt;strong&gt;bytecode interpreter&lt;/strong&gt;. YARV was designed to reduce the execution time of Ruby programs. When a ruby program is executed, the first step will be to generate YARV instructions. In order to achieve this step, the code is first &lt;strong&gt;tokenized&lt;/strong&gt;, then tokens are grouped into Ruby statements: it’s the &lt;strong&gt;parsing&lt;/strong&gt;. Finally these statements are compiled into low level &lt;strong&gt;YARV instructions&lt;/strong&gt;. Ruby doesn’t use &lt;strong&gt;Yacc&lt;/strong&gt; (&lt;a href='http://en.wikipedia.org/wiki/Yacc' target='_blank' title='wikipedia.org/wiki/Yacc'&gt;Yet Another Compiler Compiler&lt;/a&gt;) as &lt;strong&gt;parser generator&lt;/strong&gt; but &lt;a href='http://en.wikipedia.org/wiki/GNU_bison' target='_blank' title='wikipedia.org/wiki/GNU_bison'&gt;Bison&lt;/a&gt;. The parser code is processed at the &lt;strong&gt;build time&lt;/strong&gt; of Ruby and not at the run time of the program. The second step is to run YARV instructions. YARV possess low level structures. It has for instance two instructions called &lt;strong&gt;branchif&lt;/strong&gt; and &lt;strong&gt;branchunless&lt;/strong&gt; (which can be understand has low level if and unless Ruby statement) and a low level function called &lt;strong&gt;jump&lt;/strong&gt; in order to change the program counter and move into the compiled program.&lt;/p&gt;
+&lt;p&gt;The actual version of Ruby, Ruby 1.9, uses &lt;strong&gt;YARV&lt;/strong&gt; (&lt;a href='http://en.wikipedia.org/wiki/YARV' title='wikipedia.org/wiki/YARV' target='_blank'&gt;Yet another Ruby VM&lt;/a&gt;, also called &lt;strong&gt;KRI&lt;/strong&gt;) which is a &lt;strong&gt;bytecode interpreter&lt;/strong&gt;. YARV was designed to reduce the execution time of Ruby programs. When a ruby program is executed, the first step will be to generate YARV instructions. In order to achieve this step, the code is first &lt;strong&gt;tokenized&lt;/strong&gt;, then tokens are grouped into Ruby statements: it’s the &lt;strong&gt;parsing&lt;/strong&gt;. Finally these statements are compiled into low level &lt;strong&gt;YARV instructions&lt;/strong&gt;. Ruby doesn’t use &lt;strong&gt;Yacc&lt;/strong&gt; (&lt;a href='http://en.wikipedia.org/wiki/Yacc' title='wikipedia.org/wiki/Yacc' target='_blank'&gt;Yet Another Compiler Compiler&lt;/a&gt;) as &lt;strong&gt;parser generator&lt;/strong&gt; but &lt;a href='http://en.wikipedia.org/wiki/GNU_bison' title='wikipedia.org/wiki/GNU_bison' target='_blank'&gt;Bison&lt;/a&gt;. The parser code is processed at the &lt;strong&gt;build time&lt;/strong&gt; of Ruby and not at the run time of the program. The second step is to run YARV instructions. YARV possess low level structures. It has for instance two instructions called &lt;strong&gt;branchif&lt;/strong&gt; and &lt;strong&gt;branchunless&lt;/strong&gt; (which can be understand has low level if and unless Ruby statement) and a low level function called &lt;strong&gt;jump&lt;/strong&gt; in order to change the program counter and move into the compiled program.&lt;/p&gt;
 
 &lt;p&gt;For example, this if/else statement in Ruby…&lt;/p&gt;
 &lt;script src='https://gist.github.com/ThibaultLaurens/4751477.js?file=login.rb'&gt;&lt;![CDATA[ ]]&gt;&lt;/script&gt;
@@ -227,8 +227,8 @@
 &lt;hr /&gt;
 &lt;h4 id=&quot;the_best_is_to_see_under_a_microscope&quot;&gt;The best is to see under a microscope&lt;/h4&gt;
 
-&lt;p&gt;That’s all for now with Ruby but if you like this kind of things I may suggest you to read the &lt;strong&gt;excellent book&lt;/strong&gt; of &lt;strong&gt;Pat Shaughnessy&lt;/strong&gt; &lt;a href='http://patshaughnessy.net/ruby-under-a-microscope' target='_blank' title='patshaughnessy.net/ruby-under-a-microscope'&gt;&lt;strong&gt;Ruby Under a Microscope&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;div&gt;&lt;img alt='Ruby!' src='/assets/themes//img/post/11-02-13-ruby/ruby.jpg' /&gt;&lt;/div&gt;</description>
+&lt;p&gt;That’s all for now with Ruby but if you like this kind of things I may suggest you to read the &lt;strong&gt;excellent book&lt;/strong&gt; of &lt;strong&gt;Pat Shaughnessy&lt;/strong&gt; &lt;a href='http://patshaughnessy.net/ruby-under-a-microscope' title='patshaughnessy.net/ruby-under-a-microscope' target='_blank'&gt;&lt;strong&gt;Ruby Under a Microscope&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div&gt;&lt;img src='/assets/themes//img/post/11-02-13-ruby/ruby.jpg' alt='Ruby!' /&gt;&lt;/div&gt;</description>
                 <link>http://thibaultlaurens.github.io/ruby/2013/02/11/ruby-tips-tricks-and-deep-analysis</link>
                 <guid>http://thibaultlaurens.github.io/ruby/2013/02/11/ruby-tips-tricks-and-deep-analysis</guid>
                 <pubDate>2013-02-11T00:00:00+00:00</pubDate>
@@ -245,7 +245,7 @@
 &lt;script src='https://gist.github.com/4461585.js?file=program.cs'&gt;&lt;![CDATA[ ]]&gt;&lt;/script&gt;
 &lt;p&gt;An important thing to keep in mind is that parameterized objects has to have &lt;strong&gt;the same type&lt;/strong&gt;. If another class is created, an object of this second class cannot be added to the &lt;em&gt;CarList&lt;/em&gt;.&lt;br /&gt;Generic with multiple parameterized types can also be declared, in this example a &lt;strong&gt;List&amp;lt; T, U &amp;gt;&lt;/strong&gt; could be declared.&lt;/p&gt;
 &lt;hr /&gt;
-&lt;p&gt;&lt;strong&gt;Constraints&lt;/strong&gt; can be added to generics through the &lt;strong&gt;“where”&lt;/strong&gt; keyword. It consists in declaring restriction about the parameterized type. For instance, the parameterized type has to be a reference type or it has to derive from a specific class. These constraints avoid compile-time errors. For more information on constraints on type parameters check the C# programming guide on the &lt;a href='http://msdn.microsoft.com/en-us/library/d5x73970.aspx' target='_blank' title='msdn.microsoft.com/en-us/library/d5x73970.aspx'&gt;msdn website&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Constraints&lt;/strong&gt; can be added to generics through the &lt;strong&gt;“where”&lt;/strong&gt; keyword. It consists in declaring restriction about the parameterized type. For instance, the parameterized type has to be a reference type or it has to derive from a specific class. These constraints avoid compile-time errors. For more information on constraints on type parameters check the C# programming guide on the &lt;a href='http://msdn.microsoft.com/en-us/library/d5x73970.aspx' title='msdn.microsoft.com/en-us/library/d5x73970.aspx' target='_blank'&gt;msdn website&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;The website list 6 differents type of constraints:&lt;/p&gt;
 &lt;table class='responsive'&gt;
@@ -296,7 +296,7 @@
 &lt;script src='https://gist.github.com/4461585.js?file=generic.cs'&gt;&lt;![CDATA[ ]]&gt;&lt;/script&gt;
 &lt;p&gt;We obtained an error with types that don’t implement “ICustomInterface” like string.&lt;/p&gt;
 &lt;hr /&gt;
-&lt;p&gt;The C# design team made the choice to integrate generics directly &lt;strong&gt;into the CLR&lt;/strong&gt; in order to avoid some problem seen in Java (Java doesn’t integrate generics in the JVM and uses type erasure) but also, to guarantee cross language compatibility through the .NET framework. C# use &lt;strong&gt;reification&lt;/strong&gt; for generics and it results in a complete synchronisation between the compile time and the runtime. In other words, generics instantiation appends at runtime and this is only possible because the IL code produce by the CLR is totally type neutral. Have a look at this excellent &lt;a href='http://broadcast.oreilly.com/2009/03/an-interview-with-anders-hejls.html' target='_blank' title='broadcast.oreilly.com/2009/03/an-interview-with-anders-hejls'&gt;interview with Anders Hejlsberg&lt;/a&gt; (lead architect of C#, but also author of Turbo Pascal and chief architect of Delphi).&lt;/p&gt;
+&lt;p&gt;The C# design team made the choice to integrate generics directly &lt;strong&gt;into the CLR&lt;/strong&gt; in order to avoid some problem seen in Java (Java doesn’t integrate generics in the JVM and uses type erasure) but also, to guarantee cross language compatibility through the .NET framework. C# use &lt;strong&gt;reification&lt;/strong&gt; for generics and it results in a complete synchronisation between the compile time and the runtime. In other words, generics instantiation appends at runtime and this is only possible because the IL code produce by the CLR is totally type neutral. Have a look at this excellent &lt;a href='http://broadcast.oreilly.com/2009/03/an-interview-with-anders-hejls.html' title='broadcast.oreilly.com/2009/03/an-interview-with-anders-hejls' target='_blank'&gt;interview with Anders Hejlsberg&lt;/a&gt; (lead architect of C#, but also author of Turbo Pascal and chief architect of Delphi).&lt;/p&gt;
 
 &lt;p&gt;The example below shows a generic list of string and how its type information is preserved in the &lt;strong&gt;IL code&lt;/strong&gt;:&lt;/p&gt;
 &lt;script src='https://gist.github.com/4461585.js?file=generic.il'&gt;&lt;![CDATA[ ]]&gt;&lt;/script&gt;
@@ -316,7 +316,7 @@
 &lt;li&gt;No runtime exeptions, with generics you have a compile-time type check.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;The complete technical guide of &lt;strong&gt;Generics&lt;/strong&gt; is available online on the msdn website &lt;a href='http://msdn.microsoft.com/en-us/library/512aeb7t.aspx' target='_blank' title='msdn.microsoft.com/en-us/library/512aeb7t.aspx'&gt;&lt;strong&gt;here&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The complete technical guide of &lt;strong&gt;Generics&lt;/strong&gt; is available online on the msdn website &lt;a href='http://msdn.microsoft.com/en-us/library/512aeb7t.aspx' title='msdn.microsoft.com/en-us/library/512aeb7t.aspx' target='_blank'&gt;&lt;strong&gt;here&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
 </description>
                 <link>http://thibaultlaurens.github.io/microsoft/2013/01/12/generics-with-csharp</link>
                 <guid>http://thibaultlaurens.github.io/microsoft/2013/01/12/generics-with-csharp</guid>
@@ -370,15 +370,15 @@
         <item>
                 <title>Hello Blog!</title>
                 <description>
-&lt;p&gt;For a first post, I would like to briefly explain how I built this blog. If you are tired of Wordpress or others complicated blog engines and are looking for a very simple and effective way to blog, then &lt;a href='https://github.com/mojombo/jekyll/wiki' target='_blank' title='github.com/mojombo/jekyll'&gt;Jekyll&lt;/a&gt; is what you are looking for! As mentioned in the Github repository, “Jekyll is a blog aware, static site generator in Ruby” and is the simpler way to blog I have seen so far.&lt;/p&gt;
+&lt;p&gt;For a first post, I would like to briefly explain how I built this blog. If you are tired of Wordpress or others complicated blog engines and are looking for a very simple and effective way to blog, then &lt;a href='https://github.com/mojombo/jekyll/wiki' title='github.com/mojombo/jekyll' target='_blank'&gt;Jekyll&lt;/a&gt; is what you are looking for! As mentioned in the Github repository, “Jekyll is a blog aware, static site generator in Ruby” and is the simpler way to blog I have seen so far.&lt;/p&gt;
 
-&lt;p&gt;This blog is based on it and is hosted right on &lt;a href='https://github.com' target='_blank' title='github.com'&gt;Github&lt;/a&gt;. Yes, because Jekyll is actually the engine used by Github Pages, it is very simple to host a Jekyll blog on a repository named &lt;em&gt;“USERNAME.github.com”&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;This blog is based on it and is hosted right on &lt;a href='https://github.com' title='github.com' target='_blank'&gt;Github&lt;/a&gt;. Yes, because Jekyll is actually the engine used by Github Pages, it is very simple to host a Jekyll blog on a repository named &lt;em&gt;“USERNAME.github.com”&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;Dealing with Jekyll means all of these things that are easily integrated and ready to use like for instance &lt;a href='http://disqus.com/' target='_blank' title='disqus.com'&gt;Disqus&lt;/a&gt; for comments or even &lt;a href='http://www.google.com/analytics/' target='_blank' title='google.com/analytics'&gt;Google Analytics&lt;/a&gt;. A lot of html templates are also available using &lt;a href='http://twitter.github.com/bootstrap/' target='_blank' title='twitter.github.com/bootstrap'&gt;Twitter Bootstrap&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Dealing with Jekyll means all of these things that are easily integrated and ready to use like for instance &lt;a href='http://disqus.com/' title='disqus.com' target='_blank'&gt;Disqus&lt;/a&gt; for comments or even &lt;a href='http://www.google.com/analytics/' title='google.com/analytics' target='_blank'&gt;Google Analytics&lt;/a&gt;. A lot of html templates are also available using &lt;a href='http://twitter.github.com/bootstrap/' title='twitter.github.com/bootstrap' target='_blank'&gt;Twitter Bootstrap&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;I think Jekyll is the best way to blog for developers because it allows to work with a blog as we work with any project: use of a git repository, work and test in local, update from the command line.. In addition, what makes Jekyll really interesting for a blog is that it runs text-to-html converters like &lt;em&gt;Markdown&lt;/em&gt;, &lt;em&gt;Textile&lt;/em&gt; or &lt;em&gt;Liquid&lt;/em&gt; and allows the web-writer to add inline html. In other word, you can write a post in a simple text editor, add some html tags inside, push it to your Github repository and that’s it!&lt;/p&gt;
 
-&lt;p&gt;The full stack of the blog is simply Github, Jekyll and Twitter Bootstrap, you can watch/fork it &lt;a href='https://github.com/ThibaultLaurens/thibaultlaurens.github.com' target='_blank' title='github.com/ThibaultLaurens/thibaultlaurens.github.com'&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The full stack of the blog is simply Github, Jekyll and Twitter Bootstrap, you can watch/fork it &lt;a href='https://github.com/ThibaultLaurens/thibaultlaurens.github.com' title='github.com/ThibaultLaurens/thibaultlaurens.github.com' target='_blank'&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;What I really like with &lt;strong&gt;Jekyll&lt;/strong&gt; so far:&lt;/p&gt;
 
@@ -392,7 +392,7 @@
 &lt;li&gt;&lt;strong&gt;Web-writers&lt;/strong&gt; oriented: use of text-to-html converters&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;If you want to get started blogging with Jekyll, the best way is probably to check &lt;a href='http://jekyllbootstrap.com/' target='_blank' title='jekyllbootstrap.com'&gt;Jekyll-Bootstrap&lt;/a&gt;, a little framework which makes the process even easier.&lt;/p&gt;
+&lt;p&gt;If you want to get started blogging with Jekyll, the best way is probably to check &lt;a href='http://jekyllbootstrap.com/' title='jekyllbootstrap.com' target='_blank'&gt;Jekyll-Bootstrap&lt;/a&gt;, a little framework which makes the process even easier.&lt;/p&gt;
 </description>
                 <link>http://thibaultlaurens.github.io/ruby/2013/01/03/hello-world</link>
                 <guid>http://thibaultlaurens.github.io/ruby/2013/01/03/hello-world</guid>

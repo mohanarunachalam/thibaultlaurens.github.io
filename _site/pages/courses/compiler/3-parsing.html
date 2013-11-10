@@ -3,8 +3,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Project estimation - part 2</title>
-    <meta name="description" content="Software Project Management course review - part 7">
+    <title>Parsing</title>
+    <meta name="description" content="Language spec and compiler construction - part 3">
     <meta name="author" content="Thibault Laurens">
 
     <!-- Enable responsive viewport -->
@@ -55,102 +55,70 @@
       <div class="content">
           
 <div class="page-header">
-  <h1>Project estimation - part 2</h1>
+  <h1>Parsing</h1>
   
-   <h1><small>Software Project Management course review - part 7</small></h1>
+   <h1><small>Language spec and compiler construction - part 3</small></h1>
 </div>
 
 <div class="row-fluid post">
   <div class="span12">
     
-<h4 id="estimation_process">Estimation Process</h4>
+<h4 id="contextfree_grammars_cfg_and_pushdown_automata_pda">Context-Free Grammars (CFG) and Push-Down Automata (PDA)</h4>
 
 <ul>
-<li>Continual process used throughout the life cycle of a project</li>
+<li>Regular grammar cannot handle central recursion (E=x | ”(”E”)”.)</li>
 
-<li>Stages: Establish the reason for the estimate -&gt; Obtain all the existing information -&gt; Determine the requirements -&gt; calculate the size, effort, timescale -&gt; Assess risk -&gt; Discuss and refine the estimate -&gt; Agree and document the estimate</li>
+<li>CFG if all its production have X = α (X:NTS, α:non-empty sequence of TS and NTS)</li>
+
+<li>PDA recognize CFG, allows transition with TS and NTS, and uses a stack to remember the visited states.</li>
+
+<li>CFG cannot express context condition: use context-sensitive grammar or check context conditions during semantic analysis</li>
 </ul>
 
 <p><br /></p>
 
-<h4 id="cocomo_constructive_cost_model_model">COCOMO (COnstructive COst MOdel) model</h4>
+<h4 id="recursive_descent_parsing">Recursive Descent Parsing</h4>
 
 <ul>
-<li>By Dr Barry W Boehm, algorithmic model build around equation</li>
+<li>Alternative selected using the lookahead token from the input stream and the terminal start symbol of the alternative.</li>
 
-<li>Effort = A * (Size) ^ P * EAF ( Size in KSLOC: Thousand Source Lines of Code ; A &amp; P depends on development mode; Effort in person month)</li>
+<li>scan() set most recently recognized token and lookahead token, parse TS check(a), parse X NTS X()</li>
 
-<li>Three models:
-<ul>
-<li>Basic model: single-valued model, estimates effort as a function of program size taking into account the estimated source code. (EAF=1)</li>
+<li>Parse: option with if, alternative with if/else, iteration with while(first TS)</li>
 
-<li>Intermediate model: Basic model + a set of cost drivers (including product, hardware, personnel, and projet attributes) rated on 6-point scale (very low, low, nominal …) and with assigned weighting factors (EAF = factors multiplication)</li>
-
-<li>Advanced or detailed model: Intermediate model + the assessment of cost driver’s impact on each phase such as analysis, design, implementation, etc.</li>
+<li>Opti: avoid multiple check, for(;;) and break for iteration and alternatives in an iteration, attention on deletable symbol</li>
 </ul>
-</li>
 
-<li>Three development modes:
+<p><br /></p>
+
+<h4 id="ll1_left_to_right_with_leftcanonical_derivations_and_1_lookahead_symbol_property">LL1 (Left to right with Left-canonical derivations and 1 lookahead symbol) Property</h4>
+
 <ul>
-<li>Organic: simple project, small team work together, no commu overhead</li>
+<li>Definition: First(αi) ∩ First(αj) = {} (for any i ≠ j)</li>
 
-<li>Semi-detached: medium sized project, moderate level of experience</li>
+<li>Remove LL(1) conflicts: extract common start sequence, sometimes inline NTS before factorisation. Left recursion is a LL(1) conflict, replaced by iteration.</li>
 
-<li>Embedded: tight set of constraints, large team, big project</li>
+<li>Hidden conflicts on EBNF options and iterations:
+<ul>
+<li>X = {α} β. Or X = [α] β. First(α) ∩ First(β) must be {}</li>
+
+<li>X = α {β}. Or X = α [β]. First(β) ∩ Follow(X) must be {}</li>
+
+<li>X = α | . First(α) ∩ Follow(X) must be {}</li>
 </ul>
 </li>
 </ul>
 
 <p><br /></p>
-<div class='row'>
-    <img src='/assets/themes/img/page/courses/estimation.png' class='span7 offset2' />
-</div>
-<p><br /></p>
 
-<h4 id="cocomo_ii">COCOMO II</h4>
+<h4 id="error_handling">Error Handling</h4>
 
 <ul>
-<li>Take into account different requirements of software such as distributed software, web-based software etc.</li>
+<li>Panic Mode</li>
 
-<li>Used to estimate efforts for different stages in the system life cycle (see sub-models)</li>
+<li>Dynamically computed recovery sets</li>
 
-<li>Uses various effort multipliers (cost drivers) and exponent drivers. Exponent drivers replace modes in COCOMO.</li>
-
-<li>Three different sub-models:
-<ul>
-<li>Application Composition: projects where extensive reuse of software parts</li>
-
-<li>Early Design: when requirements are available but design not yet started</li>
-
-<li>Post-Architecture: when system architecture is designed and more info about the system is available</li>
-</ul>
-</li>
-
-<li>Differences with COCOMO:
-<ul>
-<li>Size: KSLOC + object points or functions points</li>
-
-<li>EAF = 7 (early design) or 17 (post-architecture) cost drivers instead of 15 for intermediate COCOMO model</li>
-
-<li>Modes are replaced by 5 Scale Factor (SF, or exponent drivers)</li>
-</ul>
-</li>
-
-<li>Effort = A (SIZE) ^ SF * EM</li>
-
-<li>Five exponent drivers:
-<ul>
-<li>Precedentedness: novelty of the project, experience with similar project</li>
-
-<li>Development flexibility (needs requirements)</li>
-
-<li>Architecture/risk resolution: degree of uncertainty in the requirements</li>
-
-<li>Team cohesion: large dispersed or well integrated team</li>
-
-<li>Process maturity: structure and organisation</li>
-</ul>
-</li>
+<li>Synchronization points</li>
 </ul>
 
   </div>

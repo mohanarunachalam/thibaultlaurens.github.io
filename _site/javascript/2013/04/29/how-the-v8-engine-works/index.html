@@ -69,13 +69,13 @@
       
 <h4 id="what_is_v8">What is V8?</h4>
 
-<p>V8 is a <strong>JavaScript engine</strong> build in the google development center in Germany. It is <a href='https://code.google.com/p/v8/wiki/Source' target='_blank' title='code.google.com/p/v8/wiki/Source'><strong>open source</strong></a> and written in <strong>C++</strong>. It is used for both client side (Googgle Chrome) and server side (node.js) JavaScript applications.</p>
+<p>V8 is a <strong>JavaScript engine</strong> build in the google development center in Germany. It is <a href='https://code.google.com/p/v8/wiki/Source' title='code.google.com/p/v8/wiki/Source' target='_blank'><strong>open source</strong></a> and written in <strong>C++</strong>. It is used for both client side (Googgle Chrome) and server side (node.js) JavaScript applications.</p>
 
 <p>V8 was first designed to increase the performance of the JavaScript execution inside web browsers. In order to obtain speed, V8 translates JavaScript code into more efficient machine code instead of using an interpreter. It compiles JavaScript code into machine code at execution by implementing a <strong>JIT (Just-In-Time) compiler</strong> like a lot of modern JavaScript engines such as SpiderMonkey or Rhino (Mozilla) are doing. The main difference with V8 is that it doesn’t produce bytecode or any intermediate code.</p>
 
 <p>The aim of this article is to show and to understand <strong>how V8 works, in order to produce optimized code</strong> for both client side or server side applications. If you are already asking yourself “Should I care about JavaScript performance?” then I will answer with a citation, from Daniel Clifford (tech lead and manager of the V8 team): “It’s not just about making your current application run faster, it’s about enabling things that you have never been able to do in the past”.</p>
 <div class='six centered columns'>
-    <img alt='V8!' src='/assets/themes/img/post/21-03-13-v8/v8.PNG' />
+    <img src='/assets/themes/img/post/21-03-13-v8/v8.PNG' alt='V8!' />
 </div>
 <h4 id="hidden_class">Hidden class</h4>
 
@@ -83,7 +83,7 @@
 
 <p>Let’s have for instance a “Point” function and the creation of two “Point” objects:</p>
 <div class='ten centered columns'>
-    <img alt='hidden class' src='/assets/themes/img/post/21-03-13-v8/hiddenclass.PNG' />
+    <img src='/assets/themes/img/post/21-03-13-v8/hiddenclass.PNG' alt='hidden class' />
 </div>
 <p>If the layout are the same, which is the case here, p and q belong to the same hidden class created by V8. This highlight another advantage in using hidden classes: it allows V8 to group objects witch properties are the same. Here “p” and “q” use the same <strong>optimized code</strong>.</p>
 
@@ -91,7 +91,7 @@
 
 <p>How V8 will deal with this scenario? In fact, V8 <strong>creates a new hidden class everytime the constructor function declares a property</strong> and keeps track of the changement in the hidden class. Why? Because if two objects are created (“p” and “q”) and if a member is added to the second object (“q”) after the creation, V8 needs to keep the last hidden class created (for the first object “p”) and to create a new one (for the second object “q”) with the new member.</p>
 <div class='ten centered columns'>
-    <img alt='transition information' src='/assets/themes/img/post/21-03-13-v8/transition.PNG' />
+    <img src='/assets/themes/img/post/21-03-13-v8/transition.PNG' alt='transition information' />
 </div>
 <p>Everytime a new hidden class is created, the previous one is updated with a class transition indicating what hidden class has to be used instead of it.</p>
 
@@ -163,18 +163,18 @@
 <li>Google I/O 2012 “Breaking the JavaScript Speed Limit with V8” with Daniel Clifford, tech lead and manager of the V8 team:</li>
 </ul>
 
-<p><a href='https://www.youtube.com/watch?v=UJPdhx5zTaw' target='_blank' title='video'>video</a> and</p>
+<p><a href='https://www.youtube.com/watch?v=UJPdhx5zTaw' title='video' target='_blank'>video</a> and</p>
 
-<p><a href='http://v8-io12.appspot.com' target='_blank' title='slides'>slides</a>.</p>
+<p><a href='http://v8-io12.appspot.com' title='slides' target='_blank'>slides</a>.</p>
 
 <ul>
 <li>V8: an open source JavaScript engine:</li>
 </ul>
 
-<p><a href='http://www.youtube.com/watch?v=hWhMKalEicY' target='_blank' title='video'>video</a> of Lars Bak, V8 core engineer.</p>
+<p><a href='http://www.youtube.com/watch?v=hWhMKalEicY' title='video' target='_blank'>video</a> of Lars Bak, V8 core engineer.</p>
 
 <ul>
-<li>Nikkei Electronics Asia blog post: <a href='http://techon.nikkeibp.co.jp/article/HONSHI/20090106/163615/' target='_blank' title='go to techon.nikkeibp.co.jp'>Why Is the New Google V8 Engine So Fast?</a></li>
+<li>Nikkei Electronics Asia blog post: <a href='http://techon.nikkeibp.co.jp/article/HONSHI/20090106/163615/' title='go to techon.nikkeibp.co.jp' target='_blank'>Why Is the New Google V8 Engine So Fast?</a></li>
 </ul>
 
     </div>
