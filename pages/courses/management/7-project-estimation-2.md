@@ -27,7 +27,7 @@ description: "Software Project Management course review - part 7"
 <br/>
 
 <div class="row">
-    <img class="span7 offset2" src="{{ ASSET_PATH }}img/page/courses/estimation.PNG" />
+    <img class="span7 offset2" src="{{ ASSET_PATH }}img/page/courses/estimation.png" />
 </div>
 
 <br/>
