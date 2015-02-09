@@ -8,7 +8,7 @@ category: javascript
 
 #### What is V8?
 V8 is a **JavaScript engine** build in the google development center in Germany. It is 
-<a href="https://code.google.com/p/v8/wiki/Source" title="code.google.com/p/v8/wiki/Source" target="_blank"><strong>open source</strong></a> and written in **C++**. It is used for both client side (Googgle Chrome) and server side (node.js) JavaScript applications. 
+<a href="https://code.google.com/p/v8/wiki/Source" title="code.google.com/p/v8/wiki/Source" target="_blank"><strong>open source</strong></a> and written in **C++**. It is used for both client side (Google Chrome) and server side (node.js) JavaScript applications. 
 
 V8 was first designed to increase the performance of the JavaScript execution inside web browsers. In order to obtain speed, V8 translates JavaScript code into more efficient machine code instead of using an interpreter. It compiles JavaScript code into machine code at execution by implementing a **JIT (Just-In-Time) compiler** like a lot of modern JavaScript engines such as SpiderMonkey or Rhino (Mozilla) are doing. The main difference with V8 is that it doesn't produce bytecode or any intermediate code.
 
