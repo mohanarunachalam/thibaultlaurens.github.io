@@ -20,7 +20,7 @@ The aim of this article is to show and to understand **how V8 works, in order to
 
 
 #### Hidden class
-JavaScript is a protoptye-based language: there is **no classes** and objects are created by using a cloning process. Also, JavaScript is dynamically typed: types and type informations are not explicit and properties can be added and deleted to objects on the fly. Accessing types and properties effectively makes a first big challenge for V8. Instead of using a dictionnary-like data structure for storing object properties and doing a dynamic lookup to resolve the property location (like most JavaScript engine do), V8 creates **hidden classes**, at runtime, in order to have an internal representation of the type system and to improve the property access time.
+JavaScript is a protoptye-based language: there are **no classes** and objects are created by using a cloning process. Also, JavaScript is dynamically typed: types and type informations are not explicit and properties can be added and deleted to objects on the fly. Accessing types and properties effectively makes a first big challenge for V8. Instead of using a dictionnary-like data structure for storing object properties and doing a dynamic lookup to resolve the property location (like most JavaScript engine do), V8 creates **hidden classes**, at runtime, in order to have an internal representation of the type system and to improve the property access time.
 
 Let's have for instance a "Point" function and the creation of two "Point" objects:
 
