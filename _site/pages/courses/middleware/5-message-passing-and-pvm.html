@@ -42,9 +42,8 @@
                 <ul class="nav">
                     <li><a href="/pages/nav/archive.html">Archive</a></li>
                     <li><a href="/pages/nav/categories.html">Categories</a></li>
-                    <!--<li><a href="/pages/courses/index.html">Courses</a></li>
-                    <li><a href="/pages/books/index.html">Books</a></li>-->
-                    <li><a title="Go to github.com/thibaultlaurens" href="https://github.com/ThibaultLaurens" target="_blank">Projects</a></li>
+                    <li><a href="/pages/courses/index.html">Courses</a></li>
+                    <!-- <li><a href="/pages/books/index.html">Books</a></li> -->
                     <li><a href="/pages/about.html">About</a></li>
                 </ul>
         </div>
@@ -63,69 +62,55 @@
 <div class="row-fluid post">
   <div class="span12">
     
-<h4 id="message_passing_models_and_requirements">Message Passing Models and requirements</h4>
+<h4 id="message-passing-models-and-requirements">Message Passing Models and requirements</h4>
 
 <ul>
-<li>Computation(MIPS, Flops), Communication(latency + bandwidth), Synchronization(timing constraints, handshaking)</li>
-
-<li>Pipe, socket, ACID</li>
-
-<li>Deadlock: Mutual exclusion, hold and wait, non preemption, circular wait – Livelock</li>
-
-<li>Synchronous/Asynchronous – Blocking/Non-Blocking – Sender/Receiver naming Static/Dynamic – Connection Oriented/Connectionless – Scatter/Gather – Transient/Persistent</li>
-
-<li>Transmission time = latency + data_length / data_rate</li>
-
-<li>Advantages/disadvantages</li>
+  <li>Computation(MIPS, Flops), Communication(latency + bandwidth), Synchronization(timing constraints, handshaking)</li>
+  <li>Pipe, socket, ACID</li>
+  <li>Deadlock: Mutual exclusion, hold and wait, non preemption, circular wait – Livelock</li>
+  <li>Synchronous/Asynchronous – Blocking/Non-Blocking – Sender/Receiver naming Static/Dynamic – Connection Oriented/Connectionless – Scatter/Gather – Transient/Persistent</li>
+  <li>Transmission time = latency + data_length / data_rate</li>
+  <li>Advantages/disadvantages</li>
 </ul>
 
 <p><br /></p>
 
-<h4 id="the_client_server_model">The Client Server model</h4>
-
+<h4 id="the-client-server-model">The Client Server model</h4>
 <ul>
-<li>Comparison to P2P Model</li>
-
-<li>Thin and Thick (or Fat) Clients</li>
-
-<li>Binding and the Name Server</li>
-
-<li>Iterative / Concurrent server</li>
-
-<li>Stateful / Stateless server</li>
+  <li>Comparison to P2P Model</li>
+  <li>Thin and Thick (or Fat) Clients</li>
+  <li>Binding and the Name Server</li>
+  <li>Iterative / Concurrent server</li>
+  <li>Stateful / Stateless server</li>
 </ul>
 
 <p><br /></p>
 
-<h4 id="distributed_memory_computing">Distributed Memory Computing</h4>
-
+<h4 id="distributed-memory-computing">Distributed Memory Computing</h4>
 <ul>
-<li>MPI and PVM approaches</li>
-
-<li>Shared memory – Threads – Message Passing</li>
-
-<li>Control and Data Parallel</li>
-
-<li>Parallel computing / Distributed computing / Concurrent</li>
-
-<li>Amdahl’s law: Speedup(P)= TimeWith1Processor / TimeWithPProcessor = P / 1 + (P-1)f Efficiency: Ep(P) = Sp(P) / P = 1/1 + (P-1)f</li>
-
-<li>Multicast Model: T = L+N / D and Tp = PL + N/D + NC/P and Sp = T1 / Tp = NC / (PL+N / D+NC / P)</li>
+  <li>MPI and PVM approaches</li>
+  <li>Shared memory – Threads – Message Passing</li>
+  <li>Control and Data Parallel</li>
+  <li>Parallel computing / Distributed computing / Concurrent</li>
+  <li>Amdahl’s law: Speedup(P)= TimeWith1Processor / TimeWithPProcessor = P / 1 + (P-1)f
+Efficiency: Ep(P) = Sp(P) / P = 1/1 + (P-1)f</li>
+  <li>Multicast Model: T = L+N / D and Tp = PL + N/D + NC/P and Sp = T1 / Tp = NC / (PL+N / D+NC / P)</li>
 </ul>
 
 <p><br /></p>
 
 <h4 id="pvm">PVM</h4>
-
 <ul>
-<li>Pvmd (daemon process, create and manage the VM) &amp; spawning (user lib for starting new processes, task coordination and message passing)</li>
+  <li>Pvmd (daemon process, create and manage the VM) &amp; spawning (user lib for starting new processes, task coordination and message passing)</li>
 </ul>
 
 <p><br /></p>
-<div class='ten centered columns'>
-    <img src='/assets/themes/img/page/courses/pvm1.png' class='span3 offset1' width='200px' />
-    <img src='/assets/themes/img/page/courses/pvm2.png' class='span5 offset2' />
+
+<div class="ten centered columns">
+    <img class="span3 offset1" src="/assets/themes/twitter/img/page/courses/pvm1.png" width="200px" />
+    <img class="span5 offset2" src="/assets/themes/twitter/img/page/courses/pvm2.png" />
 </div>
+
   </div>
 </div>
 
@@ -133,24 +118,21 @@
       </div>
       <footer class="row">
             <hr>
-            <div class="span8">
-                <p>
-                    <a title="Go to facebook.com/thibault.laurens" target="_blank" href="https://www.facebook.com/thibault.laurens"><img src="/assets/themes/twitter/bootstrap/img/facebook.png"/></a>
-                    <a title="Go to github.com/ThibaultLaurens" target="_blank" href="https://github.com/ThibaultLaurens"><img src="/assets/themes/twitter/bootstrap/img/github.png"/></i></a>
-                    <a title="Go to linkedin.com/thibault-laurens" target="_blank" href="http://www.linkedin.com/pub/thibault-laurens/13/b58/40b"><img src="/assets/themes/twitter/bootstrap/img/linked_in.png"/></i></a>
-                    <a title="Go to twitter.com/ThibaultLaurens" target="_blank" href="https://twitter.com/ThibaultLaurens"><img src="/assets/themes/twitter/bootstrap/img/twitter.png"/></a>
-                    <a title="Go to flickr.com/photos/thibaultlaurens" target="_blank" href="http://www.flickr.com/photos/thibaultlaurens/"><img src="/assets/themes/twitter/bootstrap/img/flickr.png"/></i></a>
-                </p>
-                <p>&copy; 2013 Thibault Laurens
+            <div class="span9">
+                <p>&copy; 2017 Thibault Laurens
                     with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
                     and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
                 </p>
             </div>
             <div class="span3 pull-right">
-                <img alt="technut" src="/assets/themes/twitter/img/technut.png"/>
+                <p class="pull-right">
+                    <a title="Go to github.com/ThibaultLaurens" target="_blank" href="https://github.com/ThibaultLaurens"><img src="/assets/themes/twitter/bootstrap/img/github.png"/></i></a>
+                    <a title="Go to linkedin.com/thibault-laurens" target="_blank" href="http://www.linkedin.com/pub/thibault-laurens/13/b58/40b"><img src="/assets/themes/twitter/bootstrap/img/linked_in.png"/></i></a>
+                    <a title="Go to flickr.com/photos/tlaurens" target="_blank" href="http://www.flickr.com/photos/tlaurens/"><img src="/assets/themes/twitter/bootstrap/img/flickr.png"/></i></a>
+                </p>
             </div>
-        </footer>
-
+      </footer>
+     <br>
     </div>
 
     

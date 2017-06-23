@@ -42,9 +42,8 @@
                 <ul class="nav">
                     <li><a href="/pages/nav/archive.html">Archive</a></li>
                     <li><a href="/pages/nav/categories.html">Categories</a></li>
-                    <!--<li><a href="/pages/courses/index.html">Courses</a></li>
-                    <li><a href="/pages/books/index.html">Books</a></li>-->
-                    <li><a title="Go to github.com/thibaultlaurens" href="https://github.com/ThibaultLaurens" target="_blank">Projects</a></li>
+                    <li><a href="/pages/courses/index.html">Courses</a></li>
+                    <!-- <li><a href="/pages/books/index.html">Books</a></li> -->
                     <li><a href="/pages/about.html">About</a></li>
                 </ul>
         </div>
@@ -63,94 +62,73 @@
 <div class="row-fluid post">
   <div class="span12">
     
-<h4 id="estimation_process">Estimation Process</h4>
-
+<h4 id="estimation-process">Estimation Process</h4>
 <ul>
-<li>Continual process used throughout the life cycle of a project</li>
-
-<li>Stages: Establish the reason for the estimate -&gt; Obtain all the existing information -&gt; Determine the requirements -&gt; calculate the size, effort, timescale -&gt; Assess risk -&gt; Discuss and refine the estimate -&gt; Agree and document the estimate</li>
+  <li>Continual process used throughout the life cycle of a project</li>
+  <li>Stages: Establish the reason for the estimate -&gt; Obtain all the existing information -&gt; Determine the requirements -&gt; calculate the size, effort, timescale -&gt; Assess risk -&gt; Discuss and refine the estimate -&gt; Agree and document the estimate</li>
 </ul>
 
 <p><br /></p>
 
-<h4 id="cocomo_constructive_cost_model_model">COCOMO (COnstructive COst MOdel) model</h4>
+<h4 id="cocomo-constructive-cost-model-model">COCOMO (COnstructive COst MOdel) model</h4>
 
 <ul>
-<li>By Dr Barry W Boehm, algorithmic model build around equation</li>
-
-<li>Effort = A * (Size) ^ P * EAF ( Size in KSLOC: Thousand Source Lines of Code ; A &amp; P depends on development mode; Effort in person month)</li>
-
-<li>Three models:
-<ul>
-<li>Basic model: single-valued model, estimates effort as a function of program size taking into account the estimated source code. (EAF=1)</li>
-
-<li>Intermediate model: Basic model + a set of cost drivers (including product, hardware, personnel, and projet attributes) rated on 6-point scale (very low, low, nominal …) and with assigned weighting factors (EAF = factors multiplication)</li>
-
-<li>Advanced or detailed model: Intermediate model + the assessment of cost driver’s impact on each phase such as analysis, design, implementation, etc.</li>
-</ul>
-</li>
-
-<li>Three development modes:
-<ul>
-<li>Organic: simple project, small team work together, no commu overhead</li>
-
-<li>Semi-detached: medium sized project, moderate level of experience</li>
-
-<li>Embedded: tight set of constraints, large team, big project</li>
-</ul>
-</li>
+  <li>By Dr Barry W Boehm, algorithmic model build around equation</li>
+  <li>Effort = A * (Size) ^ P * EAF ( Size in KSLOC: Thousand Source Lines of Code ; A &amp; P depends on development mode; Effort in person month)</li>
+  <li>Three models:
+    <ul>
+      <li>Basic model: single-valued model, estimates effort as a function of program size taking into account the estimated source code. (EAF=1)</li>
+      <li>Intermediate model: Basic model + a set of cost drivers (including product, hardware, personnel, and projet attributes) rated on 6-point scale (very low, low, nominal …) and with assigned weighting factors (EAF = factors multiplication)</li>
+      <li>Advanced or detailed model: Intermediate model + the assessment of cost driver’s impact on each phase such as analysis, design, implementation, etc.</li>
+    </ul>
+  </li>
+  <li>Three development modes:
+    <ul>
+      <li>Organic: simple project, small team work together, no commu overhead</li>
+      <li>Semi-detached: medium sized project, moderate level of experience</li>
+      <li>Embedded: tight set of constraints, large team, big project</li>
+    </ul>
+  </li>
 </ul>
 
 <p><br /></p>
-<div class='row'>
-    <img src='/assets/themes/img/page/courses/estimation.png' class='span7 offset2' />
+
+<div class="row">
+    <img class="span7 offset2" src="/assets/themes/twitter/img/page/courses/estimation.png" />
 </div>
+
 <p><br /></p>
 
-<h4 id="cocomo_ii">COCOMO II</h4>
+<h4 id="cocomo-ii">COCOMO II</h4>
 
 <ul>
-<li>Take into account different requirements of software such as distributed software, web-based software etc.</li>
-
-<li>Used to estimate efforts for different stages in the system life cycle (see sub-models)</li>
-
-<li>Uses various effort multipliers (cost drivers) and exponent drivers. Exponent drivers replace modes in COCOMO.</li>
-
-<li>Three different sub-models:
-<ul>
-<li>Application Composition: projects where extensive reuse of software parts</li>
-
-<li>Early Design: when requirements are available but design not yet started</li>
-
-<li>Post-Architecture: when system architecture is designed and more info about the system is available</li>
-</ul>
-</li>
-
-<li>Differences with COCOMO:
-<ul>
-<li>Size: KSLOC + object points or functions points</li>
-
-<li>EAF = 7 (early design) or 17 (post-architecture) cost drivers instead of 15 for intermediate COCOMO model</li>
-
-<li>Modes are replaced by 5 Scale Factor (SF, or exponent drivers)</li>
-</ul>
-</li>
-
-<li>Effort = A (SIZE) ^ SF * EM</li>
-
-<li>Five exponent drivers:
-<ul>
-<li>Precedentedness: novelty of the project, experience with similar project</li>
-
-<li>Development flexibility (needs requirements)</li>
-
-<li>Architecture/risk resolution: degree of uncertainty in the requirements</li>
-
-<li>Team cohesion: large dispersed or well integrated team</li>
-
-<li>Process maturity: structure and organisation</li>
-</ul>
-</li>
+  <li>Take into account different requirements of software such as distributed software, web-based software etc.</li>
+  <li>Used to estimate efforts for different stages in the system life cycle (see sub-models)</li>
+  <li>Uses various effort multipliers (cost drivers) and exponent drivers. Exponent drivers replace modes in COCOMO.</li>
+  <li>Three different sub-models:
+    <ul>
+      <li>Application Composition: projects where extensive reuse of software parts</li>
+      <li>Early Design: when requirements are available but design not yet started</li>
+      <li>Post-Architecture: when system architecture is designed and more info about the system is available</li>
+    </ul>
+  </li>
+  <li>Differences with COCOMO:
+    <ul>
+      <li>Size: KSLOC + object points or functions points</li>
+      <li>EAF = 7 (early design) or 17 (post-architecture) cost drivers instead of 15 for intermediate COCOMO model</li>
+      <li>Modes are replaced by 5 Scale Factor (SF, or exponent drivers)</li>
+    </ul>
+  </li>
+  <li>Effort = A (SIZE) ^ SF * EM</li>
+  <li>Five exponent drivers:
+    <ul>
+      <li>Precedentedness: novelty of the project, experience with similar project</li>
+      <li>Development flexibility (needs requirements)</li>
+      <li>Architecture/risk resolution: degree of uncertainty in the requirements</li>
+      <li>Team cohesion: large dispersed or well integrated team</li>
+      <li>Process maturity: structure and organisation</li>
+    </ul>
+  </li>
 </ul>
 
   </div>
@@ -160,24 +138,21 @@
       </div>
       <footer class="row">
             <hr>
-            <div class="span8">
-                <p>
-                    <a title="Go to facebook.com/thibault.laurens" target="_blank" href="https://www.facebook.com/thibault.laurens"><img src="/assets/themes/twitter/bootstrap/img/facebook.png"/></a>
-                    <a title="Go to github.com/ThibaultLaurens" target="_blank" href="https://github.com/ThibaultLaurens"><img src="/assets/themes/twitter/bootstrap/img/github.png"/></i></a>
-                    <a title="Go to linkedin.com/thibault-laurens" target="_blank" href="http://www.linkedin.com/pub/thibault-laurens/13/b58/40b"><img src="/assets/themes/twitter/bootstrap/img/linked_in.png"/></i></a>
-                    <a title="Go to twitter.com/ThibaultLaurens" target="_blank" href="https://twitter.com/ThibaultLaurens"><img src="/assets/themes/twitter/bootstrap/img/twitter.png"/></a>
-                    <a title="Go to flickr.com/photos/thibaultlaurens" target="_blank" href="http://www.flickr.com/photos/thibaultlaurens/"><img src="/assets/themes/twitter/bootstrap/img/flickr.png"/></i></a>
-                </p>
-                <p>&copy; 2013 Thibault Laurens
+            <div class="span9">
+                <p>&copy; 2017 Thibault Laurens
                     with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
                     and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
                 </p>
             </div>
             <div class="span3 pull-right">
-                <img alt="technut" src="/assets/themes/twitter/img/technut.png"/>
+                <p class="pull-right">
+                    <a title="Go to github.com/ThibaultLaurens" target="_blank" href="https://github.com/ThibaultLaurens"><img src="/assets/themes/twitter/bootstrap/img/github.png"/></i></a>
+                    <a title="Go to linkedin.com/thibault-laurens" target="_blank" href="http://www.linkedin.com/pub/thibault-laurens/13/b58/40b"><img src="/assets/themes/twitter/bootstrap/img/linked_in.png"/></i></a>
+                    <a title="Go to flickr.com/photos/tlaurens" target="_blank" href="http://www.flickr.com/photos/tlaurens/"><img src="/assets/themes/twitter/bootstrap/img/flickr.png"/></i></a>
+                </p>
             </div>
-        </footer>
-
+      </footer>
+     <br>
     </div>
 
     

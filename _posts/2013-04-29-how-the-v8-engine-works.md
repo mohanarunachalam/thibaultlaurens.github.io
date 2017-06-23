@@ -7,15 +7,15 @@ category: javascript
 {% include JB/setup %}
 
 #### What is V8?
-V8 is a **JavaScript engine** built in the google development center in Germany. It is 
-<a href="https://code.google.com/p/v8/wiki/Source" title="code.google.com/p/v8/wiki/Source" target="_blank"><strong>open source</strong></a> and written in **C++**. It is used for both client side (Google Chrome) and server side (node.js) JavaScript applications. 
+V8 is a **JavaScript engine** built in the google development center in Germany. It is
+<a href="https://code.google.com/p/v8/wiki/Source" title="code.google.com/p/v8/wiki/Source" target="_blank"><strong>open source</strong></a> and written in **C++**. It is used for both client side (Google Chrome) and server side (node.js) JavaScript applications.
 
 V8 was first designed to increase the performance of the JavaScript execution inside web browsers. In order to obtain speed, V8 translates JavaScript code into more efficient machine code instead of using an interpreter. It compiles JavaScript code into machine code at execution by implementing a **JIT (Just-In-Time) compiler** like a lot of modern JavaScript engines such as SpiderMonkey or Rhino (Mozilla) are doing. The main difference with V8 is that it doesn't produce bytecode or any intermediate code.
 
 The aim of this article is to show and to understand **how V8 works, in order to produce optimized code** for both client side or server side applications. If you are already asking yourself "Should I care about JavaScript performance?" then I will answer with a citation, from Daniel Clifford (tech lead and manager of the V8 team): "It's not just about making your current application run faster, it's about enabling things that you have never been able to do in the past".
 
 <div class="six centered columns">
-    <img alt="V8!" src="{{ ASSET_PATH }}img/post/21-03-13-v8/v8.PNG"/>
+    <img alt="V8!" src="{{ ASSET_PATH }}/img/post/21-03-13-v8/v8.PNG"/>
 </div>
 
 
@@ -25,18 +25,18 @@ JavaScript is a protoptye-based language: there are **no classes** and objects a
 Let's have for instance a "Point" function and the creation of two "Point" objects:
 
 <div class="ten centered columns">
-    <img alt="hidden class" src="{{ ASSET_PATH }}img/post/21-03-13-v8/hiddenclass.PNG"/>
+    <img alt="hidden class" src="{{ ASSET_PATH }}/img/post/21-03-13-v8/hiddenclass.PNG"/>
 </div>
 
 If the layouts are the same, which is the case here, p and q belong to the same hidden class created by V8. This highlights another advantage of using hidden classes: it allows V8 to group objects whose properties are the same. Here "p" and "q" use the same **optimized code**.
 
-Now let's assume that we want to add a "z" property to our "q" object, right after its declaration (which is perfectly fine with a dynamically typed language). 
+Now let's assume that we want to add a "z" property to our "q" object, right after its declaration (which is perfectly fine with a dynamically typed language).
 
-How will V8 deal with this scenario? 
+How will V8 deal with this scenario?
 In fact, V8 **creates a new hidden class everytime the constructor function declares a property** and keeps track of the change in the hidden class. Why? Because if two objects are created ("p" and "q") and if a member is added to the second object ("q") after the creation, V8 needs to keep the last hidden class created (for the first object "p") and to create a new one (for the second object "q") with the new member.
 
 <div class="ten centered columns">
-    <img alt="transition information" src="{{ ASSET_PATH }}img/post/21-03-13-v8/transition.PNG"/>
+    <img alt="transition information" src="{{ ASSET_PATH }}/img/post/21-03-13-v8/transition.PNG"/>
 </div>
 
 Everytime a new hidden class is created, the previous one is updated with a class transition indicating what hidden class has to be used instead of it.
@@ -84,7 +84,7 @@ V8 uses to different methods to handle arrays:
 
 <br/>
 
-V8 has two compilers! 
+V8 has two compilers!
 
 - A **"Full" Compiler** that can generate good code for any JavaScript: good but not great JIT code. The goal of this compiler is to generate code quickly. To achieve its goal, it doesn't do any type analysis and doesn't know anything about types. Instead, it uses an **Inline Caches** or "IC" strategy to refine knowledge about types while the program runs. IC is very efficient and brings about 20 times speed improvment.
 
@@ -102,9 +102,9 @@ V8 has two compilers!
 
 #### Resources
 
-- Google I/O 2012 "Breaking the JavaScript Speed Limit with V8" with Daniel Clifford, tech lead and manager of the V8 team: 
-<a href="https://www.youtube.com/watch?v=UJPdhx5zTaw" title="video" target="_blank">video</a> and 
+- Google I/O 2012 "Breaking the JavaScript Speed Limit with V8" with Daniel Clifford, tech lead and manager of the V8 team:
+<a href="https://www.youtube.com/watch?v=UJPdhx5zTaw" title="video" target="_blank">video</a> and
 <a href="http://v8-io12.appspot.com" title="slides" target="_blank">slides</a>.
-- V8: an open source JavaScript engine: 
+- V8: an open source JavaScript engine:
 <a href="http://www.youtube.com/watch?v=hWhMKalEicY" title="video" target="_blank">video</a> of Lars Bak, V8 core engineer.
 - Nikkei Electronics Asia blog post: <a href="http://techon.nikkeibp.co.jp/article/HONSHI/20090106/163615/" title="go to techon.nikkeibp.co.jp" target="_blank">Why Is the New Google V8 Engine So Fast?</a>

@@ -42,9 +42,8 @@
                 <ul class="nav">
                     <li><a href="/pages/nav/archive.html">Archive</a></li>
                     <li><a href="/pages/nav/categories.html">Categories</a></li>
-                    <!--<li><a href="/pages/courses/index.html">Courses</a></li>
-                    <li><a href="/pages/books/index.html">Books</a></li>-->
-                    <li><a title="Go to github.com/thibaultlaurens" href="https://github.com/ThibaultLaurens" target="_blank">Projects</a></li>
+                    <li><a href="/pages/courses/index.html">Courses</a></li>
+                    <!-- <li><a href="/pages/books/index.html">Books</a></li> -->
                     <li><a href="/pages/about.html">About</a></li>
                 </ul>
         </div>
@@ -63,33 +62,34 @@
 <div class="row-fluid post">
   <div class="span12">
     
-<h4 id="introducing_node">Introducing Node</h4>
+<h4 id="introducing-node">Introducing Node</h4>
 
-<p>Event-driven programming: the flow is determined by the flow of event. Programmers register callbacks to be used as event handlers for events they are interested in, and the system invokes these handlers when those events occurs. Advantages: no need to use multiple processes or threads to scale. JS suits well: first class function and closures</p>
+<p>Event-driven programming: the flow is determined by the flow of event. Programmers register callbacks to be used as event handlers for events they are interested in, and the system invokes these handlers when those events occurs. 
+Advantages: no need to use multiple processes or threads to scale. 
+JS suits well: first class function and closures</p>
+
 <hr />
-<h3 id="node_core_api_basics">Node core API basics</h3>
 
-<h4 id="loading_modules">Loading modules</h4>
+<h3 id="node-core-api-basics">Node core API basics</h3>
 
-<p>JS bad feature: the sharing of a global namespace among scripts -&gt; Node use the CommonJS modules standard: each module has it’s own context, separated from the other modules. To load a module: var module = require(‘my_module’); The require function return a JS object representing the API exposed by the module. That object can be any JS value (object, function, array..). ‘my_module’ can be:</p>
+<h4 id="loading-modules">Loading modules</h4>
 
-<ul>
-<li>a module name, to load a nodejs core module
-<ul>
-<li>a module name, to load a module from the node_modules folder. (1: if nodejs fails to find the module in node_modules folder of the current directory, it will try the parent folder and keep descending until it reaches the root) (2: the node_modules folder os the default folder where npm installs modules)</li>
+<p>JS bad feature: the sharing of a global namespace among scripts -&gt; Node use the CommonJS modules standard: each module has it’s own context, separated from the other modules.
+To load a module: var module = require(‘my_module’);
+The require function return a JS object representing the API exposed by the module. That object can be any JS value (object, function, array..). 
+‘my_module’ can be:
+	- a module name, to load a nodejs core module
+	- a module name, to load a module from the node_modules folder. (1: if nodejs fails to find the module in node_modules folder of the current directory, it will try the parent folder and keep descending until it reaches the root) (2: the node_modules folder os the default folder where npm installs modules)
+	- a module path, to load a custom module. The path can ba absolute or relative to the current file
+	- a folder path. Node will presume the folder is a package and will try to find a package definition file (package.json, with the main entry point of the package defined in it). I there is no package.json file in the folder, nodejs will assume that the main entry point is a file named index.js and will look for it.
+The ‘.js’ extension can be omitted when loading a module: nodejs will automatically add the ‘.js’ extension when looking for the module
+Modules are cached the first time they are loaded, if a module is required two times, the module initialization runs only once.</p>
 
-<li>a module path, to load a custom module. The path can ba absolute or relative to the current file</li>
+<h4 id="using-buffers-to-manipulate-encode-and-decode-binary-data">Using buffers to manipulate, encode and decode binary data</h4>
 
-<li>a folder path. Node will presume the folder is a package and will try to find a package definition file (package.json, with the main entry point of the package defined in it). I there is no package.json file in the folder, nodejs will assume that the main entry point is a file named index.js and will look for it. The ‘.js’ extension can be omitted when loading a module: nodejs will automatically add the ‘.js’ extension when looking for the module Modules are cached the first time they are loaded, if a module is required two times, the module initialization runs only once.</li>
-</ul>
-</li>
-</ul>
+<h4 id="using-the-event-emitter-pattern-to-simplify-event-binding">Using the event emitter pattern to simplify event binding</h4>
 
-<h4 id="using_buffers_to_manipulate_encode_and_decode_binary_data">Using buffers to manipulate, encode and decode binary data</h4>
-
-<h4 id="using_the_event_emitter_pattern_to_simplify_event_binding">Using the event emitter pattern to simplify event binding</h4>
-
-<h4 id="scheduling_the_execution_of_function_using_timers">Scheduling the execution of function using timers</h4>
+<h4 id="scheduling-the-execution-of-function-using-timers">Scheduling the execution of function using timers</h4>
 
   </div>
 </div>
@@ -98,24 +98,21 @@
       </div>
       <footer class="row">
             <hr>
-            <div class="span8">
-                <p>
-                    <a title="Go to facebook.com/thibault.laurens" target="_blank" href="https://www.facebook.com/thibault.laurens"><img src="/assets/themes/twitter/bootstrap/img/facebook.png"/></a>
-                    <a title="Go to github.com/ThibaultLaurens" target="_blank" href="https://github.com/ThibaultLaurens"><img src="/assets/themes/twitter/bootstrap/img/github.png"/></i></a>
-                    <a title="Go to linkedin.com/thibault-laurens" target="_blank" href="http://www.linkedin.com/pub/thibault-laurens/13/b58/40b"><img src="/assets/themes/twitter/bootstrap/img/linked_in.png"/></i></a>
-                    <a title="Go to twitter.com/ThibaultLaurens" target="_blank" href="https://twitter.com/ThibaultLaurens"><img src="/assets/themes/twitter/bootstrap/img/twitter.png"/></a>
-                    <a title="Go to flickr.com/photos/thibaultlaurens" target="_blank" href="http://www.flickr.com/photos/thibaultlaurens/"><img src="/assets/themes/twitter/bootstrap/img/flickr.png"/></i></a>
-                </p>
-                <p>&copy; 2013 Thibault Laurens
+            <div class="span9">
+                <p>&copy; 2017 Thibault Laurens
                     with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
                     and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
                 </p>
             </div>
             <div class="span3 pull-right">
-                <img alt="technut" src="/assets/themes/twitter/img/technut.png"/>
+                <p class="pull-right">
+                    <a title="Go to github.com/ThibaultLaurens" target="_blank" href="https://github.com/ThibaultLaurens"><img src="/assets/themes/twitter/bootstrap/img/github.png"/></i></a>
+                    <a title="Go to linkedin.com/thibault-laurens" target="_blank" href="http://www.linkedin.com/pub/thibault-laurens/13/b58/40b"><img src="/assets/themes/twitter/bootstrap/img/linked_in.png"/></i></a>
+                    <a title="Go to flickr.com/photos/tlaurens" target="_blank" href="http://www.flickr.com/photos/tlaurens/"><img src="/assets/themes/twitter/bootstrap/img/flickr.png"/></i></a>
+                </p>
             </div>
-        </footer>
-
+      </footer>
+     <br>
     </div>
 
     

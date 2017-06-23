@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Yet another developer blog
+title: yet another developer's blog
 tagline: some notes, reminders, findings..
 ---
 {% include JB/setup %}
@@ -9,7 +9,7 @@ tagline: some notes, reminders, findings..
   <div class="row-fluid">
       <div class="span9">
           <ul >
-              {% for post in site.posts limit 4 %}
+              {% for post in site.posts limit: 5 %}
               <h3><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3>
               <p>
                 {{ post.content | strip_html | truncatewords:75}}
@@ -37,7 +37,3 @@ tagline: some notes, reminders, findings..
       </div>
   </div>
 </div>
-
-
-
-

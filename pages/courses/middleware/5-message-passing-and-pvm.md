@@ -43,6 +43,6 @@ Efficiency: Ep(P) = Sp(P) / P = 1/1 + (P-1)f
 <br/>
 
 <div class="ten centered columns">
-    <img class="span3 offset1" src="{{ ASSET_PATH }}img/page/courses/pvm1.png" width="200px"/>
-    <img class="span5 offset2" src="{{ ASSET_PATH }}img/page/courses/pvm2.png"/>
+    <img class="span3 offset1" src="{{ ASSET_PATH }}/img/page/courses/pvm1.png" width="200px"/>
+    <img class="span5 offset2" src="{{ ASSET_PATH }}/img/page/courses/pvm2.png"/>
 </div>

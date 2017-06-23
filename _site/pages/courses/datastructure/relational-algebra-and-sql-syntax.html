@@ -42,9 +42,8 @@
                 <ul class="nav">
                     <li><a href="/pages/nav/archive.html">Archive</a></li>
                     <li><a href="/pages/nav/categories.html">Categories</a></li>
-                    <!--<li><a href="/pages/courses/index.html">Courses</a></li>
-                    <li><a href="/pages/books/index.html">Books</a></li>-->
-                    <li><a title="Go to github.com/thibaultlaurens" href="https://github.com/ThibaultLaurens" target="_blank">Projects</a></li>
+                    <li><a href="/pages/courses/index.html">Courses</a></li>
+                    <!-- <li><a href="/pages/books/index.html">Books</a></li> -->
                     <li><a href="/pages/about.html">About</a></li>
                 </ul>
         </div>
@@ -63,48 +62,59 @@
 <div class="row-fluid post">
   <div class="span12">
     
-<h4 id="relational_algebra_operators">Relational algebra operators</h4>
+<h4 id="relational-algebra-operators">Relational algebra operators</h4>
 
 <ul>
-<li>
-<p><strong>Selection</strong>, [σ], selects rows from a table.<br />Example: σ Firstname = ‘Thibault’(STUDENT)</p>
-</li>
-
-<li>
-<p><strong>Projection</strong>, [π], projects out columns from a table.<br />Example: π Firstname(STUDENT)</p>
-</li>
-
-<li>
-<p><strong>Renaming</strong>, [ρ], can be used to rename tables.<br />Example: ρ Firstname &lt;- Name(STUDENT)</p>
-</li>
-
-<li>
-<p><strong>Cartesian product</strong>, [x], of two relations (tables) consists of all the tuples of the first, combined in all possible ways with the tuples of the second.<br />Example: A x B = {&lt; a,b &gt;: for all a,b aEA and bEB}</p>
-</li>
-
-<li>
-<p><strong>Natural Join</strong>, [∞], matches up corresponding attributes (attributes with the same names and values) in two tables. The result is a table in which no two attributes have the same name.<br />Example: Employee ∞ Department</p>
-</li>
-
-<li>
-<p><strong>Division</strong>, [%], restricts attributes names uniqueness of a table, for which it holds that all their combinations with another table are present in the first one.<br />Example: Employee % Department</p>
-</li>
-
-<li>
-<p><strong>Union</strong>, [∪], of a collection of sets is the set of all distinct elements in the collection.<br />Example: A ∪ B = {x: xEA or xEB}</p>
-</li>
-
-<li>
-<p><strong>Intersection</strong>, [∩], of two sets A and B is the set that contains all elements of A that also belong to B but no other elements.<br />Example: A ∩ B = {x: xEA and xEB}</p>
-</li>
-
-<li>
-<p><strong>Set Difference</strong>, [\], of U and A (U\A) is the set of all members of U that are not members of A (also called relative complement) Example: U\A = {xEU | x!EA}</p>
-</li>
+  <li>
+    <p><strong>Selection</strong>, [σ], selects rows from a table.<br />
+Example: σ Firstname = ‘Thibault’(STUDENT)</p>
+  </li>
+  <li>
+    <p><strong>Projection</strong>, [π], projects out columns from a table.<br />
+Example: π Firstname(STUDENT)</p>
+  </li>
+  <li>
+    <p><strong>Renaming</strong>, [ρ], can be used to rename tables.<br />
+Example: ρ Firstname &lt;- Name(STUDENT)</p>
+  </li>
+  <li>
+    <p><strong>Cartesian product</strong>, [x], of two relations (tables) consists of all the tuples of the
+first, combined in all possible ways with the tuples of the second.<br />
+Example: A x B = {&lt; a,b &gt;: for all a,b aEA and bEB}</p>
+  </li>
+  <li>
+    <p><strong>Natural Join</strong>, [∞], matches up corresponding attributes (attributes with the same names and values) in two tables.
+The result is a table in which no two attributes have the same name.<br />
+Example: Employee ∞ Department</p>
+  </li>
+  <li>
+    <p><strong>Division</strong>, [%], restricts attributes names uniqueness of a table, for which it holds that
+all their combinations with another table are present in the first one.<br />
+Example: Employee % Department</p>
+  </li>
+  <li>
+    <p><strong>Union</strong>, [∪], of a collection of sets is the set of all distinct elements in the collection.<br />
+Example: A ∪ B = {x: xEA or xEB}</p>
+  </li>
+  <li>
+    <p><strong>Intersection</strong>, [∩], of two sets A and B is the set that contains all elements of A that also
+belong to B but no other elements.<br />
+Example: A ∩ B = {x: xEA and xEB}</p>
+  </li>
+  <li>
+    <p><strong>Set Difference</strong>, [\], of U and A (U\A) is the set of all members of U that are not members
+of A (also called relative complement)
+Example: U\A = {xEU | x!EA}</p>
+  </li>
 </ul>
+
 <hr />
-<h4 id="sql_syntax">SQL Syntax</h4>
-<script src='https://gist.github.com/4586266.js'><![CDATA[ ]]></script>
+
+<h4 id="sql-syntax">SQL Syntax</h4>
+
+<script src="https://gist.github.com/4586266.js"> </script>
+
+
   </div>
 </div>
 
@@ -112,24 +122,21 @@
       </div>
       <footer class="row">
             <hr>
-            <div class="span8">
-                <p>
-                    <a title="Go to facebook.com/thibault.laurens" target="_blank" href="https://www.facebook.com/thibault.laurens"><img src="/assets/themes/twitter/bootstrap/img/facebook.png"/></a>
-                    <a title="Go to github.com/ThibaultLaurens" target="_blank" href="https://github.com/ThibaultLaurens"><img src="/assets/themes/twitter/bootstrap/img/github.png"/></i></a>
-                    <a title="Go to linkedin.com/thibault-laurens" target="_blank" href="http://www.linkedin.com/pub/thibault-laurens/13/b58/40b"><img src="/assets/themes/twitter/bootstrap/img/linked_in.png"/></i></a>
-                    <a title="Go to twitter.com/ThibaultLaurens" target="_blank" href="https://twitter.com/ThibaultLaurens"><img src="/assets/themes/twitter/bootstrap/img/twitter.png"/></a>
-                    <a title="Go to flickr.com/photos/thibaultlaurens" target="_blank" href="http://www.flickr.com/photos/thibaultlaurens/"><img src="/assets/themes/twitter/bootstrap/img/flickr.png"/></i></a>
-                </p>
-                <p>&copy; 2013 Thibault Laurens
+            <div class="span9">
+                <p>&copy; 2017 Thibault Laurens
                     with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
                     and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
                 </p>
             </div>
             <div class="span3 pull-right">
-                <img alt="technut" src="/assets/themes/twitter/img/technut.png"/>
+                <p class="pull-right">
+                    <a title="Go to github.com/ThibaultLaurens" target="_blank" href="https://github.com/ThibaultLaurens"><img src="/assets/themes/twitter/bootstrap/img/github.png"/></i></a>
+                    <a title="Go to linkedin.com/thibault-laurens" target="_blank" href="http://www.linkedin.com/pub/thibault-laurens/13/b58/40b"><img src="/assets/themes/twitter/bootstrap/img/linked_in.png"/></i></a>
+                    <a title="Go to flickr.com/photos/tlaurens" target="_blank" href="http://www.flickr.com/photos/tlaurens/"><img src="/assets/themes/twitter/bootstrap/img/flickr.png"/></i></a>
+                </p>
             </div>
-        </footer>
-
+      </footer>
+     <br>
     </div>
 
     
