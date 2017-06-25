@@ -6,13 +6,13 @@ category: microsoft
 ---
 {% include JB/setup %}
 
-One of the most important new feature of C# 2.0 (released in 2005) was the introduction of **generics**. Knowing how they are implemented is essential to understand advances and key features they will bring later to C# and the .NET framework (technologies like `LINQ` for example).
+One of the most important new feature of C# 2.0 (released in 2005) was the introduction of **generics**. Knowing how they are implemented is essential to understand key features they will bring later to C# and the .NET framework (technologies like `LINQ` for example).
 
 * * *
 
 #### What are generics? ####
 
-Also called parametric polymorphism, generics consists in declaring a type with a type parameter that will be instantiated when it will be needed. It adds a great flexibility to the language. 
+Also called parametric polymorphism, generics consist in declaring a type with a type parameter that will be instantiated when it will be needed. It adds a great flexibility to the language. 
  
 In C#, you can declare generics with the help of `<T>` where `T` is the parameterized type. Classes, interfaces, methods, properties and even delegates can be used as a generic type. The exemple below declares a simplified version of the `List<T>` class (available in the .NET framework).
 
@@ -100,7 +100,7 @@ class Program
 
 An important thing to keep in mind is that parameterized objects have to have **the same type**. In this example, if another class is created, an object of this new class cannot be added to the `CarList`.
   
-However, generic with multiple parameterized types can also be declared, in this example a `List<T, U>` could be declared.
+However, generic with multiple parameterized types can also be declared, in this example a `List<T,U>` could be declared.
 
 * * *
 
@@ -172,7 +172,7 @@ The example below shows a generic list of string and how its type information is
 ``` 
 
 - Here we can see the genericity of the IL code: The `ldarg` instruction for instance on line 5 (IL_0000) which takes a method argument and put it on the stack, has no specific type to work with.  
-- The line 4 shows the list of string but with a number `List'1<string>`, this number is the **arity** and correponds to the number of parameterized type used (`List<T, U>` has an arity of 2).  
+- The line 4 shows the list of string but with a number `List'1<string>`, this number is the **arity** and correponds to the number of parameterized type used (`List<T,U>` has an arity of 2).  
 - When the parameterized type is used, the IL code add a `!` as it can be seen line 11 (IL_0012)   
 
 * * *
