@@ -9,7 +9,7 @@ tagline: some notes, reminders, findings..
   <div class="row-fluid">
       <div class="span9">
           <ul >
-              {% for post in site.posts limit: 5 %}
+              {% for post in site.posts %}
               <h3><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3>
               <p>
                 {{ post.content | strip_html | truncatewords:75}}
