@@ -38,3 +38,4 @@ Service availability is often refered in `nines`. The table below shows the down
 | 4 Nines      | 99.99%   | 52.6 minutes  | 8.6 seconds      |
 | 5 Nines      | 99.999%  | 5.25 minutes  | 0.86 seconds     |
 | 6 Nines      | 99.9999% | 31.5 seconds  | 8.6 milliseconds |
+{: .table .table-bordered .table-hover .table-condensed}
