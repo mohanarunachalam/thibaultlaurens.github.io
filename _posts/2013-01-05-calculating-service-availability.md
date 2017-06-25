@@ -27,7 +27,7 @@ Availability = (8 \* 24) / (8 \* 24 + 3) = 0.985
 
 * * *
 
-Service availability is often refered in `nines`. The table below shows the downtime per year and per day allowed according to availabilty and uptime. 
+Service availability is often referred in `nines`. The table below shows the downtime per year and per day allowed according to availabilty and uptime. 
 
 
 | Availability | Uptime   | Downtime/Year | Downtime/Day     |
