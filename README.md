@@ -3,6 +3,8 @@ thibaultlaurens.github.io
 
 Blog made with Github pages, Jekyll and Twitter bootstrap.
 
+**Deprecated branch**
+
 ### Dev
 
 `jekyll server --watch`
