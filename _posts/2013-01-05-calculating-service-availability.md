@@ -4,7 +4,6 @@ title: "Calculating service availability"
 description: "with MTBF, MTTD, MTTR and MTTF"
 category: system
 ---
-{% include JB/setup %}
 
 MTBF, MTTD, MTTR and MTTF are the four parameters required to calculate the availability of a service or an individual component in a specific architecture.
 
@@ -22,12 +21,12 @@ MTBF = MTTD + MTTR + MTTF
 Availabiliy = MTBF / (MTBF + MTTR)
 ```
 
-Example: a component with a MTBF of 8 days and a MTTR of 3 hours will have:  
+Example: a component with a MTBF of 8 days and a MTTR of 3 hours will have:
 Availability = (8 \* 24) / (8 \* 24 + 3) = 0.985
 
 * * *
 
-Service availability is often referred in `nines`. The table below shows the downtime per year and per day allowed according to availabilty and uptime. 
+Service availability is often referred in `nines`. The table below shows the downtime per year and per day allowed according to availabilty and uptime.
 
 
 | Availability | Uptime   | Downtime/Year | Downtime/Day     |

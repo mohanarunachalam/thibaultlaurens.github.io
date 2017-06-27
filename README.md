@@ -1,12 +1,12 @@
-thibaultlaurens.github.io
-=========================
+# thibaultlaurens.github.io
 
-Blog made with Github pages, Jekyll and Twitter bootstrap.
 
-### Dev
+Blog made with Jekyll and Hyde
+
+## Dev
 
 `jekyll server --watch`
 
-### License
-[Creative Commons](http://creativecommons.org/licenses/by-nc-sa/3.0/)
-ThibaultLaurens
+## License
+
+Open sourced under the [MIT license](LICENSE.md).

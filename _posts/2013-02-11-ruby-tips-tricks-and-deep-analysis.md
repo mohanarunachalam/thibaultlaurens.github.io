@@ -4,7 +4,6 @@ title: "Ruby: tips, tricks and bytecode analysis"
 description: "syntactic details and how it works under the hood"
 category: ruby
 ---
-{% include JB/setup %}
 
 
 Ruby is by definition a minimalist and natural language which, I think, is a very good thing for software development. It is also a dynamic, object oriented language but can also be used with multiple programming paradigms like imperative, functional or reflective. It was first written in C, as a single-pass interpreted language and was designed for "programmer productivity and fun".
@@ -63,58 +62,58 @@ end
 And below are the corresponding YARV instructions:
 
 ```
-local table (size: 2, argc: 0 [opts: 0, rest: -1, post: 0, block: -1] s1) 
-[ 2] user 
-0004 putself 
-0005 getinlinecache 14, <ic:0> 
-0008 getconstant :RubyVM 
-0010 getconstant :InstructionSequence 
-0012 setinlinecache <ic:0> 
-0014 putself 
-0015 putobject :create 
-0017 send :method, 1, nil, 8, <ic:1> 
-0023 send :disasm, 1, nil, 0, <ic:2> 
-0029 send :print, 1, nil, 8, <ic:3> 
-0035 pop 
-0038 getinlinecache 45, <ic:4> 
-0041 getconstant :User 
-0043 setinlinecache <ic:4> 
-0045 putself 
-0046 send :params, 0, nil, 24, <ic:5> 
-0052 putobject :email 
-0054 opt_aref <ic:19> 
-0056 putself 
-0057 send :params, 0, nil, 24, <ic:7> 
-0063 putobject :password 
-0065 opt_aref <ic:20> 
-0067 send :authenticate, 2, nil, 0, <ic:9> 
-0073 setlocal user 
-0077 getlocal user 
-0079 branchunless 131 
-0083 putself 
-0084 send :session, 0, nil, 24, <ic:11> 
-0090 putobject :user_id 
-0092 getlocal user 
-0094 send :id, 0, nil, 0, <ic:10> 
-0100 send :[]=, 2, nil, 0, <ic:12> 
-0106 pop 
-0109 putself 
-0110 putself 
-0111 send :root_url, 0, nil, 24, <ic:13> 
-0117 putobject :notice 
-0119 putstring "Logged in!" 
-0121 newhash 2 
-0123 send :redirect_to, 2, nil, 8, <ic:14> 
-0129 jump 168 ( 7) 
-0135 putself 
-0136 send :flash, 0, nil, 24, <ic:15> 
-0142 send :now, 0, nil, 0, <ic:16> 
+local table (size: 2, argc: 0 [opts: 0, rest: -1, post: 0, block: -1] s1)
+[ 2] user
+0004 putself
+0005 getinlinecache 14, <ic:0>
+0008 getconstant :RubyVM
+0010 getconstant :InstructionSequence
+0012 setinlinecache <ic:0>
+0014 putself
+0015 putobject :create
+0017 send :method, 1, nil, 8, <ic:1>
+0023 send :disasm, 1, nil, 0, <ic:2>
+0029 send :print, 1, nil, 8, <ic:3>
+0035 pop
+0038 getinlinecache 45, <ic:4>
+0041 getconstant :User
+0043 setinlinecache <ic:4>
+0045 putself
+0046 send :params, 0, nil, 24, <ic:5>
+0052 putobject :email
+0054 opt_aref <ic:19>
+0056 putself
+0057 send :params, 0, nil, 24, <ic:7>
+0063 putobject :password
+0065 opt_aref <ic:20>
+0067 send :authenticate, 2, nil, 0, <ic:9>
+0073 setlocal user
+0077 getlocal user
+0079 branchunless 131
+0083 putself
+0084 send :session, 0, nil, 24, <ic:11>
+0090 putobject :user_id
+0092 getlocal user
+0094 send :id, 0, nil, 0, <ic:10>
+0100 send :[]=, 2, nil, 0, <ic:12>
+0106 pop
+0109 putself
+0110 putself
+0111 send :root_url, 0, nil, 24, <ic:13>
+0117 putobject :notice
+0119 putstring "Logged in!"
+0121 newhash 2
+0123 send :redirect_to, 2, nil, 8, <ic:14>
+0129 jump 168 ( 7)
+0135 putself
+0136 send :flash, 0, nil, 24, <ic:15>
+0142 send :now, 0, nil, 0, <ic:16>
 0148 putstring "Invalid email or password"
-0150 send :alert=, 1, nil, 0, <ic:17> 
-0156 pop 
-0159 putself 
-0160 putstring "new" 
-0162 send :render, 1, nil, 8, <ic:18> 
+0150 send :alert=, 1, nil, 0, <ic:17>
+0156 pop
+0159 putself
+0160 putstring "new"
+0162 send :render, 1, nil, 8, <ic:18>
 0170 leave ( 12)
 ```
 

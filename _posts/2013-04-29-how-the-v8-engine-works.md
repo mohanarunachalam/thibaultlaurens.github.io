@@ -4,7 +4,6 @@ title: "How the V8 engine works?"
 description: "How it works and how to write performant JavaScript code for the engine"
 category: javascript
 ---
-{% include JB/setup %}
 
 #### What is V8?
 V8 is a **JavaScript engine** built in the google development center in Germany. It is
@@ -14,8 +13,8 @@ V8 was first designed to increase the performance of the JavaScript execution in
 
 The aim of this article is to show and to understand **how V8 works, in order to produce optimized code** for both client side or server side applications. If you are already asking yourself "Should I care about JavaScript performance?" then I will answer with a citation, from Daniel Clifford (tech lead and manager of the V8 team): "It's not just about making your current application run faster, it's about enabling things that you have never been able to do in the past".
 
-<div class="six centered columns">
-    <img alt="V8!" src="{{ ASSET_PATH }}/img/post/21-03-13-v8/v8.PNG"/>
+<div>
+    <img class="image-centered" alt="V8!" src="/public/img/post/21-03-13-v8/v8.PNG"/>
 </div>
 
 
@@ -24,8 +23,8 @@ JavaScript is a protoptye-based language: there are **no classes** and objects a
 
 Let's have for instance a "Point" function and the creation of two "Point" objects:
 
-<div class="ten centered columns">
-    <img alt="hidden class" src="{{ ASSET_PATH }}/img/post/21-03-13-v8/hiddenclass.PNG"/>
+<div>
+    <img alt="hidden class" src="/public/img/post/21-03-13-v8/hiddenclass.PNG"/>
 </div>
 
 If the layouts are the same, which is the case here, p and q belong to the same hidden class created by V8. This highlights another advantage of using hidden classes: it allows V8 to group objects whose properties are the same. Here "p" and "q" use the same **optimized code**.
@@ -35,8 +34,8 @@ Now let's assume that we want to add a "z" property to our "q" object, right aft
 How will V8 deal with this scenario?
 In fact, V8 **creates a new hidden class everytime the constructor function declares a property** and keeps track of the change in the hidden class. Why? Because if two objects are created ("p" and "q") and if a member is added to the second object ("q") after the creation, V8 needs to keep the last hidden class created (for the first object "p") and to create a new one (for the second object "q") with the new member.
 
-<div class="ten centered columns">
-    <img alt="transition information" src="{{ ASSET_PATH }}/img/post/21-03-13-v8/transition.PNG"/>
+<div>
+    <img alt="transition information" src="/public/img/post/21-03-13-v8/transition.PNG"/>
 </div>
 
 Everytime a new hidden class is created, the previous one is updated with a class transition indicating what hidden class has to be used instead of it.
